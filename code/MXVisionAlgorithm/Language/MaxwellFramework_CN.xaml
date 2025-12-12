@@ -1,0 +1,2222 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- ************************************************* MaxwellFramework **************************************** -->
+
+    <!--Header-->
+    <sys:String x:Key="HeaderProgram">程式</sys:String>
+    <sys:String x:Key="HeaderAlarm">报警</sys:String>
+    <sys:String x:Key="HeaderLogger">日志</sys:String>
+    <sys:String x:Key="HeaderOnline">在线</sys:String>
+    <sys:String x:Key="HeaderOffline">离线</sys:String>
+    <sys:String x:Key="HeaderSet">设置</sys:String>
+    <sys:String x:Key="HeaderUser">用户管理</sys:String>
+    <sys:String x:Key="HeaderSwitchUser">切换用户</sys:String>
+    <sys:String x:Key="HeaderLogout">注销</sys:String>
+    <sys:String x:Key="HeaderExit">退出</sys:String>
+    <sys:String x:Key="MainViewClose">关闭</sys:String>
+    <sys:String x:Key="MainViewEMO">急停</sys:String>
+
+    <!--UserRightAttach-->
+    <sys:String x:Key="UserRightAttachUserRightSetting">用户权限设置</sys:String>
+    <sys:String x:Key="UserRightAttachVisible">可见</sys:String>
+    <sys:String x:Key="UserRightAttachEnable">使能</sys:String>
+
+    <!--UserManager-->
+    <sys:String x:Key="UserManagerModleSet">用户模式设置</sys:String>
+    <sys:String x:Key="UserManagerIsUsingVisitor">是否启用访客</sys:String>
+    <sys:String x:Key="UserManagerSwitchVisitorTime">切换访客时间(min)</sys:String>
+    <sys:String x:Key="UserManagerUsingAdminLogin">启用管理员登录</sys:String>
+    <sys:String x:Key="UserManagerVisitor">访客</sys:String>
+    <sys:String x:Key="UserManagerUsingKeyPadLogin">登录密码框是否弹出键盘</sys:String>
+
+    <!--ChangePassword-->
+    <sys:String x:Key="ChangePasswordTitle">修改密码</sys:String>
+    <sys:String x:Key="ChangePasswordOldPwd">原密码</sys:String>
+    <sys:String x:Key="ChangePasswordNewPwd">新密码</sys:String>
+    <sys:String x:Key="ChangePasswordConfirmPwd">确认密码</sys:String>
+
+    <!--CheckPasswordDialog-->
+    <sys:String x:Key="CheckPasswordDialogTitle">核对密码</sys:String>
+
+    <!--ConfigManager-->
+    <sys:String x:Key="ConfigManagerCancelChange">取消修改</sys:String>
+    <sys:String x:Key="ConfigManagerApplyChange">保存并应用</sys:String>
+
+    <!--Loading-->
+    <sys:String x:Key="LoadingContent">加载中...</sys:String>
+
+    <!--LockScreen-->
+    <sys:String x:Key="LockScreenText">安全锁屏 请勿操作</sys:String>
+    <sys:String x:Key="LockScreenUnLock">解锁</sys:String>
+
+    <!--Login-->
+    <sys:String x:Key="LoginVisitorLogin">访客登录</sys:String>
+    <sys:String x:Key="LoginLogin">登  录</sys:String>
+
+    <!--Root-->
+    <sys:String x:Key="RootNoActWhenRepairing">正在进行维修作业请勿操作...</sys:String>
+
+    <!--SecurityDialog-->
+    <sys:String x:Key="SecurityDialogTitle">功能安全保护</sys:String>
+
+    <!--SwitchUser-->
+    <sys:String x:Key="SwitchUserTitle">切换用户</sys:String>
+
+    <!--SystemConfigSetting-->
+    <sys:String x:Key="SystemConfigSettingWindowSetting">窗口设置</sys:String>
+    <sys:String x:Key="SystemConfigSettingIsTopMost">保持顶层</sys:String>
+    <sys:String x:Key="SystemConfigSettingKeyboardSetting">键盘设置</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAll">全部禁用</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableWin">禁用Win键</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAltWithTab">禁用Alt+Tab</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAltWithF4">禁用Alt+F4</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableCtrlWithAltDel">禁用Ctrl+Alt+Del</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableCtrlWithShiftEsc">禁用Ctrl+Shift+Esc</sys:String>
+    <sys:String x:Key="SystemConfigSettingSystemSetting">系统设置</sys:String>
+    <sys:String x:Key="SystemConfigSettingSecuritySetting">安全保护设置</sys:String>
+    <sys:String x:Key="SystemConfigSettingChangeSecurityPassword">修改密码</sys:String>
+    <sys:String x:Key="SystemConfigSettingUserManagerSetting">用户管理设置</sys:String>
+
+    <!--UserManager-->
+    <sys:String x:Key="UserManagerUserRole">用户类型</sys:String>
+    <sys:String x:Key="UserManagerLastLoginTime">最后一次登陆</sys:String>
+    <sys:String x:Key="UserManagerAddUser">新增</sys:String>
+    <sys:String x:Key="UserManagerDeleteUser">删除</sys:String>
+    <sys:String x:Key="UserManagerShowPassword">显示密码</sys:String>
+    <sys:String x:Key="UserManagerChangePassword">修改密码</sys:String>
+    <sys:String x:Key="UserManagerWarning">警告</sys:String>
+    <sys:String x:Key="UserManagerName">管理员</sys:String>
+
+    <!--PCHeader-->
+    <sys:String x:Key="PCHeaderSoftwareVersion">软件版本</sys:String>
+    <sys:String x:Key="PCHeaderEquipmentNo">设备编号</sys:String>
+    <sys:String x:Key="PCHeaderEmergencyStop">急停</sys:String>
+
+    <!--SameMessage-->
+    <sys:String x:Key="UserName">用户名</sys:String>
+    <sys:String x:Key="Password">密码</sys:String>
+    <sys:String x:Key="ButtonConfirm">确定</sys:String>
+    <sys:String x:Key="ButtonCancel">取消</sys:String>
+    <sys:String x:Key="ButtonYes">是</sys:String>
+    <sys:String x:Key="ButtonNo">否</sys:String>
+    <sys:String x:Key="TipTitle">提示</sys:String>
+    <sys:String x:Key="CantFind">找不到</sys:String>
+    <sys:String x:Key="PleaseChooseUserName">请选择用户名</sys:String>
+    <sys:String x:Key="PleaseEnterPassword">请输入密码</sys:String>
+
+    <!--SplashView-->
+    <sys:String x:Key="SplashViewWelcome">欢迎使用</sys:String>
+    <sys:String x:Key="SplashViewLoading">正在加载</sys:String>
+    <sys:String x:Key="SplashViewLoading1">正在加载.</sys:String>
+    <sys:String x:Key="SplashViewLoading2">正在加载..</sys:String>
+    <sys:String x:Key="SplashViewLoading3">正在加载...</sys:String>
+    <sys:String x:Key="SplashViewLoadingError">载入过程中出错</sys:String>
+    <sys:String x:Key="SplashViewClickExitAndRollingBack">点击退出，开始回滚</sys:String>
+    <sys:String x:Key="SplashViewClickContinueIgnoreErrorAndContinueLoading">点击继续，忽略错误继续加载</sys:String>
+    <sys:String x:Key="SplashViewExiting">正在退出</sys:String>
+    <sys:String x:Key="SplashViewExiting1">正在退出.</sys:String>
+    <sys:String x:Key="SplashViewExiting2">正在退出..</sys:String>
+    <sys:String x:Key="SplashViewExiting3">正在退出...</sys:String>
+    <sys:String x:Key="SplashViewExit">退出</sys:String>
+    <sys:String x:Key="SplashViewRedo">重试</sys:String>
+    <sys:String x:Key="SplashViewIgnoreContinue">继续</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="ChangePasswordErrorPwdEmpty">*原密码为空</sys:String>
+    <sys:String x:Key="ChangePasswordErrorPwdWrongFormat">*密码必须为3~16的字母数字或符号</sys:String>
+    <sys:String x:Key="ChangePasswordErrorPwdInconsistent">*两次输入的新密码不一致</sys:String>
+    <sys:String x:Key="ChangePasswordErrorOldPwdWrong">*原密码不正确</sys:String>
+    <sys:String x:Key="LoginErrorMessage">*请输入正确的用户名和密码</sys:String>
+    <sys:String x:Key="UserManagerDeleteFail">删除失败！</sys:String>
+    <sys:String x:Key="UserManagerCannotDeleteManager">无法删除管理员用户。</sys:String>
+    <sys:String x:Key="UserManagerChangeUserNameFail">用户名修改失败</sys:String>
+    <sys:String x:Key="UserManagerSameName">存在同名的用户，请更换其他名称。</sys:String>
+    <sys:String x:Key="UserManagerIllegalName">用户名不合法！</sys:String>
+    <sys:String x:Key="UserManagerNameFormat">用户名必须由3-16位的中文、字母、数字或下划线组成，且不可以数字开头！</sys:String>
+    <sys:String x:Key="UserManagerDeleteMessage1">确定要删除名为</sys:String>
+    <sys:String x:Key="UserManagerDeleteMessage2">用户吗？</sys:String>
+
+    <!-- ************************************************* Alarm **************************************** -->
+
+    <!--AlarmDataGrid-->
+    <sys:String x:Key="AlarmDataGridAlarmType">类型</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmLevel">级别</sys:String>
+    <sys:String x:Key="AlarmDataGridTriggerTime">发生时间</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmDescribe">描述</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmReason">原因</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmSolution">解决方法</sys:String>
+
+    <!--AlarmStatisticsView-->
+    <sys:String x:Key="AlarmStatisticsViewDateTimeChoose">日期时间选择</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewQuickQuery">快捷查询</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewQuery">查询</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewClearAlarm">清空报警</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewAlarmRank">报警次数排名</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewNumber">序号</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewTimes">次数</sys:String>
+
+    <!--AgingStatisticsView-->
+    <sys:String x:Key="AgingStatisticsViewDateTimeChoose">日期时间选择</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQuickQuery">快捷查询</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQueryCurrentParameterFile">查询当前参数档</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQueryAllParameterFile">查询全部参数档</sys:String>
+    <sys:String x:Key="AgingStatisticsViewMTBAList">MTBA列表</sys:String>
+    <sys:String x:Key="AgingStatisticsViewNumber">序号</sys:String>
+    <sys:String x:Key="AgingStatisticsRecipeName">程式名称</sys:String>
+    <sys:String x:Key="AgingStatisticsWorkingTime">作业时间</sys:String>
+    <sys:String x:Key="AgingStatisticsAlarmTimes">报警次数</sys:String>
+    <sys:String x:Key="AgingStatisticsMTBAValue">MTBA值</sys:String>
+    <sys:String x:Key="AgingStatisticsAlarmRanking">报警次数排名</sys:String>
+    <sys:String x:Key="AgingStatisticsDescribe">描述</sys:String>
+    <sys:String x:Key="AgingStatisticsViewID">ID</sys:String>
+    <sys:String x:Key="AgingStatisticsViewTimes">次数</sys:String>
+    
+    <!--AlarmView-->
+    <sys:String x:Key="AlarmViewTimeOrder">时间顺序</sys:String>
+    <sys:String x:Key="AlarmViewAlarmStatistics">报警统计</sys:String>
+    <sys:String x:Key="AlarmViewExportCurrent">导出当前页</sys:String>
+    <sys:String x:Key="AlarmViewExportAll">导出全部</sys:String>
+    <sys:String x:Key="AlarmViewClearPLCAlarm">清除报警</sys:String>
+    <sys:String x:Key="AlarmViewCloseBuzzer">关闭蜂鸣器</sys:String>
+    <sys:String x:Key="AlarmViewReturn">返回</sys:String>
+    <sys:String x:Key="RealTimeAlarm">实时报警</sys:String>
+    <sys:String x:Key="HistoryAlarm">历史报警</sys:String>
+    <sys:String x:Key="AlarmViewAgingStatistics">时效统计</sys:String>
+
+    <!--AlarmModule-->
+    <sys:String x:Key="AlarmModule">报警模块</sys:String>
+    <sys:String x:Key="OpenAlarmModule">开启报警模块</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="AlarmViewErrorNoMessage">信息不存在！</sys:String>
+    <sys:String x:Key="AlarmViewExportSuccess">导出成功！</sys:String>
+    <sys:String x:Key="HistoryViewErrorConnectDB">异常信息:数据库连接失败</sys:String>
+    <sys:String x:Key="AlarmViewErrorConnectDevice">异常信息:加载设备异常</sys:String>
+
+    <!--AlarmService-->
+    <sys:String x:Key="AlarmServiceIDOutOfRange">自定义报警错误，报警ID超出范围，ID范围应为0-10000</sys:String>
+    <sys:String x:Key="AlarmServiceIDCannotBeNegative">报警ID不能为负数</sys:String>
+    <sys:String x:Key="AlarmServiceCustomAlarmTrigger">自定义Alarm触发(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceCustomAlarmResolved">自定义Alarm已解决(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalAlarmTrigger">电气Alarm触发(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalAlarmResolved">电气Alarm已解决(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalWarningTrigger">电气Warning触发(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalWarningResolved">电气Warning已解决(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceHardwareAlarmTrigger">硬件Alarm触发(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceHardwareAlarmResolved">硬件Alarm已解决(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+
+    <!-- ************************************************* Logger **************************************** -->
+
+    <!--Logger-->
+    <sys:String x:Key="LoggerTitle">日志</sys:String>
+    <sys:String x:Key="RealTimeLogger">实时日志</sys:String>
+    <sys:String x:Key="HistoryLogger">历史日志</sys:String>
+
+    <!--ExportOptionsDialogView-->
+    <sys:String x:Key="ExportOptionsDialogViewTitle">导出选项</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSegmentation">分割方式</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewTimeSeg">按时间分割</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSizeSeg">按大小分割</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSegUnit">分割单元</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewExportPosition">导出位置</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewChoosePath">选择路径</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewExportProgress">导出进度</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewFileFormat">文件格式</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewStartExport">开始导出</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView3Hour">3小时</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView12Hour">12小时</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView1Day">1天</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView10Thousand">1万</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView50Thousand">5万</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView100Thousand">10万</sys:String>
+
+    <!--HistoryLoggerView-->
+    <sys:String x:Key="HistoryViewLogLevel">日志级别</sys:String>
+    <sys:String x:Key="HistoryViewModule">模块</sys:String>
+    <sys:String x:Key="HistoryViewTimeOrder">时间顺序</sys:String>
+    <sys:String x:Key="HistoryViewMessageKeyword">消息关键字</sys:String>
+    <sys:String x:Key="HistoryViewLogList">日志列表</sys:String>
+    <sys:String x:Key="HistoryViewTime">时间</sys:String>
+    <sys:String x:Key="HistoryViewLevel">级别</sys:String>
+    <sys:String x:Key="HistoryViewMessage">消息</sys:String>
+    <sys:String x:Key="HistoryViewThreadId">线程Id</sys:String>
+    <sys:String x:Key="HistoryViewDetail">详细信息</sys:String>
+    <sys:String x:Key="HistoryViewDate">日期</sys:String>
+    <sys:String x:Key="HistoryViewBelongsModule">所属模块</sys:String>
+    <sys:String x:Key="HistoryViewLogMessage">日志消息</sys:String>
+    <sys:String x:Key="HistoryLoggerViewAscOrder">升序</sys:String>
+    <sys:String x:Key="HistoryLoggerViewDescOrder">降序</sys:String>
+    <sys:String x:Key="HistoryLoggerViewEmpty">置空</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneMinute">前一分钟</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTenMinute">前十分钟</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThirtyMinute">前三十分钟</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneHour">前一小时</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThreeHour">前三小时</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTwelveHour">前十二小时</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneDay">前一天</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThreeDay">前三天</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTenDay">前十天</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneMonth">前一个月</sys:String>
+    <sys:String x:Key="HistoryLoggerViewAll">全部</sys:String>
+	<sys:String x:Key="HistoryLoggerViewServiceConnectionFailure">服务连接失败!</sys:String>
+	<sys:String x:Key="HistoryLoggerViewDatabaseConnectionFailure">数据库连接失败!</sys:String>
+	
+	
+	 <!--UserManagerHelper-->
+	<sys:String x:Key="UserManagerHelperDeleteData">是否删除{0}天前的数据 </sys:String>
+	<sys:String x:Key="UserManagerHelperServiceConnectionFails">Service服务连接失败! </sys:String>
+	
+	 <!--ReceiverConfigViewModel-->
+	<sys:String x:Key="ReceiverConfigViewModelPortOccupiedProcedure">端口号已被占用! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelInvalidPort">无效端口号! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelSaveSuccessfully">保存成功! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelServiceConnectionFails">Service服务连接失败! </sys:String>
+    <sys:String x:Key="ReceiverConfigViewModelServiceConnectionSuccessful">Service服务连接成功! </sys:String>
+	
+	  <!--LogApi-->
+	<sys:String x:Key="LogApiDescriptionFailedToObtainHistoricalLogData">历史日志数量数据获取失败</sys:String>
+	<sys:String x:Key="LogApiFailedTo0btainLoggerData">Logger数据获取失败 </sys:String>
+	<sys:String x:Key="LogApiFailedTo0btainLevelAndLoggerData">LevelAndLogger数据获取失败 </sys:String>
+	<sys:String x:Key="LogApiFailedToObtainTimeoutLogQuantityData">超时日志数量数据获取失败 </sys:String>
+	<sys:String x:Key="LogApiFailedToObtainRealTimeLogQuantityData">实时日志数量数据获取失败</sys:String>
+    <sys:String x:Key="LogApiFailedToObtainRealTimeLogData">实时日志数据获取失败</sys:String>
+    <sys:String x:Key="LogApiFailedToObtainHistoricalLogData">历史日志数据获取失败</sys:String>
+    <sys:String x:Key="LogApiFailedToDeleteData">删除数据失败</sys:String>
+	
+    <!--LoggerMainView-->
+    <sys:String x:Key="LoggerMainViewExportLog">导出日志</sys:String>
+
+    <!--RealTimeView-->
+    <sys:String x:Key="RealTimeViewStart">启动</sys:String>
+    <sys:String x:Key="RealTimeViewPause">暂停</sys:String>
+    <sys:String x:Key="RealTimeViewClear">清除</sys:String>
+
+    <!--ReceiveConfig-->
+    <sys:String x:Key="ReceiveConfigNetworkSettings">网络设置</sys:String>
+    <sys:String x:Key="ReceiveConfigSaveCycleSettings">保存周期设置</sys:String>
+    <sys:String x:Key="ReceiveConfigSaveDays">保存天数</sys:String>
+    <sys:String x:Key="ReceiveConfigNetworkAddress">网络地址</sys:String>
+    <sys:String x:Key="ReceiveConfigPort">端口</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="LogLoadFail">日志启动失败！</sys:String>
+    <sys:String x:Key="LogNotInstall">日志查看工具未安装或安装错误，请尝试重新安装</sys:String>
+    <sys:String x:Key="ProgramNotInstall">项目程序未安装或安装错误，请尝试重新安装</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewEmptyExport">导出日志为空，请重新导出</sys:String>
+    <sys:String x:Key="HistoryViewTipNoLog">当前没有可保存的日志</sys:String>
+    <sys:String x:Key="ReceiveConfigErrorNetwork">无法解析输入的网络地址</sys:String>
+
+    <!-- ************************************************* Control **************************************** -->
+
+    <!--Control-->
+    <sys:String x:Key="ControlTotal">共</sys:String>
+    <sys:String x:Key="ControlItem">条</sys:String>
+    <sys:String x:Key="ControlHome">首页</sys:String>
+    <sys:String x:Key="ControlPrePage">上一页</sys:String>
+    <sys:String x:Key="ControlGoTo">跳转</sys:String>
+    <sys:String x:Key="ControlNextPage">下一页</sys:String>
+    <sys:String x:Key="ControlLastPage">尾页</sys:String>
+    <sys:String x:Key="ControlCurrentPage">当前页</sys:String>
+    <sys:String x:Key="ControlPreStep">上一步</sys:String>
+    <sys:String x:Key="ControlNextStep">下一步</sys:String>
+    <sys:String x:Key="ControlStepFrameFinished">完成</sys:String>
+    <sys:String x:Key="ControlBack">返回</sys:String>
+    <sys:String x:Key="ControlCannotEmpty">不能为空</sys:String>
+    <sys:String x:Key="ControlExceedingThresholdRange">超出阈值范围</sys:String>
+    <sys:String x:Key="ControlInputValueRange">输入的值应该在{0}到{1}之间</sys:String>
+    <sys:String x:Key="ControlIsChangeValue">是否将值修改为{0}?</sys:String>
+    <sys:String x:Key="ControlFormatError">格式错误</sys:String>
+    <sys:String x:Key="ControlTypeError">类型错误</sys:String>
+    <sys:String x:Key="ControlFinished">完成</sys:String>
+    <sys:String x:Key="ControlSchedule">进度</sys:String>
+    <sys:String x:Key="ControlNow">现在</sys:String>
+    <sys:String x:Key="ControlClear">清除</sys:String>
+    <sys:String x:Key="ControlConfirm">确定</sys:String>
+    <sys:String x:Key="ControlSelectDateTime">选择日期和时间</sys:String>
+    <sys:String x:Key="ControlHour">时:</sys:String>
+    <sys:String x:Key="ControlMinute">分:</sys:String>
+    <sys:String x:Key="ControlSecond">秒:</sys:String>
+    <sys:String x:Key="ControlPleaseInputPassword">请输入密码</sys:String>
+    <sys:String x:Key="ControlPleaseEnterAValueOfUpToSevenDigits">请输入七位数以内的值</sys:String>
+    <!--Bootstrapper-->
+    <sys:String x:Key="BootstrapperDontFindLayout">找不到Layout.xml，请确认</sys:String>
+    <sys:String x:Key="BootstrapperPleaseRunProgramByAdministrator">请以管理员身份启动本程序</sys:String>
+    <sys:String x:Key="BootstrapperUnSelect">未选择</sys:String>
+    <sys:String x:Key="BootstrapperUnFind">未找到</sys:String>
+
+    <!-- ************************************************* MwFramework **************************************** -->
+
+    <!--ManagerService-MwFrameworkModule-->
+    <sys:String x:Key="MwFrameworkModuleDeviceManager">设备管理器</sys:String>
+    <sys:String x:Key="MwFrameworkModuleOpenDevice">开启设备</sys:String>
+    <sys:String x:Key="MwFrameworkParameterManager">参数管理</sys:String>
+    <sys:String x:Key="MwFrameworkReadParameter">读取参数</sys:String>
+
+    <!--ManagerService-DeviceManagerService-->
+    <sys:String x:Key="DeviceManagerService1StartLoadingAllHardwareInParallel">开始并行加载所有硬件</sys:String>
+    <sys:String x:Key="DeviceManagerServiceStartLoading">开始加载</sys:String>
+    <sys:String x:Key="DeviceManagerServiceCreateError">创建失败</sys:String>
+    <sys:String x:Key="DeviceManagerServiceLoadingError">加载{0}失败</sys:String>
+    <sys:String x:Key="DeviceManagerServiceLoaded">硬件加载完成</sys:String>
+
+    <!--UIControl-RecipeView -->
+    <sys:String x:Key="RecipeViewRecipeList">配方列表</sys:String>
+    <sys:String x:Key="RecipeViewNewFolder">新建文件夹</sys:String>
+    <sys:String x:Key="RecipeViewDeleteFolder">删除文件夹</sys:String>
+    <sys:String x:Key="RecipeViewImport">导入</sys:String>
+    <sys:String x:Key="RecipeViewExport">导出</sys:String>
+    <sys:String x:Key="RecipeViewOpen">打开</sys:String>
+    <sys:String x:Key="RecipeViewApply">应用</sys:String>
+    <sys:String x:Key="RecipeViewSave">保存</sys:String>
+    <sys:String x:Key="RecipeViewDelete">删除</sys:String>
+    <sys:String x:Key="RecipeViewNew">新建</sys:String>
+    <sys:String x:Key="RecipeViewCopy">拷贝</sys:String>
+    <sys:String x:Key="RecipeViewRename">重命名</sys:String>
+    <sys:String x:Key="RecipeViewBack">返回</sys:String>
+
+    <!--UIControl-RecipeNewFolder -->
+    <sys:String x:Key="RecipeNewFolderTitle">新建文件夹</sys:String>
+    <sys:String x:Key="RecipeNewFolderOK">确定</sys:String>
+    <sys:String x:Key="RecipeNewFolderCancel">取消</sys:String>
+
+    <!--UIControl-RecipeNewWindow -->
+    <sys:String x:Key="RecipeNewWindowTitle">新建配方</sys:String>
+    <sys:String x:Key="RecipeNewWindowPPID">配方ID</sys:String>
+    <sys:String x:Key="RecipeNewWindowComment">描述</sys:String>
+    <sys:String x:Key="RecipeNewWindowOK">确定</sys:String>
+    <sys:String x:Key="RecipeNewWindowCancel">取消</sys:String>
+    <sys:String x:Key="RecipeNewWindowNewTitle">重命名/拷贝</sys:String>
+
+    <!--UIControl-RenameWindowTitle -->
+    <sys:String x:Key="RenameWindowTitle">重命名</sys:String>
+    <sys:String x:Key="RenameWindowPPID">配方</sys:String>
+    <sys:String x:Key="RenameWindowOK">确定</sys:String>
+    <sys:String x:Key="RenameWindowCancel">取消</sys:String>
+    <!--UIControl-Tips -->
+    <sys:String x:Key="RenameWindowPPIDCannotEmpty">配方ID为必填项，不能为空</sys:String>
+    <sys:String x:Key="RenameWindowPPIDCannotExceed50Characters">配方ID长度超过50个字符</sys:String>
+    <sys:String x:Key="RenameWindowPPIDCannotContainsIllegalCharacters">配方ID存在非法字符</sys:String>
+    <sys:String x:Key="RenameWindowPPIDFirstAndLastCannotContainsDrop">配方ID首尾字符不能为'.'</sys:String>
+
+    <sys:String x:Key="RecipeServiceSameNameCover">所选文件夹中存在同名导出项，是否覆盖？</sys:String>
+    <sys:String x:Key="RecipeServiceSameRecipe">存在相同配方项</sys:String>
+    <sys:String x:Key="RecipeServiceFolderCannotExceed50Characters">文件夹名称长度超过50个字符</sys:String>
+    <sys:String x:Key="RecipeServiceDirectorySameFolder">当前目录存在相同文件夹</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeFolderConnotDelete">当前配方文件夹不可删除</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeConnotDelete">当前配方不可删除</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeFolderNotExist">文件夹不存在</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeDoesNotExist">配方不存在,请先保存配方！</sys:String>
+    <sys:String x:Key="RecipeServiceIsDeleteSelecteRecipe">是否删除选中配方</sys:String>
+    <sys:String x:Key="RecipeServiceNotSelecteRecipe">未选中配方</sys:String>
+    <sys:String x:Key="RecipeServiceCurrentRecipeUserConnotVisible">当前应用配方此用户不可见</sys:String>
+    <sys:String x:Key="RecipeServiceNotFindKey">未找到key</sys:String>
+    <sys:String x:Key="RecipeServiceTheCurrentRecipeCannotBeRenamed">当前配方不可重命名</sys:String>
+    <sys:String x:Key="RecipeServiceRenamingFailedPleaseCheckWhetherThePathContainsIllegalCharacters">重命名失败，请检查路径是否包含非法字符</sys:String>
+    <sys:String x:Key="RecipeServiceTheSelectedProgramDoesNotExist">选中程式不存在</sys:String>
+
+    <!--UIControl-AxisControlView -->
+    <sys:String x:Key="AxisControlViewAxisList">轴列表</sys:String>
+    <sys:String x:Key="AxisControlViewAxis">轴</sys:String>
+    <sys:String x:Key="AxisControlViewPosition">位置(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewEnable">使能</sys:String>
+    <sys:String x:Key="AxisControlViewHomeFinished">回零完成</sys:String>
+    <sys:String x:Key="AxisControlViewNegLimit">负极限</sys:String>
+    <sys:String x:Key="AxisControlViewPosLimit">正极限</sys:String>
+    <sys:String x:Key="AxisControlViewPoint">点位</sys:String>
+    <sys:String x:Key="AxisControlViewInPosition">到位</sys:String>
+    <sys:String x:Key="AxisControlViewMove">移动</sys:String>
+    <sys:String x:Key="AxisControlViewInRelativeDistance">相对偏移(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewAbsolutePosition">绝对位置(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewTargetPosition">目标位置</sys:String>
+    <sys:String x:Key="AxisControlViewRun">运行</sys:String>
+    <sys:String x:Key="AxisControlViewStop">停止</sys:String>
+    <sys:String x:Key="AxisControlViewVelocity">速度</sys:String>
+    <sys:String x:Key="AxisControlViewVelocityUnits">速度(mm/s)</sys:String>
+    <sys:String x:Key="AxisControlViewSetup">设置</sys:String>
+    <sys:String x:Key="AxisControlViewAcceleration">加速度</sys:String>
+    <sys:String x:Key="AxisControlViewAccelerationUnits">加速度(mm/s²)</sys:String>
+    <sys:String x:Key="AxisControlViewJerk">加加速度</sys:String>
+    <sys:String x:Key="AxisControlViewJerkUnits">加加速度(mm/s³)</sys:String>
+    <sys:String x:Key="AxisControlViewDeceleration">减速度</sys:String>
+    <sys:String x:Key="AxisControlViewDecelerationUnits">减速度(mm/s²)</sys:String>
+
+    <!--UIControl-AxisParameterSettingView -->
+    <sys:String x:Key="AxisParameterSettingViewAxisName">轴名称</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewVelocityUnits">速度(mm/s)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewAccelerationUnits">加速度(mm/s²)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewDecelerationUnits">减速度(mm/s²)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewJerkUnits">加加速度(mm/s³)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewSnap">断裂</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewPosition">位置(mm)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewMin">最小值</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewMax">最大值</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewParameterRange">参数区间</sys:String>
+
+    <!--UIControl-AxisPositionView -->
+    <sys:String x:Key="AxisPositionViewAxisList">轴列表</sys:String>
+    <sys:String x:Key="AxisPositionViewPrePage">上一页</sys:String>
+    <sys:String x:Key="AxisPositionViewNextPage">下一页</sys:String>
+    <sys:String x:Key="AxisPositionViewPosition">位置(mm)</sys:String>
+    <sys:String x:Key="AxisPositionViewInPosition">到位</sys:String>
+    <sys:String x:Key="AxisPositionViewNew">添加</sys:String>
+    <sys:String x:Key="AxisPositionViewDelete">删除</sys:String>
+
+    <!--UIControl-AxisStateView -->
+    <sys:String x:Key="AxisStateViewAxis">轴</sys:String>
+    <sys:String x:Key="AxisStateViewVelocityUnits">速度(mm/s)</sys:String>
+    <sys:String x:Key="AxisStateViewSteppingUnits">步进(mm)</sys:String>
+    <sys:String x:Key="AxisStateViewPosition">位置(mm)</sys:String>
+    <sys:String x:Key="AxisStateViewEnable">使能</sys:String>
+    <sys:String x:Key="AxisStateViewHomeFinished">回零完成</sys:String>
+    <sys:String x:Key="AxisStateViewNegLimit">负极限</sys:String>
+    <sys:String x:Key="AxisStateViewPosLimit">正极限</sys:String>
+    <sys:String x:Key="AxisStateViewStop">Stop</sys:String>
+    <sys:String x:Key="AxisStateViewHome">Home</sys:String>
+    <sys:String x:Key="AxisStateViewServerOn">ServerOn</sys:String>
+    <sys:String x:Key="AxisStateViewServerOff">ServerOff</sys:String>
+    <sys:String x:Key="AxisStateViewReduceSlowIndex">-SlowIndex</sys:String>
+    <sys:String x:Key="AxisStateViewAddSlowIndex">+SlowIndex</sys:String>
+    <sys:String x:Key="AxisStateViewReduceIndex">-Index</sys:String>
+    <sys:String x:Key="AxisStateViewAddIndex">+Index</sys:String>
+    <sys:String x:Key="AxisStateViewReduceSlowScan">-SlowScan</sys:String>
+    <sys:String x:Key="AxisStateViewAddSlowScan">+SlowScan</sys:String>
+    <sys:String x:Key="AxisStateViewReduceScan">-Scan</sys:String>
+    <sys:String x:Key="AxisStateViewAddScan">+Scan</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="AxisStateViewOffline">离线状态，设备未连接！</sys:String>
+    <sys:String x:Key="AxisStateViewNotEnabled">未上使能</sys:String>
+    <sys:String x:Key="AxisStateViewSetSpeed">速度为0，请先设置速度</sys:String>
+    <sys:String x:Key="AxisStateViewStepIsZero">步进为0，轴无法移动！</sys:String>
+
+    <!--UIControl-SingleAxisController -->
+    <sys:String x:Key="SingleAxisControllerVelocity">速度</sys:String>
+
+    <!--UIControl-CameraBaseView -->
+    <sys:String x:Key="CameraBaseViewShowDoubleLines">显示双线</sys:String>
+
+    <!--UIControl-Generic -->
+    <sys:String x:Key="GenericYAxisPointCurve">Y轴点位曲线</sys:String>
+    <sys:String x:Key="GenericCurrentWavelength">当前波长</sys:String>
+    <sys:String x:Key="GenericIsHome">是否归零</sys:String>
+    <sys:String x:Key="GenericNo">否</sys:String>
+
+    <sys:String x:Key="CountConverterChannel">通道</sys:String>
+
+    <!--UIControl-HammerView -->
+    <sys:String x:Key="HammerViewHammerControl">击锤控制</sys:String>
+
+    <!--UIControl-HammerView -->
+    <sys:String x:Key="HammerViewHammer1Voltage">击锤1电压</sys:String>
+    <sys:String x:Key="HammerViewHammer2Voltage">击锤2电压</sys:String>
+    <sys:String x:Key="HammerViewRead">读取</sys:String>
+    <sys:String x:Key="HammerViewSetup">设置</sys:String>
+    <sys:String x:Key="HammerViewStart">开始</sys:String>
+    <sys:String x:Key="HammerViewStop">停止</sys:String>
+
+    <!--UIControl-BoolIOView -->
+    <sys:String x:Key="BoolIOViewIOQuantityControl">IO量控制</sys:String>
+
+    <!--UIControl-BoolUmacIO -->
+    <sys:String x:Key="BoolUmacIOOn">开</sys:String>
+    <sys:String x:Key="BoolUmacIOOff">关</sys:String>
+
+    <!--UIControl- FloatIOView -->
+    <sys:String x:Key="FloatIOViewInputValue">输入值</sys:String>
+    <sys:String x:Key="FloatIOViewSetup">设置</sys:String>
+
+    <!--UIControl- IntIOView -->
+    <sys:String x:Key="IntIOViewInputValue">输入值</sys:String>
+    <sys:String x:Key="IntIOViewSetup">设置</sys:String>
+
+    <!--UIControl- IOPanel -->
+    <sys:String x:Key="IOPanelLineMarked">线标</sys:String>
+    <sys:String x:Key="IOPanelComment">描述</sys:String>
+    <sys:String x:Key="IOPanelState">状态</sys:String>
+
+    <!--UIControl- IOView -->
+    <sys:String x:Key="IOViewFilterGroup">筛选组别</sys:String>
+    <sys:String x:Key="IOViewState">状态</sys:String>
+    <sys:String x:Key="IOViewName">名称</sys:String>
+    <sys:String x:Key="IOViewLineMarked">线标</sys:String>
+    <sys:String x:Key="IOViewType">类别</sys:String>
+    <sys:String x:Key="IOViewNotes">注释</sys:String>
+
+    <!--UIControl-BoolParam -->
+    <sys:String x:Key="BoolParamOn">开</sys:String>
+    <sys:String x:Key="BoolParamOff">关</sys:String>
+
+    <!--UIControl-DoubleDualPower -->
+    <sys:String x:Key="DoubleDualPowerSend">发送</sys:String>
+
+    <!--UIControl-EnumParam -->
+    <sys:String x:Key="EnumParamControlMode">控制模型</sys:String>
+
+    <!--UIControl-LaserControllorManualOperation -->
+    <sys:String x:Key="LaserControllorManualOperationLaser">激光</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationLaserShutter">光闸</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationSetupPower">设置功率</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationMeasurementPosition">测量位置</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationSetupMeasurementPosition">设定测量位置</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationMoveToMeasurementPosition">移动至测量位置</sys:String>
+
+    <!--UIControl-LaserView -->
+    <sys:String x:Key="LaserViewCount">数量</sys:String>
+    <sys:String x:Key="LaserViewSerial">串口号</sys:String>
+    <sys:String x:Key="LaserViewConnect">连接</sys:String>
+    <sys:String x:Key="LaserViewDisConnect">断开连接</sys:String>
+
+    <!--UIControl-OpcUnitView -->
+    <sys:String x:Key="OpcUnitViewPower">功率[W]</sys:String>
+    <sys:String x:Key="OpcUnitViewEnergy">能量[J]</sys:String>
+    <sys:String x:Key="OpcUnitViewReset">重置</sys:String>
+
+    <!--UIControl-OpcView -->
+    <sys:String x:Key="OpcViewLasterList">激光器集合</sys:String>
+    <sys:String x:Key="OpcViewErrorInfo">错误信息</sys:String>
+
+    <!--UIControl-PWMPower -->
+    <sys:String x:Key="PWMPowerPEC">PEC(%)</sys:String>
+    <sys:String x:Key="PWMPowerControlMode">控制模型</sys:String>
+    <sys:String x:Key="PWMPowerDutyWidth">工作区宽度(%)</sys:String>
+    <sys:String x:Key="PWMPowerSend">发送</sys:String>
+
+    <!--UIControl-LighterView -->
+    <sys:String x:Key="LighterViewName">名称</sys:String>
+    <sys:String x:Key="LighterViewChannel">通道</sys:String>
+    <sys:String x:Key="LighterViewState">状态</sys:String>
+    <sys:String x:Key="LighterViewBrightness">亮度</sys:String>
+    <sys:String x:Key="LighterViewInputValue">输入值</sys:String>
+    <sys:String x:Key="LighterViewSetup">设置</sys:String>
+    <sys:String x:Key="LighterViewPrePage">上一页</sys:String>
+    <sys:String x:Key="LighterViewNextPage">下一页</sys:String>
+
+    <!--UIControl-InitView -->
+    <sys:String x:Key="InitViewAxis">轴</sys:String>
+    <sys:String x:Key="InitViewPosition">位置(mm)</sys:String>
+    <sys:String x:Key="InitViewEnable">使能</sys:String>
+    <sys:String x:Key="InitViewHomeFinished">回零完成</sys:String>
+    <sys:String x:Key="InitViewNegLimit">负极限</sys:String>
+    <sys:String x:Key="InitViewPosLimit">正极限</sys:String>
+    <sys:String x:Key="InitViewSingleAxisControl">单轴控制</sys:String>
+    <sys:String x:Key="InitViewServerOn">开服务</sys:String>
+    <sys:String x:Key="InitViewServerOff">关服务</sys:String>
+    <sys:String x:Key="InitViewStop">停止</sys:String>
+    <sys:String x:Key="InitViewHome">回零</sys:String>
+    <sys:String x:Key="InitViewInchingMove">寸动（mm）</sys:String>
+    <sys:String x:Key="InitViewReduceJog">Jog -</sys:String>
+    <sys:String x:Key="InitViewAddJog">Jog +</sys:String>
+    <sys:String x:Key="InitViewParaSetup">参数设置</sys:String>
+    <sys:String x:Key="InitViewVelocityUnits">速度(mm/s)</sys:String>
+    <sys:String x:Key="InitViewAccelerationUnits">加速度(mm/s²)</sys:String>
+    <sys:String x:Key="InitViewJerkUnits">加加速度(mm/s³)</sys:String>
+    <sys:String x:Key="InitViewDecelerationUnits">减速度(mm/s²)</sys:String>
+    <sys:String x:Key="InitViewAbsoluteRelative">绝对相对运动(mm)</sys:String>
+    <sys:String x:Key="InitViewAbsolute">绝对运动</sys:String>
+    <sys:String x:Key="InitViewRelative">相对运动</sys:String>
+    <sys:String x:Key="InitViewRun">运行</sys:String>
+    <sys:String x:Key="InitViewMultiAxisControl">多轴控制</sys:String>
+    <sys:String x:Key="InitViewAllServerOn">所有服务开启</sys:String>
+    <sys:String x:Key="InitViewAllServerOff">所有服务关闭</sys:String>
+
+    <!--UIControl-ManualControlView -->
+    <sys:String x:Key="ManualControlViewPositionAxis">位置轴</sys:String>
+    <sys:String x:Key="ManualControlViewVelocityAxis">速度轴</sys:String>
+    <sys:String x:Key="ManualControlViewParameter">参数</sys:String>
+
+    <!--UIControl-MotionParameterView -->
+    <sys:String x:Key="MotionParameterViewAxisName">轴名称</sys:String>
+    <sys:String x:Key="MotionParameterViewAcceleration">加速度</sys:String>
+    <sys:String x:Key="MotionParameterViewDeceleration">减速度</sys:String>
+    <sys:String x:Key="MotionParameterViewJerk">加加速度</sys:String>
+    <sys:String x:Key="MotionParameterViewSpeed">步进</sys:String>
+    <sys:String x:Key="MotionParameterViewHomeSpeed">回零步进</sys:String>
+    <sys:String x:Key="MotionParameterViewOneKeyToSetTheSpeed">一键设置速度</sys:String>
+    
+    <!--UIControl-VelAxisView -->
+    <sys:String x:Key="VelAxisViewAxis">轴</sys:String>
+    <sys:String x:Key="VelAxisViewVelocity">速度</sys:String>
+    <sys:String x:Key="VelAxisViewEnable">使能</sys:String>
+    <sys:String x:Key="VelAxisViewHomeFinished">回零完成</sys:String>
+    <sys:String x:Key="VelAxisViewNegLimit">负极限</sys:String>
+    <sys:String x:Key="VelAxisViewPosLimit">正极限</sys:String>
+    <sys:String x:Key="VelAxisViewSingleAxisControl">单轴控制</sys:String>
+    <sys:String x:Key="VelAxisViewServerOn">开服务</sys:String>
+    <sys:String x:Key="VelAxisViewServerOff">关服务</sys:String>
+    <sys:String x:Key="VelAxisViewStop">停止</sys:String>
+    <sys:String x:Key="VelAxisViewHome">回零</sys:String>
+    <sys:String x:Key="VelAxisViewInchingMove">寸动（mm）</sys:String>
+    <sys:String x:Key="VelAxisViewReduceJog">Jog -</sys:String>
+    <sys:String x:Key="VelAxisViewAddJog">Jog +</sys:String>
+    <sys:String x:Key="VelAxisViewParaSetup">参数设置</sys:String>
+    <sys:String x:Key="VelAxisViewVelocityUnits">速度(mm/s)</sys:String>
+    <sys:String x:Key="VelAxisViewAccelerationUnits">加速度(mm/s²)</sys:String>
+    <sys:String x:Key="VelAxisViewJerkUnits">加加速度(mm/s³)</sys:String>
+    <sys:String x:Key="VelAxisViewSnapUnits">Snap(mm/s⁴)</sys:String>
+    <sys:String x:Key="VelAxisViewDecelerationUnits">减速度(mm/s²)</sys:String>
+    <sys:String x:Key="VelAxisViewAbsoluteRelative">绝对相对运动(mm)</sys:String>
+    <sys:String x:Key="VelAxisViewAbsoluteVelocity">绝对速度</sys:String>
+    <sys:String x:Key="VelAxisViewRelativeVelocity">相对速度</sys:String>
+    <sys:String x:Key="VelAxisViewRun">运行</sys:String>
+    <sys:String x:Key="VelAxisViewBackAndForthMove">往返运动（mm）</sys:String>
+    <sys:String x:Key="VelAxisViewStart">开始</sys:String>
+    <sys:String x:Key="VelAxisViewEnd">结束</sys:String>
+    <sys:String x:Key="VelAxisViewMultiAxisControl">多轴控制</sys:String>
+    <sys:String x:Key="VelAxisViewAllServerOn">所有服务开启</sys:String>
+    <sys:String x:Key="VelAxisViewAllServerOff">所有服务关闭</sys:String>
+    <sys:String x:Key="VelAxisViewAllHome">所有回零</sys:String>
+    <sys:String x:Key="VelAxisViewAllStop">所有停止</sys:String>
+
+    <!--UIControl-CameraAxisControl -->
+    <sys:String x:Key="CameraAxisControlExposureGain">曝光/增益</sys:String>
+    <sys:String x:Key="CameraAxisControlLightSourceSelection">光源选择</sys:String>
+    <sys:String x:Key="CameraAxisControlExposureShowDoubleLines">显示双线</sys:String>
+    <sys:String x:Key="CameraAxisControlExposure">曝光</sys:String>
+    <sys:String x:Key="CameraAxisControlGain">增益</sys:String>
+    <sys:String x:Key="CameraAxisControlContinuousAcquisition">连续采集</sys:String>
+
+    <!--UIControl-CameraAxisControlEvolutionA -->
+    <sys:String x:Key="CameraAxisControlEvolutionAExposure">曝光</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAGain">增益</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAContinuousAcquisition">连续采集</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAShowDoubleLines">显示双线</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionABaselineZoomOut">基准线缩小</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionABaselineExpansion">基准线扩大</sys:String>
+
+    <!--UIControl-ImageViewer -->
+    <sys:String x:Key="ImageViewerAddMark">标记Mark</sys:String>
+    <sys:String x:Key="ImageViewerAppMark">应用Mark</sys:String>
+    <sys:String x:Key="ImageViewerDeleteLastMark">清除上次Mark</sys:String>
+    <sys:String x:Key="ImageViewerLineMeasure">直线测量</sys:String>
+    <sys:String x:Key="ImageViewerClearROI">清除ROI</sys:String>
+    <sys:String x:Key="ImageViewerOpen">打开</sys:String>
+    <sys:String x:Key="ImageViewerSave">保存</sys:String>
+    <sys:String x:Key="ImageViewerClear">清空</sys:String>
+    <sys:String x:Key="ImageViewerRectangle1">矩形1</sys:String>
+    <sys:String x:Key="ImageViewerRectangle2">矩形2</sys:String>
+    <sys:String x:Key="ImageViewerCircle">圆</sys:String>
+    <sys:String x:Key="ImageViewerEllipse">椭圆</sys:String>
+    <sys:String x:Key="ImageViewerLine">直线</sys:String>
+    <sys:String x:Key="ImageViewerDelete">删除</sys:String>
+
+    <!--UIControl-Tips -->
+    <sys:String x:Key="VelAxisViewExceedingLimit">超出限位</sys:String>
+    <sys:String x:Key="VelAxisViewOffline">离线状态，设备未连接！</sys:String>
+    <sys:String x:Key="VelAxisViewNotEnabled">未上使能</sys:String>
+    <sys:String x:Key="VelAxisViewHomeUnFinished">回零未完成</sys:String>
+    <sys:String x:Key="VelAxisViewNegLimitUnFinished">负极限未完成</sys:String>
+    <sys:String x:Key="VelAxisViewPosLimitUnFinished">正极限未完成</sys:String>
+
+    <!--UIControl-SlitControllerView -->
+    <sys:String x:Key="SlitControllerViewTitle">狭缝控制器</sys:String>
+    <sys:String x:Key="SlitControllerViewPort">狭缝端口</sys:String>
+    <sys:String x:Key="SlitControllerViewContent">连接</sys:String>
+    <sys:String x:Key="SlitControllerViewSize">大小</sys:String>
+    <sys:String x:Key="SlitControllerViewXmicron">X（微米）</sys:String>
+    <sys:String x:Key="SlitControllerViewYmicron">Y（微米）</sys:String>
+    <sys:String x:Key="SlitControllerViewSetup">设置</sys:String>
+    <sys:String x:Key="SlitControllerViewSlitAngle">狭缝角度</sys:String>
+    <sys:String x:Key="SlitControllerViewCurrentAngle">当前角度</sys:String>
+    <sys:String x:Key="SlitControllerViewUpdate">更新</sys:String>
+    <sys:String x:Key="SlitControllerViewTargetAngle">目标角度(-45~45度)</sys:String>
+
+    <!--BoxCalibrate-Tip-->
+    <sys:String x:Key="ApproachCenterTaskCameraNotStarted">相机未启动！</sys:String>
+    <sys:String x:Key="ApproachCenterTaskTip">提示</sys:String>
+
+    <!--BoxCalibrate-BoxCalibrateView-->
+    <sys:String x:Key="BoxCalibrateViewHeader">参数设定</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxXLength">Box X长度</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxYLength">Box Y长度</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxInterval">Box间隔</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkZAxis">打标Z轴</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStep1">【第一步】调整打标位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCrossLength">十字长度(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCameraZAxis">相机Z轴(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCurrentLocation">当前位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewVisualCenterX">视觉中心X(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewVisualCenterY">视觉中心Y(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkPositionX">打标位置X(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkPositionY">打标位置Y(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToMarkPosition">移到打标位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToVisualCenter">移到视觉中心</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCrossMark">十字打标</sys:String>
+    <sys:String x:Key="BoxCalibrateViewAdjustMarkPosition">调整打标位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStep2">【第二步】校正</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartPointX">起点X(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartPointY">起点Y(mm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxMark">Box打标</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCalculateStartPoint">计算起点</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToStartPoint">移到起点</sys:String>
+    <sys:String x:Key="BoxCalibrateViewApproximationThreshold">逼近阈值(μm)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewAccuracyError">精度误差</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartMark">开始标定</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStopMark">停止标定</sys:String>
+    <sys:String x:Key="BoxCalibrateViewImportGalvanometer">导入振镜</sys:String>
+    <sys:String x:Key="BoxCalibrateViewClearData">清除数据</sys:String>
+    <sys:String x:Key="BoxCalibrateViewReadData">读取数据</sys:String>
+    <sys:String x:Key="BoxCalibrateViewSaveData">保存数据</sys:String>
+
+    <!--BoxCalibrate-ScannerRelationCalibrateView-->
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvanometerFusionCalibration">振镜融合标定</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewStep1">【第一步】单轴标定</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewTargetRows">目标行数</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewTargetColumns">目标列数</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPitch">点间距(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCameraZAxis">相机Z轴(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPixelX">像素X</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPixelY">像素Y</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealX">真值X</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealY">真值Y</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCenterRealX">中心真值X</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCenterRealY">中心真值Y</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCameraY">相机Y</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealXAxisForward">真值X轴正向</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealYAxisForward">真值Y轴正向</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealXYExchange">真值XY轴交换</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewAddRows">添加行</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewDeleteRows">删除行</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCalculationRelationship">计算关系</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMoveToPhotoPosition">移到拍照位</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewStep2">【第二步】振镜融合</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxLength">Box长度(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxInterval">Box间隔(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewLaserPower">激光功率(%)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMarkZAxis">打标Z轴(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPhotoPositionX">拍照位置X(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPhotoPositionY">拍照位置Y(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMoveToProcessPosition">移到加工位</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvCenterXOffset">振镜中心X偏移(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvCenterYOffset">振镜中心Y偏移(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewOffsetZeroing">偏移清零</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCrossMark">十字打标</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCalculateCenterOffset">计算中心偏移</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxMark">Box打标</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewClearData">清除数据</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewReadData">读取数据</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-CameraDistortionCalibControl-->
+    <sys:String x:Key="CameraDistortionCalibControlCameraDistortionCalibration">相机畸变标定</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep1">【第一步】文件路径设置</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlImagePath">图像路径</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadImage">加载图片</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlRepresentFilePath">描述文件路径</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadRepresentFile">加载描述文件</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep2">【第二步】校正参数设置</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlType">类型</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLensFocalLength">镜头焦长</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlDistortionParameters">畸变参数</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep3">【第三步】标定计算</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlCalibrationDistortion">标定畸变</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep4">【第四步】标定验证</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadCorrectionImage">加载校正图像</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlCorrectingImage">校正图像</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-CameraParaCalibControl-->
+    <sys:String x:Key="CameraParaCalibControlCameraParameterCalibration">相机参数标定</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep1">【第一步】标定板选择</sys:String>
+    <sys:String x:Key="CameraParaCalibControlPlaceCalibrationBoard">把所选标定板放置到相机下方</sys:String>
+    <sys:String x:Key="CameraParaCalibControlType1">型号######</sys:String>
+    <sys:String x:Key="CameraParaCalibControlType2">型号*****</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep2">【第二步】角度标定</sys:String>
+    <sys:String x:Key="CameraParaCalibControlMeasuredSpacing">测量间距</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalculateAngle">计算角度</sys:String>
+    <sys:String x:Key="CameraParaCalibControlAngleToX">与X角度</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep3">【第三步】像素比标定</sys:String>
+    <sys:String x:Key="CameraParaCalibControlXDirectionSpacing">X方向间距</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalibrationX">标定X</sys:String>
+    <sys:String x:Key="CameraParaCalibControlXDirectionResolution">X方向分辨率</sys:String>
+    <sys:String x:Key="CameraParaCalibControlYDirectionSpacing">Y方向间距</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalibrationY">标定Y</sys:String>
+    <sys:String x:Key="CameraParaCalibControlYDirectionResolution">Y方向分辨率</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep4">【第四步】标定验证</sys:String>
+    <sys:String x:Key="CameraParaCalibControlIdentifyAndAlignCenters">识别并对齐中心</sys:String>
+    <sys:String x:Key="CameraParaCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="CameraParaCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="CameraParaCalibControlSaveData">保存数据</sys:String>
+    <sys:String x:Key="CameraParaCalibControlPictureSize">图片尺寸</sys:String>
+    <sys:String x:Key="CameraParaCalibControlDrawingSizeHigh">采图尺寸-高</sys:String>
+	
+    <!--SystemCalib-CameraRelationCalibControl-->
+    <sys:String x:Key="CameraRelationCalibControlStep1">【第一步】采集标定板坐标</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFirstPoint">确定第一个点①</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlAlignCenter">对齐中心</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlGetCurrentValue">获取当前值</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineSecondPoint">确定第二个点②</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineThirdPoint">确定第三个点③</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFourthPoint">确定第四个点④</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFifthPoint">确定第五个点⑤</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlStep2">【第二步】计算关系</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCalculate">计算</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlClear">清除</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlStep3">【第三步】验证关系</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlThickCameraRulerX">粗相机ruler_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlPrecisionCameraRulerX">精相机ruler_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlThickCameraRulerY">粗相机ruler_Y</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlPrecisionCameraRulerY">精相机ruler_Y</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlSaveData">保存数据</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCameraRelationshipCalibration">相机关系标定</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRulerX">中心点ruler_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRulerY">中心点ruler_Y</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRealX">中心点real_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRealY">中心点real_Y</sys:String>
+	
+    <!--SystemCalib-LargeFieldCameraCalibControl-->
+    <sys:String x:Key="LargeFieldCameraCalibControlWideAngleCalibration">广角标定</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1">第1点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4">第4点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5">第5点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2">第2点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3">第3点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1CoordinateX">1点坐标X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1CoordinateY">1点坐标Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2CoordinateX">2点坐标X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2CoordinateY">2点坐标Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3CoordinateX">3点坐标X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3CoordinateY">3点坐标Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4CoordinateX">4点坐标X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4CoordinateY">4点坐标Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5CoordinateX">5点坐标X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5CoordinateY">5点坐标Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlStep1">【第一步】广角相机像素坐标</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlObtainPixelCoordinateValues">获取像素坐标值</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1WideAnglePixelX">1点广角像素X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1WideAnglePixelY">1点广角像素Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2WideAnglePixelX">2点广角像素X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2WideAnglePixelY">2点广角像素Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3WideAnglePixelX">3点广角像素X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3WideAnglePixelY">3点广角像素Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4WideAnglePixelX">4点广角像素X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4WideAnglePixelY">4点广角像素Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5WideAnglePixelX">5点广角像素X</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5WideAnglePixelY">5点广角像素Y</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlStep3">【第三步】计算标定</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlCalculateCalibration">计算标定</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-LargeFieldLinkerCalibControl-->
+    <sys:String x:Key="LargeFieldLinkerCalibControlRotationCenterCalibration">旋转中心标定</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep1">【第一步】相机点位设置</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint1">确定第一个点①</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlAlignCenter">对齐中心</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlGetCurrentValue">获取当前值</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint2">确定第二个点②</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint3">确定第三个点③</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint4">确定第四个点④</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint5">确定第五个点⑤</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep2">【第二步】数据采集</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint1RealValue">第一个点real值①</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint2RealValue">第二个点real值②</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint3RealValue">第三个点real值③</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint4RealValue">第四个点real值④</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint5RealValue">第五个点real值⑤</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep3">【第三步】标定计算</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlCalculate">计算</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-MotionSysCalibControl-->
+    <sys:String x:Key="MotionSysCalibControlMoveCalib">运动系标定</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep1">【第一步】标定板调平</sys:String>
+    <sys:String x:Key="MotionSysCalibControlXInterval">X间隔</sys:String>
+    <sys:String x:Key="MotionSysCalibControlClockwiseIsPositive">顺时针为正</sys:String>
+    <sys:String x:Key="MotionSysCalibControlLevelingX">调平X</sys:String>
+    <sys:String x:Key="MotionSysCalibControlAngleInXDirection">X方向角度(°)</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep2">【第二步】标定设置</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartPointX">起点X</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartPointY">起点Y</sys:String>
+    <sys:String x:Key="MotionSysCalibControlMoveToStartPoint">移动到起点</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRealValueX">真值X</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRealValueY">真值Y</sys:String>
+    <sys:String x:Key="MotionSysCalibControlSetStartPoint">设定起点</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRows">行数</sys:String>
+    <sys:String x:Key="MotionSysCalibControlColumns">列数</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep">步长</sys:String>
+    <sys:String x:Key="MotionSysCalibControlCameraHeight">相机高度</sys:String>
+    <sys:String x:Key="MotionSysCalibControlThreshold">阈值</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep3">【第三步】执行标定</sys:String>
+    <sys:String x:Key="MotionSysCalibControlIsCalibrated">是否标定</sys:String>
+    <sys:String x:Key="MotionSysCalibControlIsVerify">是否验证</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartExecution">开始执行</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStopExecution">停止执行</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep4">【第四步】查看验证结果</sys:String>
+    <sys:String x:Key="MotionSysCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="MotionSysCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="MotionSysCalibControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-RepetitivenessValidateControl-->
+    <sys:String x:Key="RepetitivenessValidateControlRepeatabilityVerification">重复性验证</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep1">【第一步】参数设置</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlRows">行数</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep">步长(mm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlColumns">列数</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlTimes">次数</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlSpeed">速度(mm/s)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlCameraHeight">相机高度(mm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep2">【第二步】执行验证</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStartCollection">开始采集</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStopCollection">停止采集</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep3">【第三步】测量结果</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlMaximumDistanceDeviation">最大距离偏差(µm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlClearData">清除数据</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlReadData">读取数据</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-RotateCenterCalibControl-->
+    <sys:String x:Key="RotateCenterCalibControlRotationCenterCalibration">旋转中心标定</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep1">【第一步】起始位置设置</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlInitialAngle">初始角度(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlSetInitialAngle">设定初始角度</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationInterval">旋转间隔(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep2">【第二步】数据采集</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlInitialAngle1">起始角度①</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlAlignCenter">对齐中心</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlControlMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle2">旋转角度②</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle3">旋转角度③</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle4">旋转角度④</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle5">旋转角度⑤</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep3">【第三步】标定计算</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationCenterX">旋转中心X</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationCenterY">旋转中心Y</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCalculate">计算</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep4">【第四步】标定验证</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCalculateCurrentRealValue">计算当前真值</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle">旋转角度(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlClockwiseIsPositive">顺时针为正</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationVerification">旋转验证</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotateToPosition">旋转到位置</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlClearData">清除数据</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlReadData">读取数据</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-RotateCenterSimpleControl-->
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterCalibration">旋转中心标定</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep1">【第一步】起始位置设置</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlIsRotatingPositive">是否正向旋转</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlClockwiseIsPositive">顺时针为正</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlIsProductCalibrated">是否产品标定</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationAngle">旋转角度(°)</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep2">【第二步】数据采集</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSetPoint1">设定第一点</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlAlignCenter">对齐中心</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotate">旋转</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSetPoint2">设定第二点</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep3">【第三步】标定计算</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCalculate">计算</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterReal">旋转中心real</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterRuler">旋转中心ruler</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep4">【第四步】标定验证</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCalculateCurrentRealValue">计算当前真值</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationVerification">旋转验证</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotateToPosition">旋转到位置</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlClearData">清除数据</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlReadData">读取数据</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSaveData">保存数据</sys:String>
+
+    <!--SystemCalib-StraightnessValidateControl-->
+    <sys:String x:Key="StraightnessValidateControlStraightnessVerification">直线度验证</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep1">【第一步】参数设置</sys:String>
+    <sys:String x:Key="StraightnessValidateControlRows">行数</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep">步长</sys:String>
+    <sys:String x:Key="StraightnessValidateControlColumns">列数</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStepUnit">步长(mm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlTimes">次数</sys:String>
+    <sys:String x:Key="StraightnessValidateControlSpeed">速度(mm/s)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlCameraHeight">相机高度(mm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep2">【第二步】执行验证</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStartCollection">开始采集</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStopCollection">停止采集</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep3">【第三步】测量结果</sys:String>
+    <sys:String x:Key="StraightnessValidateControlMeanDeviation">平均偏差(µm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlMaxDeviation">最大偏差(µm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlClearData">清除数据</sys:String>
+    <sys:String x:Key="StraightnessValidateControlReadData">读取数据</sys:String>
+    <sys:String x:Key="StraightnessValidateControlSaveData">保存数据</sys:String>
+
+    <!--PowerCalibComponent-AdjustParamentWindow-->
+    <sys:String x:Key="AdjustParamentWindowTitle">功率校正配置</sys:String>
+    <sys:String x:Key="AdjustParamentWindowChannel">通道</sys:String>
+    <sys:String x:Key="AdjustParamentWindowFrequency">频率</sys:String>
+    <sys:String x:Key="AdjustParamentWindowPulse">脉冲</sys:String>
+    <sys:String x:Key="AdjustParamentWindowStabilityTime">稳定时间（S）</sys:String>
+    <sys:String x:Key="AdjustParamentWindowSampleTime">采样时间（S）</sys:String>
+    <sys:String x:Key="AdjustParamentWindowDataProcessingTime">数据处理时间</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterResolution">测量参数分辨率</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterStartValue">测量参数起始值</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterEndValue">测量参数结束值</sys:String>
+    <sys:String x:Key="AdjustParamentWindowAddLayer">添加层</sys:String>
+    <sys:String x:Key="AdjustParamentWindowDeleteSelectedLayer">删除所选层</sys:String>
+
+    <!--PowerCalibComponent-AutoWaveLine-->
+    <sys:String x:Key="AutoWaveLineRealTimePower">实时功率</sys:String>
+    <sys:String x:Key="AutoWaveLineCurrentWavelength">当前波长</sys:String>
+    <sys:String x:Key="AutoWaveLineZeroOrNot">是否归零</sys:String>
+    <sys:String x:Key="AutoWaveLineNo">否</sys:String>
+
+    <!--PowerCalibComponent-HistoryDataView-->
+    <sys:String x:Key="HistoryDataViewTestData">测试数据</sys:String>
+    <sys:String x:Key="HistoryDataViewSerialNumber">序号</sys:String>
+    <sys:String x:Key="HistoryDataViewMeasurementParameters">测量参数</sys:String>
+    <sys:String x:Key="HistoryDataViewRealPower">实际功率(W)</sys:String>
+    <sys:String x:Key="HistoryDataViewHistoryData">历史数据</sys:String>
+    <sys:String x:Key="HistoryDataViewApplySelectedItems">应用选中项</sys:String>
+    <sys:String x:Key="HistoryDataViewDeleteSelectedItems">删除选中项</sys:String>
+    <sys:String x:Key="HistoryDataViewTestDate">测试日期</sys:String>
+    <sys:String x:Key="HistoryDataViewChannel">通道</sys:String>
+    <sys:String x:Key="HistoryDataViewFrequency">频率(HZ)</sys:String>
+    <sys:String x:Key="HistoryDataViewPulse">脉冲</sys:String>
+    <sys:String x:Key="HistoryDataViewStabilityTime">稳定时间(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewSampleTime">采样时间(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewProcessingTime">处理时间(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterMIN">参数MIN</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterMAX">参数MAX</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterResolution">参数分辨率</sys:String>
+    <sys:String x:Key="HistoryDataViewFittingAlgorithm">拟合算法</sys:String>
+
+    <!--PowerCalibComponent-LaserParamsetView-->
+    <sys:String x:Key="LaserParamsetViewPowerW">功率(W)</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerHZ">功率(HZ)</sys:String>
+    <sys:String x:Key="LaserParamsetViewSetup">设置</sys:String>
+
+    <!--PowerCalibComponent-LaserPowerCheckView-->
+    <sys:String x:Key="LaserPowerCheckViewFrequency">频率(KHZ))</sys:String>
+    <sys:String x:Key="LaserPowerCheckViewSetup">设置</sys:String>
+    <sys:String x:Key="LaserPowerCheckViewPulse">脉冲</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerAW">功率A(w)</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerBW">功率B(w)</sys:String>
+    <sys:String x:Key="LaserParamsetViewCheckRealPower">点检</sys:String>
+    <sys:String x:Key="LaserParamsetViewCheckRealPowerAlgorithm">点检算法</sys:String>
+
+    <!--PowerCalibComponent-PowerCheck-->
+    <sys:String x:Key="PowerCheckPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerCheckTip">提示</sys:String>
+    <sys:String x:Key="PowerCheckPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+    <sys:String x:Key="PowerCheckMeasurementDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerCheckMeasurementDeviceException">功率计设备异常</sys:String>
+    <sys:String x:Key="PowerCheckDeviceStateError">检查硬件状态报错</sys:String>
+    <sys:String x:Key="PowerCheckDeviceCollectionFailed">功率计设备开始采集失败</sys:String>
+
+    <!--PowerCalibComponent-PowerAdjustView-->
+    <sys:String x:Key="PowerAdjustViewParaInputSetup">输入参数设置</sys:String>
+    <sys:String x:Key="PowerAdjustViewPowerMeasurement">功率测量</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep1">【第1步】运动到测量位置</sys:String>
+    <sys:String x:Key="PowerAdjustViewAxisXYZ">轴(XYZ)</sys:String>
+    <sys:String x:Key="PowerAdjustViewPositionCorrection">位置校正</sys:String>
+    <sys:String x:Key="PowerAdjustViewMoveInPosition">运动到位</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep2">【第2步】设置测量参数</sys:String>
+    <sys:String x:Key="PowerAdjustViewStabilizeTime">功率稳定时间(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewSampleTime">采样时间(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewDataProcessTime">数据处理时间(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameterResolution">测量参数分辨率</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameterRange">测量参数范围</sys:String>
+    <sys:String x:Key="PowerAdjustViewLaserMaxPower">激光器最大功率</sys:String>
+    <sys:String x:Key="PowerAdjustViewPaddleCorrection">拨片校正</sys:String>
+    <sys:String x:Key="PowerAdjustViewChannel">通道</sys:String>
+    <sys:String x:Key="PowerAdjustViewFrequency">频率(HZ)</sys:String>
+    <sys:String x:Key="PowerAdjustViewPulse">脉冲</sys:String>
+    <sys:String x:Key="PowerAdjustViewMultipleCorrections">多次校正</sys:String>
+    <sys:String x:Key="PowerAdjustViewCorrectionsSetup">校正设置</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep3">【第3步】执行测量过程</sys:String>
+    <sys:String x:Key="PowerAdjustViewStart">开始</sys:String>
+    <sys:String x:Key="PowerAdjustViewStop">停止</sys:String>
+    <sys:String x:Key="PowerAdjustViewHistory">历史查询</sys:String>
+    <sys:String x:Key="PowerAdjustViewIndex">序号</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameter">测量参数</sys:String>
+    <sys:String x:Key="PowerAdjustViewRealPower">实际功率(W)</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep4">【第4步】功率换算</sys:String>
+    <sys:String x:Key="PowerAdjustViewCalc">计算</sys:String>
+    <sys:String x:Key="PowerMeterAxisControlTestControl">测试变量控制</sys:String>
+
+    <!--PowerCalibComponent-PowerMeterControl-->
+    <sys:String x:Key="PowerMeterControlPowerMeter">功率计</sys:String>
+    <sys:String x:Key="PowerMeterControlSerial">串口</sys:String>
+    <sys:String x:Key="PowerMeterControlWavelength">波长(nm)</sys:String>
+    <sys:String x:Key="PowerMeterControlSetup">设置</sys:String>
+    <sys:String x:Key="PowerMeterControlStart">开始</sys:String>
+    <sys:String x:Key="PowerMeterControlHome">归零</sys:String>
+
+    <!--PowerCalibComponent-PowerMeasurementView-->
+    <sys:String x:Key="PowerMeasurementViewRealCurve">实时曲线</sys:String>
+    <sys:String x:Key="PowerMeasurementViewUsing">启用</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementItem">测量项</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementTarget">测量目标</sys:String>
+    <sys:String x:Key="PowerMeasurementViewPowerMeter">功率计</sys:String>
+    <sys:String x:Key="PowerMeasurementViewSerial">串口</sys:String>
+    <sys:String x:Key="PowerMeasurementViewWavelength">波长(nm)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewPositionCorrection">位置校正</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMoveInPosition">运动到位</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStart">开始</sys:String>
+    <sys:String x:Key="PowerMeasurementViewHome">归零</sys:String>
+    <sys:String x:Key="PowerMeasurementViewInitSetup">初始化设置</sys:String>
+    <sys:String x:Key="PowerMeasurementViewInputVariables">输入变量</sys:String>
+    <sys:String x:Key="PowerMeasurementViewRange">范围</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStep">步长</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementParameter">测量参数</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStartMeasurement">开始测量</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStabilizeTime">功率稳定时间(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewSampleTime">采样时间(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewDataProcessTime">数据处理时间(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStop">停止</sys:String>
+    <sys:String x:Key="PowerMeasurementViewThisResult">本次结果</sys:String>
+    <sys:String x:Key="PowerMeasurementViewHistory">历史查询</sys:String>
+     <sys:String x:Key="PowerMeasurementViewSave">保存</sys:String>
+
+    <!--PowerCalibComponent_LSD-Tip -->
+    <sys:String x:Key="PowerCalibComponentLSDFileDonetExist">文件不存在</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDLagrangeInterpolation">拉格朗日插值</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDLeastSquareMethod">最小二乘法</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDConnectionStatusCheck">连接状态检测</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasurementDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasureDeviceEmpty">测量硬件为空</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasureDeviceException">测量硬件异常</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDDeviceCollectionFailed">功率计设备开始采集失败</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDSetZero">置零</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDNotSetZero">未置零</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDHome">归零</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDStartStatistics">开始统计</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDNoFoundPowerComparisonTable">未找到功率对照表</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDPowerCorrectionPositionException">功率校正位置设置异常</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDParameterSettingError">参数设置错误</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDOutputPower">输出功率</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDTestingParameter">测试参数</sys:String>
+
+    <!--PatternTemplate-CaliperParamView-->
+    <sys:String x:Key="CaliperParamViewCalipersNum">卡尺数量</sys:String>
+    <sys:String x:Key="CaliperParamViewProjectionLength">投影长度</sys:String>
+    <sys:String x:Key="CaliperParamViewIgnoreNum">忽略数量</sys:String>
+    <sys:String x:Key="CaliperParamViewSmoothingFactor">平滑因子</sys:String>
+    <sys:String x:Key="CaliperParamViewSearchLength">搜索长度</sys:String>
+    <sys:String x:Key="CaliperParamViewEdgeThreshold">边缘阈值</sys:String>
+    <sys:String x:Key="CaliperParamViewCalipersScore">卡尺分值</sys:String>
+    <sys:String x:Key="CaliperParamViewSelectEdge">选择边缘</sys:String>
+    <sys:String x:Key="CaliperParamViewEdgeDirection">边缘方向</sys:String>
+    <sys:String x:Key="CaliperParamViewInterpolationAlgorithm">插值算法</sys:String>
+    <sys:String x:Key="CaliperParamViewCatch">抓取</sys:String>
+    <sys:String x:Key="CaliperParamViewApply">应用</sys:String>
+
+    <!--PatternTemplate-PowerMeasureHistoryDataView-->
+    <sys:String x:Key="PowerMeasureHistoryDataViewHistory">历史功率测量数据</sys:String>
+    <sys:String x:Key="PowerMeasureHistoryDataViewApply">应用</sys:String>
+
+    <!--PatternTemplate-CameraImageView-->
+    <sys:String x:Key="CameraImageViewCreateTemplate">创建模板</sys:String>
+    <sys:String x:Key="CameraImageViewTemplateParameter">模板参数</sys:String>
+    <sys:String x:Key="CameraImageViewCalipers">卡尺</sys:String>
+    <sys:String x:Key="CameraImageViewGraphType">图形类型</sys:String>
+    <sys:String x:Key="CameraImageViewTemplateType">模板类型</sys:String>
+    <sys:String x:Key="CameraImageViewOpenTemplate">打开模板</sys:String>
+    <sys:String x:Key="CameraImageViewSaveTemplate">保存模板</sys:String>
+
+    <!--PatternTemplate-CameraObliqueView-->
+    <sys:String x:Key="CameraObliqueViewGraphType">图形类型</sys:String>
+    <sys:String x:Key="CameraObliqueViewSave">保存</sys:String>
+
+    <!--PatternTemplate-CameraVision-->
+    <sys:String x:Key="CameraVisionCreateTemplate">创建模板</sys:String>
+    <sys:String x:Key="CameraVisionMate">匹配</sys:String>
+    <sys:String x:Key="CameraVisionCalipers">卡尺</sys:String>
+    <sys:String x:Key="CameraVisionGraphType">图形类型</sys:String>
+    <sys:String x:Key="CameraVisionTemplateType">模板类型</sys:String>
+    <sys:String x:Key="CameraVisionOpenTemplate">打开模板</sys:String>
+
+    <!--PatternTemplate-TemplateParamView-->
+    <sys:String x:Key="TemplateParamViewStarteAngle">起始角</sys:String>
+    <sys:String x:Key="TemplateParamViewAngleRange">角度范围</sys:String>
+    <sys:String x:Key="TemplateParamViewPyramid">金字塔数</sys:String>
+    <sys:String x:Key="TemplateParamViewNumMatches">最大匹配个数</sys:String>
+    <sys:String x:Key="TemplateParamViewMaxOverlap">最大重叠值</sys:String>
+    <sys:String x:Key="TemplateParamViewMinScore">最小匹配值</sys:String>
+    <sys:String x:Key="TemplateParamViewGreediness">贪婪度</sys:String>
+    <sys:String x:Key="TemplateParamViewSearchAccuracy">搜索精度</sys:String>
+    <sys:String x:Key="TemplateParamViewSaveOriginalTemplateParameters">保存原始模板参数</sys:String>
+    <sys:String x:Key="TemplateParamViewImagePreprocessing">保存原始模板参数</sys:String>
+    <sys:String x:Key="TemplateParamViewMate">匹配</sys:String>
+    <sys:String x:Key="TemplateParamViewOpen">开启</sys:String>
+
+    <!--PatternTemplate-TemplateCreateView-->
+    <sys:String x:Key="TemplateCreateViewStarteAngle">起始角</sys:String>
+    <sys:String x:Key="TemplateCreateViewAngleRange">角度范围</sys:String>
+    <sys:String x:Key="TemplateCreateViewAngleStep">角度步长</sys:String>
+    <sys:String x:Key="TemplateCreateViewAuto">自动</sys:String>
+    <sys:String x:Key="TemplateCreateViewOptimizationAlgorithm">优化算法</sys:String>
+    <sys:String x:Key="TemplateCreateViewMatchingMethod">匹配方法</sys:String>
+    <sys:String x:Key="TemplateCreateViewContrastRatio">对比度</sys:String>
+    <sys:String x:Key="TemplateCreateViewMinContrast">最小对比度</sys:String>
+    <sys:String x:Key="TemplateCreateViewImagePreprocessing">图像预处理</sys:String>
+    <sys:String x:Key="TemplateCreateViewPyramid">金字塔数</sys:String>
+    <sys:String x:Key="TemplateCreateViewOpen">开启</sys:String>
+
+    <!--PatternTemplate-CameraModelViewModel-Tip-->
+    <sys:String x:Key="CameraModelViewModelOpenCameraContinuousAcquisition">请打开相机连续采集</sys:String>
+    <sys:String x:Key="CameraModelViewModelTemplateNotLoad">模板未加载</sys:String>
+    <sys:String x:Key="FailedToOpenTemplatePleaseCheckTheTemplateSavePath">打开模板失败，请检查模板保存路径！</sys:String>
+    <sys:String x:Key="MatchingFailed">匹配失败</sys:String>
+    <sys:String x:Key="MatchingFailedPleaseCheckTheSavePath">匹配失败，请检查模板保存路径！</sys:String>
+    <sys:String x:Key="ROIWithoutSpecifyingATemplateType">未划定Template类型的ROI</sys:String>
+    <sys:String x:Key="UndefinedROI">未划定ROI！</sys:String>
+
+    <!--PatternTemplate-StaticString-Tip-->
+    <sys:String x:Key="StaticStringCalipers">卡尺</sys:String>
+    <sys:String x:Key="CreateTemplate">制作模板</sys:String>
+    <sys:String x:Key="MatchTemplate">匹配参数</sys:String>
+
+    <!--ProductCalib-ProductCalibStepFrameView-->
+    <sys:String x:Key="ProductCalibStepFrameViewSelectTemplate">选择模板</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalibCCD">标定CCD</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewLeveling">调平</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalculateInterval">搜索间距</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewMoveCalib">运动系标定</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalibDataVisual">标定数据检查</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCameraFuseCalib">相机融合标定</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewRotateCenterCalib">旋转中心标定</sys:String>
+
+    <!--ProductCalib-CalculateIntervalView-->
+    <sys:String x:Key="CalculateIntervalViewStep1">【第一步】计算间距</sys:String>
+    <sys:String x:Key="CalculateIntervalViewHorizontalDistance">水平间距(mm)</sys:String>
+    <sys:String x:Key="CalculateIntervalViewSearch">搜索</sys:String>
+    <sys:String x:Key="CalculateIntervalViewVerticalDistance">垂直间距(mm)</sys:String>
+    <sys:String x:Key="CalculateIntervalViewStopSearch">停止搜索</sys:String>
+
+    <!--ProductCalib-CalibDataVisualView-->
+    <sys:String x:Key="CalibDataVisualViewStep1">【第一步】标定数据可视化</sys:String>
+    <sys:String x:Key="CalibDataVisualViewRange">极差(μm)</sys:String>
+    <sys:String x:Key="CalibDataVisualViewStartEndYDeviation">起点终点Y偏差(μm)</sys:String>
+    <sys:String x:Key="CalibDataVisualViewReadData">读取数据</sys:String>
+    <sys:String x:Key="CalibDataVisualViewSaveData">保存数据</sys:String>
+
+    <!--ProductCalib-CalibRunView-->
+    <sys:String x:Key="CalibRunViewStep1">【第一步】标定设置</sys:String>
+    <sys:String x:Key="CalibRunViewRowStep">行步长</sys:String>
+    <sys:String x:Key="CalibRunViewColumnStep">列步长</sys:String>
+    <sys:String x:Key="CalibRunViewCameraHeight">相机高度(mm)</sys:String>
+    <sys:String x:Key="CalibRunViewThreshold">阈值(μm)</sys:String>
+    <sys:String x:Key="CalibRunViewOpenAutofocus">开启自动对焦</sys:String>
+    <sys:String x:Key="CalibRunViewSerial">串口号</sys:String>
+    <sys:String x:Key="CalibRunViewFocusingAccuracy">对焦精度(μm)</sys:String>
+    <sys:String x:Key="CalibRunViewFocusingStep">对焦步长</sys:String>
+    <sys:String x:Key="CalibRunViewStep2">【第二步】执行标定</sys:String>
+    <sys:String x:Key="CalibRunViewOpenDialog">弹窗</sys:String>
+    <sys:String x:Key="CalibRunViewDontOpenDialog">不弹窗</sys:String>
+    <sys:String x:Key="CalibRunViewStartExcute">开始执行</sys:String>
+    <sys:String x:Key="CalibRunViewStopExcute">停止执行</sys:String>
+    <sys:String x:Key="CalibRunViewStep3">【第三步】结果</sys:String>
+
+    <!--ProductCalib-CameraFuseView-->
+    <sys:String x:Key="CameraFuseViewStep1">【第一步】采集坐标点</sys:String>
+    <sys:String x:Key="CameraFuseViewGetCurrentValue">获取当前值</sys:String>
+    <sys:String x:Key="CameraFuseViewCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="CameraFuseViewStep2">【第二步】标定计算</sys:String>
+    <sys:String x:Key="CameraFuseViewCalc">计算</sys:String>
+    <sys:String x:Key="CameraFuseViewStep3">【第三步】验证关系</sys:String>
+    <sys:String x:Key="CameraFuseViewStartVerify">开始验证</sys:String>
+    <sys:String x:Key="CameraFuseViewStopVerify">结束验证</sys:String>
+    <sys:String x:Key="CameraFuseViewReadData">读取数据</sys:String>
+    <sys:String x:Key="CameraFuseViewSaveData">保存数据</sys:String>
+
+    <!--ProductCalib-CCDCalibView-->
+    <sys:String x:Key="CCDCalibViewStep1">【第一步】角度标定</sys:String>
+    <sys:String x:Key="CCDCalibViewMeasuredSpacing">测量间距(mm)</sys:String>
+    <sys:String x:Key="CCDCalibViewCalculateAngle">计算角度</sys:String>
+    <sys:String x:Key="CCDCalibViewAngleToX">与X角度(°)</sys:String>
+    <sys:String x:Key="CCDCalibViewStep2">【第二步】像素比标定</sys:String>
+    <sys:String x:Key="CCDCalibViewXDirectionSpacing">X方向间距(mm)</sys:String>
+    <sys:String x:Key="CCDCalibViewYDirectionSpacing">Y方向间距(mm)</sys:String>
+    <sys:String x:Key="CCDCalibViewCalibrationX">标定X</sys:String>
+    <sys:String x:Key="CCDCalibViewCalibrationY">标定Y</sys:String>
+    <sys:String x:Key="CCDCalibViewXDirectionResolution">X方向分辨率(µm)</sys:String>
+    <sys:String x:Key="CCDCalibViewYDirectionResolution">Y方向分辨率(µm)</sys:String>
+    <sys:String x:Key="CCDCalibViewStep3">【第三步】标定验证</sys:String>
+    <sys:String x:Key="CCDCalibViewIdentifyAndAlignCenters">识别并对齐中心</sys:String>
+    <sys:String x:Key="CCDCalibViewClearData">清除数据</sys:String>
+    <sys:String x:Key="CCDCalibViewReadData">读取数据</sys:String>
+    <sys:String x:Key="CCDCalibViewSaveData">保存数据</sys:String>
+
+    <!--ProductCalib-CCDCalibViewModel-->
+    <sys:String x:Key="CCDCalibViewModelIsUseROI">请确认是否使用ROI区域？（使用ROI区域可能导致模板识别失败）</sys:String>
+
+    <!--ProductCalib-LevelingView-->
+    <sys:String x:Key="LevelingViewStep1">【第一步】调平设置</sys:String>
+    <sys:String x:Key="LevelingViewFirstPoint">第一个点</sys:String>
+    <sys:String x:Key="LevelingViewGetCurrentValue">获取当前值</sys:String>
+    <sys:String x:Key="LevelingViewMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="LevelingViewSecondPoint">第二个点</sys:String>
+    <sys:String x:Key="LevelingViewThreshold">阈值(μm)</sys:String>
+    <sys:String x:Key="LevelingViewXInterval">X间距(mm)</sys:String>
+    <sys:String x:Key="LevelingViewStep2">【第二步】调平</sys:String>
+    <sys:String x:Key="LevelingViewManualLeveling">手动调平</sys:String>
+    <sys:String x:Key="LevelingViewAutoLeveling">自动调平</sys:String>
+    <sys:String x:Key="LevelingViewAngleInXDirection">X方向角度(°)</sys:String>
+    <sys:String x:Key="LevelingViewTheCoordinateXY">坐标(X,Y)</sys:String>
+    <!--ProductCalib-MatchSelectView-->
+    <sys:String x:Key="MatchSelectViewStep1">【第一步】确认调平</sys:String>
+    <sys:String x:Key="MatchSelectViewRotateCarrierToTemplatePosition">旋转载台至模板大概调平位置</sys:String>
+    <sys:String x:Key="MatchSelectViewStep2">【第二步】模板制作</sys:String>
+    <sys:String x:Key="MatchSelectViewCreateTemplate">模板制作</sys:String>
+    <sys:String x:Key="MatchSelectViewStep3">【第三步】结果</sys:String>
+    <sys:String x:Key="MatchSelectViewTemplatePath">模板路径</sys:String>
+
+    <!--ProductCalib-RotateCenterView-->
+    <sys:String x:Key="RotateCenterViewStep1">【第一步】模板制作</sys:String>
+    <sys:String x:Key="RotateCenterViewCreateTemplate">模板制作</sys:String>
+    <sys:String x:Key="RotateCenterViewStep2">【第二步】数据采集</sys:String>
+    <sys:String x:Key="RotateCenterViewThreshold">阈值(μm)</sys:String>
+    <sys:String x:Key="RotateCenterViewCurrentAngle">当前角度</sys:String>
+    <sys:String x:Key="RotateCenterViewRotation90">旋转90°</sys:String>
+    <sys:String x:Key="RotateCenterViewCoordinate">坐标(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterViewAlignCenter">对齐中心</sys:String>
+    <sys:String x:Key="RotateCenterViewMoveToPoint">移动到该点</sys:String>
+    <sys:String x:Key="RotateCenterViewStep3">【第三步】标定计算</sys:String>
+    <sys:String x:Key="RotateCenterViewCalc">计算</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationCenterX">旋转中心X</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationCenterY">旋转中心Y</sys:String>
+    <sys:String x:Key="RotateCenterViewTemplatePath">模板路径</sys:String>
+    <sys:String x:Key="RotateCenterViewStep4">【第四步】标定验证</sys:String>
+    <sys:String x:Key="RotateCenterViewCalcValue">计算真值</sys:String>
+    <sys:String x:Key="RotateCenterViewCalcCurrentValue">当前真值(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationVerification">旋转验证</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationAngle">旋转角度(°)</sys:String>
+    <sys:String x:Key="RotateCenterViewReadData">读取数据</sys:String>
+    <sys:String x:Key="RotateCenterViewSaveData">保存数据</sys:String>
+
+    <!--DFTComponent-DFTMaintanceView-->
+    <sys:String x:Key="DFTMaintanceViewDFTEnable">DFT功能</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDFTState">DFT状态</sys:String>
+    <sys:String x:Key="DFTMaintanceViewAlarmReset">警报复位</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderLocationConfiguration">测距仪位置配置</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDFTScanMode">输出模式</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADDataDirection">AD数据方向</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADAndDirection">AD和DA方向</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderObjectiveSpacing">测距仪物镜间距(μm)</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSpecifyInstructionSending">指定指令发送</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSendingInstruction">发送指令</sys:String>
+    <sys:String x:Key="DFTMaintanceViewAcceptContent">接受内容</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSend">发送</sys:String>
+    <sys:String x:Key="DFTMaintanceViewReadLocalityData">读取本地数据</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRead">读取</sys:String>
+    <sys:String x:Key="DFTMaintanceViewFeedbackConfiguration">反馈配置</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSetOutputValue">设置输出值（V）</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADUpperEdgeThreshold">AD上边沿阈值</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeThreshold">AD下降沿阈值</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeRange">AD边沿区域</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeNum">AD边沿数量</sys:String>
+    <sys:String x:Key="DFTMaintanceViewXOriginSetting">X原点设置</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderObjectiveSpacingCorrect">测距仪物镜间距修正</sys:String>
+    <sys:String x:Key="DFTMaintanceViewObjectiveSpacingMagnification">物镜间距放大倍数</sys:String>
+    <sys:String x:Key="DFTMaintanceViewCurrentLocation">当前位置</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADEffectiveWorkRange">AD有效工作范围</sys:String>
+    <sys:String x:Key="DFTMaintanceViewErrorMessage">错误信息</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMinimumV">DA最小值（V）</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMaximumV">DA最大值（V）</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMedianOfV">DA中间值（V）</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSaveData">保存本地数据</sys:String>
+
+    <!--DFTComponent-ValueRange-->
+    <sys:String x:Key="ValueRange">范围</sys:String>
+
+    <!--ATFComponent-ATFController"-->
+    <sys:String x:Key="AbnormalFocusingPleaseCheckTheFocusingFunction">自动对焦控制流程异常，请检查对焦功能是否正常</sys:String>
+
+    <!-- Controls.UIControl.Axis-AxisController-->
+    <sys:String x:Key="TheZeroReturnOperationCannotBeUndone">回零操作无法撤销</sys:String>
+    <sys:String x:Key="AreYouSureYouWantToPerformTheZeroReturnOperation">确定要执行回零操作吗？</sys:String>
+
+    <!-- Controls.UIControl.Axis-AxisControllerEvolutionA-->
+    <sys:String x:Key="AxisControllerEvolutionATips">提示</sys:String>
+
+    <!-- Controls.UIControl-AxisControlViewModel-Tips-->
+    <sys:String x:Key="HardwareNotConnectedOffline">离线状态,硬件未连接</sys:String>
+    <sys:String x:Key="ExceedingNegativeLimit">超出负限位</sys:String>
+    <sys:String x:Key="ExceedingThePositiveLimit">超出正限位</sys:String>
+    <sys:String x:Key="AxisNotEnabled">轴未上使能</sys:String>
+    <sys:String x:Key="AxisNotReturningToZero">轴未回原点</sys:String>
+
+    <!-- Controls.UIControl.Helper-ZipHelper -Tips-->
+    <sys:String x:Key="TheCompressedPackageNameDoesNotMatchTheInternalFolder">压缩包名称与内部文件夹不符</sys:String>
+
+    <!-- MwFramework.Controls.UIControl-LighterViewModel -Tips-->
+    <sys:String x:Key="LightSourceController">光源控制器</sys:String>
+    <sys:String x:Key="OpenFailed">打开失败</sys:String>
+    <sys:String x:Key="CloseFailed">关闭失败</sys:String>
+
+    <!-- UIControl.LogView-->
+    <sys:String x:Key="LogType">日志类型</sys:String>
+    <sys:String x:Key="SortOrder">排序方式</sys:String>
+    <sys:String x:Key="TimeReverseOrder">时间逆序</sys:String>
+    <sys:String x:Key="TimeOrder">时间顺序</sys:String>
+    <sys:String x:Key="DateTimeSelection">日期时间选择</sys:String>
+    <sys:String x:Key="BeforeQuickQuery">快速查询前</sys:String>
+    <sys:String x:Key="TenMinutes">十分钟</sys:String>
+    <sys:String x:Key="HalfAnHour">半小时</sys:String>
+    <sys:String x:Key="AnHour">一小时</sys:String>
+    <sys:String x:Key="ThreeHours">三小时</sys:String>
+    <sys:String x:Key="HalfADay">半天</sys:String>
+    <sys:String x:Key="ADay">一天</sys:String>
+    <sys:String x:Key="TwoDays">两天</sys:String>
+    <sys:String x:Key="TenDays">十天</sys:String>
+    <sys:String x:Key="Query">查询</sys:String>
+    <sys:String x:Key="Date">日期</sys:String>
+    <sys:String x:Key="Time">时间</sys:String>
+    <sys:String x:Key="Category">类别</sys:String>
+    <sys:String x:Key="Message">消息</sys:String>
+
+    <!-- MwFramework.Controls.UIControl -RecipeNewFolder -->
+    <sys:String x:Key="TheFolderNameCannotBeEmpty">文件夹名称不能为空。</sys:String>
+    <sys:String x:Key="TheFolderNameExceeds50CharactersInLength">文件夹名称长度超过50个字符</sys:String>
+    <sys:String x:Key="TheFolderNameContainsIllegalCharacters">文件夹名称包含非法字符</sys:String>
+    <sys:String x:Key="TheFirstAndLastCharactersOfAFolderNameCannotBe.">文件夹名称首尾字符不能为'.'</sys:String>
+    <sys:String x:Key="PPIDIsMandatoryAndCannotBeEmpty">PPID为必填项，不能为空</sys:String>
+    <sys:String x:Key="TheFolderContainsIllegalCharacters">文件夹包含非法字符</sys:String>
+    
+    <!-- MwFramework.Controls.UIControl -RecipeNewWindow - Tips -->
+    <sys:String x:Key="RecipeIDCannotBeEmpty">配方ID为必填项，不能为空。</sys:String>
+    <sys:String x:Key="RecipeIDLengthExceeds50Characters">配方ID长度超过50个字符。</sys:String>
+    <sys:String x:Key="RecipeIDContainsIllegalCharacters">配方ID包含非法字符。</sys:String>
+    <sys:String x:Key="TheFirstAndLastCharactersOfTheRecipeIDCannotBe.">配方ID首尾字符不能为'.'</sys:String>
+    <sys:String x:Key="PPIDLengthExceeds50Characters">PPID长度超过50个字符</sys:String>
+    <sys:String x:Key="PPIDContainsIllegalCharacters">PPID包含非法字符</sys:String>
+    
+    <!-- MwFramework.Controls.UIControl.ViewModel -RecipeService - Tips -->
+    <sys:String x:Key="ExportCompleted">导出完成</sys:String>
+    <sys:String x:Key="DeleteAllFormulasInTheCurrentFolder">是否删除当前文件夹所有配方!</sys:String>
+    <sys:String x:Key="TheSelectedFormulaIsEmpty">选中配方为空。</sys:String>
+    <sys:String x:Key="RecipeServiceNoSaveRecipe">{0}配方未保存！是否保存该配方？</sys:String>
+
+    <!-- MwFramework.BoxCalibrate.Tasks -ApproachCenterTask - Tips -->
+    <sys:String x:Key="CameraNotStarted">相机未启动！</sys:String>
+    <sys:String x:Key="StartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="NotEnabled">未上使能</sys:String>
+    <sys:String x:Key="NotReturningToZero">未回零！</sys:String>
+    <sys:String x:Key="AlignmentFailed">对齐失败</sys:String>
+    <sys:String x:Key="SpeedZero">速度为零</sys:String>
+    <sys:String x:Key="AlignToCenterSuccessful">对齐到中心成功</sys:String>
+
+    <!--  MwFramework.BoxCalibrate.Tasks -AutoCalibrateTask - Tips -->
+    <sys:String x:Key="JudgingApproximationAccuracy">未达到逼近精度，是否重试？点击“是”重试，“否”保存当前数据，“取消”直接找下一个点。</sys:String>
+    <sys:String x:Key="ApproachingFailedAndIsRetry">逼近失败！是否重试？</sys:String>
+    <sys:String x:Key="ExitProcess">退出流程！</sys:String>
+    <sys:String x:Key="BoxCalibrateFailed">Box标定失败！</sys:String>
+    <sys:String x:Key="BoxCalibrateSuccessfulCorrectionError">Box矫正完成！\r\n矫正误差为</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskApproachingFailed">逼近失败</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskProcess">进度</sys:String>
+
+    <!--  MwFramework.BoxCalibrate.Tasks -MarkBoxTask - Tips -->
+    <sys:String x:Key="GalvanometerNotInitialized">振镜未初始化！</sys:String>
+    <sys:String x:Key="AbnormalGalvanometerConnection">振镜连接异常！</sys:String>
+    <sys:String x:Key="MarkingSuccessful">打标成功！</sys:String>
+    <sys:String x:Key="RealValuenotProvided">真值未提供</sys:String>
+    <sys:String x:Key="MirrorCoordinateAcquisitionFailed">振镜坐标获取失败</sys:String>
+    <sys:String x:Key="ImageMatchingFailed">图像匹配失败！</sys:String>
+    <sys:String x:Key="FoundTargetQuantity">找到目标数量</sys:String>
+    <sys:String x:Key="MirrorNotInitializedImportFailed!">振镜未初始化，导入失败</sys:String>
+    <sys:String x:Key="CorrectionFileDoesNotExist">校正文件不存在</sys:String>
+   <sys:String x:Key="MarkBoxTaskCameraNotStarted">相机未启动</sys:String>
+   <sys:String x:Key="MarkBoxTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+
+    <!--BoxShared-BoxCalibrateViewModel -->
+    <sys:String x:Key="BoxCalibrateViewModelLaserPower">激光功率(%)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoMarkingPosition">未设置打标位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoStartPosition">未设置起点位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoCenterPosition">未设置视觉中心位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoInputParameter">未输入参数</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoData">没有数据</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNophotoPosition">未设置拍照位置</sys:String>
+    <sys:String x:Key="BoxCalibrateViewLineDistance">直线距离为：{0:F3}</sys:String>
+
+    <!--ImageViewer-Tip -->
+    <sys:String x:Key="ImageViewerLoadImage">请载入图像</sys:String>
+    <sys:String x:Key="ImageViewerFileDonetExist">文件不存在</sys:String>
+    <sys:String x:Key="ImageViewerAfterSettingClickSave">设定完成后点击“保存”</sys:String>
+
+    <!--PowerCalibComponent_PC-PowerMeasureItem-Tip-->
+    <sys:String x:Key="PowerMeasureItemPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerMeasureItemPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+    <sys:String x:Key="PowerMeasureItemPowerMeterOpenError">功率计打开出错</sys:String>
+
+    <!--PowerCalibComponent_PC-PowerMeasurementViewModel-Tip-->
+    <sys:String x:Key="PowerMeasurementViewModelPowerW">功率(W)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelTime">时间(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelParameterLoadingException">参数加载异常</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelConpletionOfPowerMeasurement">功率测量完成</sys:String>
+    <sys:String x:Key="PowerMeasureItemIsConstraintRelationship">的项存在约束关系</sys:String>
+
+    <!--PowerCalibComponent_Shared-CsvHelper-Tip-->
+    <sys:String x:Key="CsvHelperReadFileNotExist">读取的文件不存在</sys:String>
+    <sys:String x:Key="CsvHelperFileWritingFailure">写入文件失败</sys:String>
+    <sys:String x:Key="CsvHelperFileNotExist">文件不存在</sys:String>
+    <sys:String x:Key="CsvHelperFileReadingFailure">读取文件失败</sys:String>
+
+    <!--PowerCalibComponent_Shared-LinearFit-Tip-->
+    <sys:String x:Key="LinearFitLeastSquareMethod">最小二乘法</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerMeterControl-Tip-->
+    <sys:String x:Key="PowerMeterControlStartStatistics">开始统计</sys:String>
+    <sys:String x:Key="PowerMeterControlPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerMeterControlPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerAdjustViewModel-Tip-->
+    <sys:String x:Key="PowerAdjustViewModelNoFoundPowerComparisonTableCheckFrequencyAndChannelSettings">未找到功率对照表请检查频率和通道设置</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelDeviceCollectionFailed">功率计设备开始采集失败</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelMeasureDeviceEmpty">测量硬件为空</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelMeasureDeviceException">测量硬件异常</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerCorrectionPositionException">功率校正位置设置异常</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelParameterSettingError">参数设置错误</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelOutputPower">输出功率</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelTestingParameter">测试参数</sys:String>
+
+    <!--ProductCalib-ProductCalib-Tip-->
+    <sys:String x:Key="ProductCalibGetCrossPointsFailed">获取交点失败！</sys:String>
+    <sys:String x:Key="ProductCalibCrossPointsFew">交点过少！请修改行列步长！</sys:String>
+
+    <!--ProductCalib-ProductCalibAlg-Tip-->
+    <sys:String x:Key="ProductCalibAlgMarkFailedMoveToImageCenter">Mark点移动到图像中心失败</sys:String>
+    <sys:String x:Key="ProductCalibAlgTemplateFetchingFailure">抓取模板失败</sys:String>
+    <sys:String x:Key="ProductCalibAlgTablePositionIsNotSet">台盘位置未设置</sys:String>
+    <sys:String x:Key="ProductCalibAlgReferencePointError">基准点错误</sys:String>
+    <sys:String x:Key="ProductCalibAlgNoTemplate">未制作模板</sys:String>
+
+    <!--ProductCalib-AccurateLeveling-Tip-->
+    <sys:String x:Key="AccurateLevelingStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="AccurateLevelingFineLevelingDistanceIsNotSet">精调平距离未设置</sys:String>
+    <sys:String x:Key="AccurateLevelingFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="AccurateLevelingDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="AccurateLevelingCalculationFailure">计算失败</sys:String>
+    <sys:String x:Key="AccurateLevelingManualLevelingIsComplete">手动调平完成</sys:String>
+    <sys:String x:Key="AccurateLevelingExitLeveling">退出调平</sys:String>
+    <sys:String x:Key="AccurateLevelingFineLevelingCompleted">精调平完成</sys:String>
+    <sys:String x:Key="AccurateLevelingAxis_Cut_TurnDoesNotReturnZero">Axis_Cut_Turn未回零</sys:String>
+    <!--ProductCalib-AdjacentItemXDistance-Tip-->
+    <sys:String x:Key="AdjacentItemXDistanceStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceFailedToObtainTemplate">获取模板失败</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceSearchFailure">搜索失败</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceShaftControlFailedCheckHardwareStatus">轴控制失败，请检查硬件状态</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceStopSearch">停止搜索</sys:String>
+
+    <!--ProductCalib-AutoLeveling-Tip-->
+    <sys:String x:Key="AutoLevelingStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="AutoLevelingParityThresholdIsNotSetProcedure">对位阈值未设置</sys:String>
+    <sys:String x:Key="AutoLevelingFineLevelingDistanceIsNotSet">精调平距离未设置</sys:String>
+    <sys:String x:Key="AutoLevelingPleaseAdjustLevelManuallyFirstAndAdjustToYAxisWithLittleDeviation">请先进行手动调平，调至Y轴偏差不大</sys:String>
+    <sys:String x:Key="AutoLevelingFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="AutoLevelingDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="AutoLevelingFirstPointIsNotFound">未找到第一个点</sys:String>
+    <sys:String x:Key="AutoLevelingSecondPointIsNotFound">未找到第二个点</sys:String>
+    <sys:String x:Key="AutoLevelingCalculationFailure">计算失败</sys:String>
+    <sys:String x:Key="AutoLevelingFineLevelingCompleted">精调平完成</sys:String>
+    <sys:String x:Key="AutoLevelingAxis_Cut_TurnDoesNotReturnZero">Axis_Cut_Turn未回零</sys:String>
+    <sys:String x:Key="AutoLevelingExitLeveling">退出调平</sys:String>
+    <sys:String x:Key="AutoLevelingImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--ProductCalib-CCDAngle-Tip-->
+    <sys:String x:Key="CCDAngleExitCalibrationAngle">退出标定角度</sys:String>
+    <sys:String x:Key="CCDAngleCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CCDAngleStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CCDAngleSetXDistanceFirst">先设置X方向间距</sys:String>
+    <sys:String x:Key="CCDAngleFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="CCDAngleDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="CCDAngleImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="CCDAngleMatchingFailed">匹配失败</sys:String>
+
+    <!--ProductCalib-CCDCenter-Tip-->
+    <sys:String x:Key="CCDCenterExitAlignmentToCenter">退出对齐到中心</sys:String>
+    <sys:String x:Key="CCDCenterStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CCDCenterMustBeCalibratedFirst">必须先标定</sys:String>
+    <sys:String x:Key="CCDCenterFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="CCDCenterDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="CCDCenterAlignToCenterSuccessful">对齐到中心成功</sys:String>
+    <sys:String x:Key="CCDCenterImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--ProductCalib-CCDDet-Tip-->
+    <sys:String x:Key="CCDDetCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CCDDetStartCollection">先开启采集</sys:String>
+    <sys:String x:Key="CCDDetCalculateXAngleFirst">先计算X方向角度</sys:String>
+    <sys:String x:Key="CCDDetFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="CCDDetDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="CCDDetImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="CCDDetFailedToAlignTemplateCenter">对齐模板中心失败</sys:String>
+    <sys:String x:Key="CCDDetExitCalibrationXDirectionPixelRatio">退出标定X方向像素比</sys:String>
+    <sys:String x:Key="CCDDetSetXDistanceFirst">先设置X方向间距</sys:String>
+    <sys:String x:Key="CCDDetCurrentGivenMovingDistanceExceedsTheLowerLimitOfPosition">当前给定的移动距离超过了位置下限{0}</sys:String>
+    <sys:String x:Key="CCDDetCurrentGivenTravelDistanceExceedsThePositionBelowAndAbove">当前给定的移动距离超过了位置下上{0}</sys:String>
+    <sys:String x:Key="CCDDetExitCalibrationYDirectionPixelRatio">退出标定Y方向像素比</sys:String>
+    <sys:String x:Key="CCDDetSetYDistanceFirst">先设置Y方向间距</sys:String>
+
+    <!--ProductCalib-MatchPoint-Tip-->
+    <sys:String x:Key="MatchPointStopMatching">停止匹配</sys:String>
+    <sys:String x:Key="MatchPointStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MatchPointFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="MatchPointDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行？</sys:String>
+    <sys:String x:Key="MatchPointFailedToMatchTemplatePleaseCheckCCDCalibration">匹配模板失败，请检查CCD标定</sys:String>
+    <sys:String x:Key="MatchPointFailedToObtainTheCurrentValue">获取当前值失败</sys:String>
+    <sys:String x:Key="MatchPointImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--ProductCalib-MotionCalib-Tip-->
+    <sys:String x:Key="MotionCalibStopProcess">停止流程</sys:String>
+    <sys:String x:Key="MotionCalibStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MotionCalibThresholdIsNotSet">未设定阈值</sys:String>
+    <sys:String x:Key="MotionCalibXSpacingError">X间距错误</sys:String>
+    <sys:String x:Key="MotionCalibYSpacingError">Y间距错误</sys:String>
+    <sys:String x:Key="MotionCalibColumnSpacingError">列步距错误</sys:String>
+    <sys:String x:Key="MotionCalibLineSpacingError">行步距错误</sys:String>
+    <sys:String x:Key="MotionCalibFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="MotionCalibDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行？</sys:String>
+    <sys:String x:Key="MotionCalibErrorSendingMotionScript">发送运动脚本错误</sys:String>
+    <sys:String x:Key="MotionCalibImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="MotionCalibErrorSavingCalibrationData">保存标定数据出错</sys:String>
+    <sys:String x:Key="MotionCalibTemplateCenterNotFoundWhetherToTryAgain">未找到模板中心,是否重试</sys:String>
+    <!--ProductCalib-MotionCalib2-Tip-->
+    <sys:String x:Key="MotionCalib2StopProcess">停止流程</sys:String>
+    <sys:String x:Key="MotionCalib2XAxisIsNotEnabled">X轴未上使能</sys:String>
+    <sys:String x:Key="MotionCalib2YAxisIsNotEnabled">Y轴未上使能</sys:String>
+    <sys:String x:Key="MotionCalib2ZAxisIsNotEnabled">Z轴未上使能</sys:String>
+    <sys:String x:Key="MotionCalib2StartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MotionCalib2ThresholdIsNotSet">未设定阈值</sys:String>
+    <sys:String x:Key="MotionCalib2XSpacingError">X间距错误</sys:String>
+    <sys:String x:Key="MotionCalib2YSpacingError">Y间距错误</sys:String>
+    <sys:String x:Key="MotionCalib2ColumnSpacingError">列步距错误</sys:String>
+    <sys:String x:Key="MotionCalib2LineSpacingError">行步距错误</sys:String>
+    <sys:String x:Key="MotionCalib2FailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="MotionCalib2DefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行？</sys:String>
+    <sys:String x:Key="MotionCalib2ErrorSendingMotionScript">发送运动脚本错误</sys:String>
+    <sys:String x:Key="MotionCalib2ErrorSavingCalibrationData">保存标定数据出错</sys:String>
+    <sys:String x:Key="MotionCalib2ImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="MotionCalib2JudgingApproximationAccuracy">未达到逼近精度，是否重试？点击“是”重试，“否”保存当前数据，“取消”直接找下一个点。</sys:String>
+    <sys:String x:Key="MotionCalib2TemplateRecognitionFailed">模板识别失败！</sys:String>
+
+    <!--ProductCalib-RotateAlignCenter-Tip-->
+    <sys:String x:Key="RotateAlignCenterExitProcess">退出流程</sys:String>
+    <sys:String x:Key="RotateAlignCenterStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="RotateAlignCenterFailedToObtainAxisShiftParameterPO">获取轴移动参数PO失败</sys:String>
+    <sys:String x:Key="RotateAlignCenterDefaultAxisSpeedIs0WhetherToContinue">默认轴速度为0,是否继续执行</sys:String>
+    <sys:String x:Key="RotateAlignCenterImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--ProductCalib-RotatingAngle-Tip-->
+    <sys:String x:Key="RotatingAngleSpinFailedExitSpin">旋转失败，退出旋转</sys:String>
+    <sys:String x:Key="RotatingAngleStartingPointCoordinatesAreNotCollected">起始点坐标未采集</sys:String>
+    <sys:String x:Key="RotatingAngleTerminationPointCoordinatesAreNotCollected">终止点坐标未采集</sys:String>
+    <sys:String x:Key="RotatingAngleRotationAngleIsNotSet">未设置旋转角度</sys:String>
+    <sys:String x:Key="RotatingAngleCurrentRasterValueAndServoCoordinateCalculationFailed">当前的光栅值和伺服坐标计算失败</sys:String>
+    <sys:String x:Key="RotatingAngleRotatedInPlace">已旋转到位</sys:String>
+
+    <!--ProductCalib-CalibRunViewModel-Tip-->
+    <sys:String x:Key="CalibRunViewModelXSpacingError">X间距错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelYSpacingError">Y间距错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelColumnSpacingError">列步距错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelLineSpacingError">行步距错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelReferencePointError">基准点错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelPlanningRouteCalibrationError">规划标定路线错误</sys:String>
+    <sys:String x:Key="CalibRunViewModelPleaseChangeTheRow/ColumnStepSize">请修改行/列步长</sys:String>
+    <sys:String x:Key="CalibRunViewModelShaftControlFailedCheckHardwareStatus">轴控制失败，请检查硬件状态</sys:String>
+    <sys:String x:Key="CalibRunViewModelProcessExecutionCompletion">流程执行完成</sys:String>
+    <sys:String x:Key="CalibRunViewModelCalibRunStartTip">当前相机为{0}，请确认是否使用该相机进行运动系标定。</sys:String>
+    <sys:String x:Key="CalibRunViewModelAtfStepNotNull">对焦精度不能为空！</sys:String>
+    <sys:String x:Key="CalibRunViewModelAtfCountNotNull">对焦步长不能为空！</sys:String>
+
+    <!--ProductCalib-CameraFuseViewModel-Tip-->
+    <sys:String x:Key="CameraFuseViewModelPleaseSwitchToAnotherCamera">请切换到其它相机</sys:String>
+    <sys:String x:Key="CameraFuseViewModelNoCollectionPointsAreCollectedCheckTheNumberOfCollectionPoints">未采集点，请检查采集点的个数</sys:String>
+    <sys:String x:Key="CameraFuseViewModelUnableToFindTheDataInTheCalibratedCamera">无法找到已标定相机中的数据</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCouldNotFindTheDataInTheFusionCamera">无法找到融合相机中的数据</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCompleteCalculation">计算完成</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCalculationFailedPleaseCheckWhetherTheCalibrationIsComplete">计算失败，请检查标定是否完成</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete">获取真值失败，请确认标定数据是否完整</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainRulerValuePleaseConfirmWhetherTheCalibrationDataIsComplete">获取Ruler值失败，请确认标定数据是否完整</sys:String>
+    <sys:String x:Key="CameraFuseViewModelXaxisExceedsNegativeLimitPleaseAdjustXaxisPosition">X轴超负限位，请调整X轴位置</sys:String>
+    <sys:String x:Key="CameraFuseViewModelXaxisExceedsThePositiveLimitPleaseAdjustXaxisPosition">X轴超正限位，请调整X轴位置</sys:String>
+    <sys:String x:Key="CameraFuseViewModelYaxisExceedsNegativeLimitPleaseAdjustYaxisPosition">Y轴超负限位，请调整Y轴位置</sys:String>
+    <sys:String x:Key="CameraFuseViewModelYaxisExceedsThePositiveLimitPleaseAdjustYaxisPosition">Y轴超正限位，请调整Y轴位置</sys:String>
+    <sys:String x:Key="CameraFuseViewModelPleasePickSomeFirst">请先采点</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainTruthValue">获取真值失败</sys:String>
+
+    <!--ProductCalib-LevelingViewModel-Tip-->
+    <sys:String x:Key="LevelingViewModelStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="LevelingViewModelPleaseSetTheFirstPositionFirst">请先设定第一点位置</sys:String>
+    <sys:String x:Key="LevelingViewModelShaftControlFailedCheckHardwareStatus">轴控制失败，请检查硬件状态</sys:String>
+    <sys:String x:Key="LevelingViewModelPleaseSetTheSecondPositionFirst">请先设定第二点位置</sys:String>
+
+    <!--ProductCalib-RotateCenterViewModel-Tip-->
+    <sys:String x:Key="RotateCenterViewModelUncalibratedCenterOfRotation">未标定旋转中心</sys:String>
+    <sys:String x:Key="RotateCenterViewModelShaftControlFailedCheckHardwareStatus">轴控制失败，请检查硬件状态</sys:String>
+    <sys:String x:Key="RotateCenterViewModelUnacquiredCoordinates">未获取坐标</sys:String>
+    <sys:String x:Key="RotateCenterViewModelPoint1IsEmpty">点1坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterViewModelPoint2IsEmpty">点2坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">获取真值失败，确定标定数据无误</sys:String>
+
+    <!--CalibShared-SystemCallHelper-Tip-->
+    <sys:String x:Key="SystemCallHelperTheCameraFailedToCaptureTheImage">相机抓图失败</sys:String>
+    <sys:String x:Key="SystemCallHelperFailedToCaptureTheCenterOfTheCircle">抓取圆心失败</sys:String>
+    <sys:String x:Key="SystemCallHelperMarkFailedMoveToImageCenter">Mark点移动到图像中心失败</sys:String>
+
+    <!--CalibShared-CameraAngleTask-Tip-->
+    <sys:String x:Key="CameraAngleTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CameraAngleTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CameraAngleTaskSetXDistanceFirst">先设置X方向间距</sys:String>
+    <sys:String x:Key="CameraAngleTaskImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--CalibShared-CameraDetBaseTask-Tip-->
+    <sys:String x:Key="CameraDetBaseTaskImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--CalibShared-CameraIdentifyAlignCenterTask-Tip-->
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskStartCollection">先开启采集</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskMustBeCalibratedFirst">必须先标定</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskcenterTheCircleIsNotInTheImage">圆心不在图像内</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskAlignToCenterSuccessful">对齐到中心成功</sys:String>
+
+    <!--CalibShared-CameraLargeFieldBigTask-Tip-->
+    <sys:String x:Key="CameraLargeFieldBigTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CameraLargeFieldBigTaskSelectTheCircleUsingTheRectangleBoxFirst">先用矩形框选圆</sys:String>
+    <sys:String x:Key="CameraLargeFieldBigTaskAlignedCenter">已对齐中心</sys:String>
+
+    <!--CalibShared-CameraLargeFieldSmallTask-Tip-->
+    <sys:String x:Key="CameraLargeFieldSmallTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CameraLargeFieldSmallTaskImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="CameraLargeFieldSmallTaskAlignedCenter">已对齐中心</sys:String>
+
+    <!--CalibShared-CameraRelationCaculateDiffTask-Tip-->
+    <sys:String x:Key="CameraRelationCaculateDiffTaskTheDataIsEmptyCollectCompleteDataAndCalculate">数据为空，请采集完整数据后计算</sys:String>
+    <sys:String x:Key="CameraRelationCaculateDiffTaskSuccessfulCalculation">计算成功</sys:String>
+
+    <!--CalibShared-CameraRelationVisionBigTask-Tip-->
+    <sys:String x:Key="CameraRelationVisionBigTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskSelectTheCircleUsingTheRectangleBoxFirst">SelectTheCircleUsingTheRectangleBoxFirst</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskAlignedCenter">已对齐中心</sys:String>
+
+    <!--CalibShared-CameraRelationVisionSmallTask-Tip-->
+    <sys:String x:Key="CameraRelationVisionSmallTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskAlignedCenter">已对齐中心</sys:String>
+
+    <!--CalibShared-CameraXDetTask-Tip-->
+    <sys:String x:Key="CameraXDetTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CameraXDetTaskStartCollection">先开启采集</sys:String>
+    <sys:String x:Key="CameraXDetTaskCalculateXAngleFirst">先计算X方向角度</sys:String>
+    <sys:String x:Key="CameraXDetTaskSetXDistanceFirst">先设置X方向间距</sys:String>
+
+    <!--CalibShared-CameraYDetTask-Tip-->
+    <sys:String x:Key="CameraYDetTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="CameraYDetTaskStartCollection">先开启采集</sys:String>
+    <sys:String x:Key="CameraYDetTaskCalculateXAngleFirst">先计算X方向角度</sys:String>
+    <sys:String x:Key="CameraYDetTaskSetYDistanceFirst">先设置Y方向间距</sys:String>
+
+    <!--CalibShared-LargeFieldCameraCalibTask-Tip-->
+    <sys:String x:Key="LargeFieldCameraCalibTaskPoint1IsEmpty">点1坐标为空</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskWide-angleCameraPoint1CoordinateIsEmpty">广角相机点1坐标为空</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskSuccessfulCalculation">计算成功</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskCalculationFailure">计算失败</sys:String>
+
+    <!--CalibShared-LargeMoveToPointByIndex-Tip-->
+    <sys:String x:Key="LargeMoveToPointByIndexThePointPositionMustBeDetermined">必须确定点位</sys:String>
+    <sys:String x:Key="LargeMoveToPointByIndexAlreadyInPlace">已到位</sys:String>
+
+    <!--CalibShared-MotionAxisXFlatTask-Tip-->
+    <sys:String x:Key="MotionAxisXFlatTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskSetXDistanceFirst">先设置X方向间距</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskTheSpacingInTheXDirectionIsTooSmallSetTheSpacingInTheXDirectionFirst">X方向间距太小，先设置X方向间距</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskFailedToSquareTheCircle">对齐圆心失败</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskImageAcquisitionFailure">采集图像失败</sys:String>
+
+    <!--CalibShared-MotionCalibTask-Tip-->
+    <sys:String x:Key="MotionCalibTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="MotionCalibTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MotionCalibTaskTheStartingPointHasNotBeenSet">还未设置起点</sys:String>
+    <sys:String x:Key="MotionCalibTaskNumberOfRowsRowIntervalNumberOfColumnsTheColumnIntervalIsNotSetCorrectly">行数 行间隔  列数 列间隔  没有设置正确</sys:String>
+    <sys:String x:Key="MotionCalibTaskPleaseSelectCalibrationOrValidation">请选择需要标定或者验证</sys:String>
+    <sys:String x:Key="MotionCalibTaskCenterNotFoundRetry">未找到圆心,是否重试</sys:String>
+    <sys:String x:Key="MotionCalibTaskMark">标定</sys:String>
+    <sys:String x:Key="MotionCalibTaskVerification">验证</sys:String>
+    <sys:String x:Key="MotionCalibTaskSuccess">成功{0}</sys:String>
+    <sys:String x:Key="MotionCalibTaskFailure">失败{0}</sys:String>
+
+    <!--CalibShared-MotionMoveStartPointTask-Tip-->
+    <sys:String x:Key="MotionMoveStartPointTaskTheStartingPointHasNotBeenSet">还未设置起点</sys:String>
+    <sys:String x:Key="MotionMoveStartPointTaskMovedToTheStartingPoint">已移动到起点</sys:String>
+
+    <!--CalibShared-MotionSetStartPointTask-Tip-->
+    <sys:String x:Key="MotionSetStartPointTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="MotionSetStartPointTaskTheCenterOfTheCircleIsAlignedSuccessfully">对齐圆心成功</sys:String>
+    <sys:String x:Key="MotionSetStartPointTaskFailedToSquareTheCircle">对齐圆心失败</sys:String>
+
+    <!--CalibShared-MoveToPoint-Tip-->
+    <sys:String x:Key="MoveToPointThePointPositionMustBeDetermined">必须确定点位</sys:String>
+    <sys:String x:Key="MoveToPointAlreadyInPlace">已到位</sys:String>
+
+    <!--CalibShared-RepetitiveValidateTask-Tip-->
+    <sys:String x:Key="RepetitiveValidateTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskNumberOfRowsRowsIntervalNumberOfRowsIntervalSpeedTimesAreNotSetCorrectly">行数 行间隔  列数 列间隔 速度  次数 没有设置正确</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionCompletion">采集完成</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionFailure">采集失败</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound">找不到圆中心,采集失败</sys:String>
+
+    <!--CalibShared-RotateAlignCenterByIndexTask-Tip-->
+    <sys:String x:Key="RotateAlignCenterByIndexTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskAlignedCenter">已对齐中心</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskAlignmentToCenterFailed">对齐到中心失败</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskPleaseSetTheStartingAngleAndRotationIntervalFirst">请先设置开始角度，旋转间隔</sys:String>
+    <!--CalibShared-RotateCenterCaculateTask-Tip-->
+    <sys:String x:Key="RotateCenterCaculateTaskPoint1IsEmpty">点1坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint2IsEmpty">点2坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint3IsEmpty">点3坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint4IsEmpty">点4坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint5IsEmpty">点5坐标为空</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskSuccessfulCalculation">计算成功</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskCalculationFailure">计算失败</sys:String>
+
+    <!--CalibShared-RotateCenterMoveToPointByIndex-Tip-->
+    <sys:String x:Key="RotateCenterMoveToPointByIndexAlignmentMustBeIdentifiedFirst">必须先识别对齐</sys:String>
+    <sys:String x:Key="RotateCenterMoveToPointByIndexAlreadyInPlace">已到位</sys:String>
+
+    <!--CalibShared-RotateToAngleTask-Tip-->
+    <sys:String x:Key="RotateToAngleTaskPleaseSetTheStartingAngleAndRotationIntervalFirst">请先设置开始角度，旋转间隔</sys:String>
+    <sys:String x:Key="RotateToAngleTaskRotatedInPlace">已旋转到位</sys:String>
+
+    <!--CalibShared-RotateVerifyTask-Tip-->
+    <sys:String x:Key="RotateVerifyTaskSetTheAngleYouWantToValidateFirst">请先设置要验证的角度</sys:String>
+    <sys:String x:Key="RotateVerifyTaskPleaseCalculateTheAngleFirst">请先计算角度</sys:String>
+    <sys:String x:Key="RotateVerifyTaskHaveMovedIntoPlace">已运动到位</sys:String>
+    <sys:String x:Key="RotateVerifyTaskValidationCalculationFailure">验证计算失败</sys:String>
+
+    <!--CalibShared-StraightValidateTask-Tip-->
+    <sys:String x:Key="StraightValidateTaskCameraNotStarted">相机未启动</sys:String>
+    <sys:String x:Key="StraightValidateTaskStartContinuousCollectionFirst">先开启连续采集</sys:String>
+    <sys:String x:Key="StraightValidateTaskTheNumberOfColumnIntervalSpeedsIsNotSetCorrectly">列数 间隔 速度  次数 没有设置正确</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionCompletion">采集完成</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionFailed">采集失败</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound">找不到圆中心,采集失败</sys:String>
+
+    <!--CalibShared-CameraDistortionCalibViewModel-Tip-->
+    <sys:String x:Key="CameraDistortionCalibViewModelPleaseSelectTheImageFilePath">请选择图像文件路径</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelSelectTheDescriptionFilePath">请选择描述文件路径</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelSetThePathFirst">请先设置路径</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelParameterSettingsAreIncompletePleaseCompleteThemAndThenCalculate">参数设置不全，请补齐后再计算</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelPleaseSelectFolder">请选择文件夹</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelNoData">没有数据</sys:String>
+
+    <!--CalibShared-CameraParaCalibViewModel-Tip-->
+    <sys:String x:Key="CameraParaCalibViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="CameraParaCalibViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-CameraRelationCalibViewModel-Tip-->
+    <sys:String x:Key="CameraRelationCalibViewModelFailedToObtainTheRulerValueOfFineCameraPleaseConfirmWhetherTheCalibrationDataIsComplete">获取精相机ruler值失败，请确认标定数据是否完整</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelPleaseGoToCoarseCameraCalculation">请转到粗相机计算</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelFailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete">获取真值失败，请确认标定数据是否完整</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-LargeFieldCameraCalibViewModel-Tip-->
+    <sys:String x:Key="LargeFieldCameraCalibViewModelStep2">【第二步】</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-LargeFieldLinkerCalibViewModel-Tip-->
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelImageAcquisitionFailure">采集图像失败</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelTheDataIsIncompleteCollectCompleteDataAndCalculate">数据不完整，请采集完整数据后计算</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelNoData">没有数据</sys:String>
+
+    <!--CalibShared-MotionSysCalibViewModel-Tip-->
+    <sys:String x:Key="MotionSysCalibViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="MotionSysCalibViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-RepetitivenessValidateViewModel-Tip-->
+    <sys:String x:Key="RepetitivenessValidateViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="RepetitivenessValidateViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-RotateCenterCalibViewModel-Tip-->
+    <sys:String x:Key="RotateCenterCalibViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">获取真值失败，确定标定数据无误</sys:String>
+    <sys:String x:Key="RotateCenterCalibViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="RotateCenterCalibViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-RotateCenterSimpleViewModel-Tip-->
+    <sys:String x:Key="RotateCenterSimpleViewModelUncollectedData">未采集数据</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">获取真值失败，确定标定数据无误</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelRotatedInPlace">已旋转到位</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--CalibShared-StraightnessValidateViewModel-Tip-->
+    <sys:String x:Key="StraightnessValidateViewModelNoData">没有数据</sys:String>
+    <sys:String x:Key="StraightnessValidateViewModelNotCalculatedOrCalculatedIncorrectly">尚未计算或者计算有误</sys:String>
+
+    <!--ManagerService-DelegateBase-Tip-->
+    <sys:String x:Key="DelegateBaseExitProcess">退出流程</sys:String>
+
+    <!--DFTComponent-CardCommCommand-Tip-->
+    <sys:String x:Key="CardCommCommandForwardOutput">正向输出</sys:String>
+    <sys:String x:Key="CardCommCommandKeepTheOutputOUTCO">保持输出OUTCO</sys:String>
+    <sys:String x:Key="CardCommCommandAcquisitionMode">采集模式</sys:String>
+    <sys:String x:Key="CardCommCommandReplicationMode">复制模式</sys:String>
+    <sys:String x:Key="CardCommCommandObjectiveLeft">物镜左侧</sys:String>
+    <sys:String x:Key="CardCommCommandObjectiveRight">物镜右侧</sys:String>
+    <sys:String x:Key="CardCommCommandBothSidesOfObjective">物镜两侧</sys:String>
+    <sys:String x:Key="CardCommCommandForwardDirection">正向</sys:String>
+    <sys:String x:Key="CardCommCommandNegativeDirection">负向</sys:String>
+    <sys:String x:Key="CardCommCommandReverseOutput">反向输出</sys:String>
+
+    <!--DFTComponent-MWCommCommand-Tip-->
+    <sys:String x:Key="MWCommCommandDAOutputsPIMIN">DA输出PIMIN</sys:String>
+    <sys:String x:Key="MWCommCommandDAOutputPIC">DA输出PIC</sys:String>
+    <sys:String x:Key="MWCommCommandADRecordAndDAOutputBasedOnCount">AD记录,DA依据计数输出</sys:String>
+    <sys:String x:Key="MWCommCommandTheADDoesNotRecordAndTheDAOutputIsBasedOnTheCount">AD不记录,DA依据计数输出</sys:String>
+    <sys:String x:Key="MWCommCommandNegativeDirection">负向</sys:String>
+    <sys:String x:Key="MWCommCommandForwardDirection">正向</sys:String>
+    <sys:String x:Key="MWCommCommandAIsForwardDirection">A为正</sys:String>
+    <sys:String x:Key="MWCommCommandBIsForwardDirection">B为正</sys:String>
+
+    <!--DFTComponent-DFTMaintanceViewModel-Tip-->
+    <sys:String x:Key="DFTMaintanceViewModelDeviceNotConnected">设备未连接</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelAlarmResetFailure">报警复位失败</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelAlarmResetSuccessfully">报警复位成功</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelInstructionFormatCannotBeEnteredInChinese">指令格式不能输入中文</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelCommandReceivingFailure">命令接收失败</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelTheSendCommandIsNull">发送命令为空</sys:String>
+    
+	<!--UIShared-FFUView-Tip-->
+	<sys:String x:Key="FFUViewOpenAll">全部打开</sys:String>
+	<sys:String x:Key="FFUViewOpen">打开</sys:String>
+	<sys:String x:Key="FFUViewAllShutDown">全部关闭</sys:String>
+	<sys:String x:Key="FFUViewShutDown">关闭</sys:String>
+	<sys:String x:Key="FFUViewName">名称</sys:String>
+	<sys:String x:Key="FFUViewState">状态</sys:String>
+	<sys:String x:Key="FFUViewActualWindSpeed">实际风速</sys:String>
+	<sys:String x:Key="FFUViewSetWindSpeed">设置风速</sys:String>
+
+	<!--UIShared-PureHuaView-Tip-->
+	<sys:String x:Key="PureHuaViewName">名称</sys:String>
+	<sys:String x:Key="PureHuaViewState">状态</sys:String>
+	<sys:String x:Key="PureHuaViewHighFrequencyWindSpeed">高频风速</sys:String>
+	<sys:String x:Key="PureHuaViewLowFrequencyWindSpeed">低频风速</sys:String>
+	<sys:String x:Key="PureHuaViewFrequencyMode">频率模式</sys:String>
+
+	<!--UIShared-IOView-Tip-->
+	<sys:String x:Key="IOViewScreeningGroup">筛选组别</sys:String>
+
+	<!--UIShared-DualBandPower-Tip-->
+	<sys:String x:Key="DualBandPowerSend">发送</sys:String>
+
+	<!--UIShared-GateParam-Tip-->
+	<sys:String x:Key="GateParamMakeSureTurnOnTheLaser">确定要打开激光</sys:String>
+
+	<!--UIShared-LogViewModel-Tip-->
+	<sys:String x:Key="LogViewModelMessage">信息</sys:String>
+	<sys:String x:Key="LogViewModelWarning">警告</sys:String>
+	<sys:String x:Key="LogViewModelError">错误</sys:String>
+	<sys:String x:Key="LogViewModelTrack">跟踪</sys:String>
+
+	<!--UIShared-MotionInitViewModel-Tip-->
+	<sys:String x:Key="LogViewModelExceedingLimit">超出限位</sys:String>
+	
+       <!--BoxShared-ScannerRegTask-Tip-->
+       	<sys:String x:Key="ScannerRegTaskCameraNotStarted">相机未启动！</sys:String>
+	<!--UIShared-ScanCalibFileFactory-Tip-->
+	<sys:String x:Key="ScanCalibFileFactoryImportingTheGalvanometerSucceededProcedure">导入振镜成功</sys:String>
+
+	<!--UIShared-ScannerRelationCalibrateViewModel-Tip-->
+	<sys:String x:Key="ScannerRelationCalibrateViewModelNophotoPosition">未设置拍照位置</sys:String>
+	<sys:String x:Key="ScannerRelationCalibrateViewModelNoMarkingPosition">未设置打标位置</sys:String>
+	<sys:String x:Key="ScannerRelationCalibrateViewModelNoInputParameter">未输入参数</sys:String>
+
+	<!--UIShared-DxfView-Tip-->
+	<sys:String x:Key="DxfViewAttribute">属性</sys:String>
+	<sys:String x:Key="DxfViewGraphtTree">图形树</sys:String>
+    <!--UIShared-ScanBasicImageView-Tip-->
+	<sys:String x:Key="ScanBasicImageViewDxfViewAttribute">属性</sys:String>
+	<sys:String x:Key="ScanBasicImageViewGraphtTree">图形树</sys:String>
+	<sys:String x:Key="ScanBasicImageViewEquipment">设备</sys:String>
+	<sys:String x:Key="ScanBasicImageViewLaserProperty">激光属性</sys:String>
+
+	<!--UIShared-ScanImageView-Tip-->
+	<sys:String x:Key="ScanImageViewDxfViewAttribute">属性</sys:String>
+	<sys:String x:Key="ScanImageViewGraphtTree">图形树</sys:String>
+	<sys:String x:Key="ScanImageViewEquipment">设备</sys:String>
+	<sys:String x:Key="ScanImageViewLaserProperty">激光属性</sys:String>
+
+	<!--ImageViewer-MarkMovedEventArg-Tip-->
+	<sys:String x:Key="MarkMovedEventArgOpenPicture">打开图片</sys:String>
+	<sys:String x:Key="MarkMovedEventArgSaveImage">保存图像</sys:String>
+	<sys:String x:Key="MarkMovedEventArgImageOpenException">图片打开异常</sys:String>
+	<sys:String x:Key="MarkMovedEventArgLoadImage">请载入图像</sys:String>
+	<sys:String x:Key="MarkMovedEventArgFileDonetExist">文件不存在</sys:String>
+	<sys:String x:Key="MarkMovedEventArgAfterSettingClickSave">设定完成后点击“保存”</sys:String>
+
+	<!--PowerCalibComponent_PC-PowerMeasurementResultView-Tip-->
+	<sys:String x:Key="PowerMeasurementResultViewNumber">序号</sys:String>
+	<sys:String x:Key="PowerMeasurementResultViewMeasurementParameter">测量参数</sys:String>
+	<sys:String x:Key="PowerMeasurementResultViewRealPower">实际功率(W)</sys:String>
+
+	<!--PowerCalibComponent_Shared-PMAdjustProgress-Tip-->
+	<sys:String x:Key="PMAdjustProgressPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+	<sys:String x:Key="PMAdjustProgressMeasureDeviceEmpty">测量硬件为空</sys:String>
+	<sys:String x:Key="PMAdjustProgressMeasureDeviceException">测量硬件异常</sys:String>
+	<sys:String x:Key="PMAdjustProgressDeviceStateError">检查硬件状态报错</sys:String>
+	<sys:String x:Key="PMAdjustProgressPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+
+	<!--PowerCalibComponent_Shared-PowerCheckTask-Tip-->
+	<sys:String x:Key="PowerCheckTaskPowerMeterDeviceOffline">功率计设备未连接</sys:String>
+	<sys:String x:Key="PowerCheckTaskPowerMeterDeviceEmpty">功率计设备为空</sys:String>
+	<sys:String x:Key="PowerCheckTaskDeviceCollectionFailed">功率计设备开始采集失败</sys:String>
+    <sys:String x:Key="PowerCheckTaskException">异常</sys:String>
+
+	<!--ControlCanvas-DesignPanel-Tip-->
+	<sys:String x:Key="DesignPanelIncorrectFormat">格式不正确</sys:String>
+
+	<!--MotionTest-MainWindow-Tip-->
+	<sys:String x:Key="MainWindowDistanceMeasurement">测距</sys:String>
+
+	<!--PowerCalibComponent_Shared-PowerMeterControl-Tip-->
+	<sys:String x:Key="PowerMeterControlSetZero">置零</sys:String>
+	<sys:String x:Key="PowerMeterControlNotSetZero">未置零</sys:String>
+
+	<!--XYYCalibShared-AccurateCenterCalibTask-Tip-->
+	<sys:String x:Key="AccurateCenterCalibTaskStopSearchingCenterOfCircle">停止搜索圆心</sys:String>
+	<sys:String x:Key="AccurateCenterCalibTaskTheLocationOfTheComputingCenterIsIncorrect">计算中心位置出错</sys:String>
+	
+	<!--XYYCalibShared-CenterCalibTask-Tip-->
+	<sys:String x:Key="CenterCalibTaskStopCalibratingTheCenterOfRotation">停止标定旋转中心</sys:String>
+	<sys:String x:Key="CenterCalibTaskNotFoundWhetherToTryAgain">未找到模板</sys:String>
+	<sys:String x:Key="CenterCalibTaskTheCenterOfRotationCannotBeFound">无法找到旋转中心</sys:String>
+	<sys:String x:Key="CenterCalibTaskFindTheCenterOfRotation">找到旋转中心</sys:String>
+
+	<!--XYYCalibShared-MakeTableTask-Tip-->
+	<sys:String x:Key="MakeTableTaskFailedToCalculateTheTargetLocation">计算目标位置失败</sys:String>
+	<sys:String x:Key="MakeTableTaskFailedToCalculateTheChordLength">计算弦长失败</sys:String>
+	<sys:String x:Key="MakeTableTaskStopAutomatiCalibration">停止自动标定</sys:String>
+	<sys:String x:Key="MakeTableTaskFailedToCaptureTheImageCenter">抓取图像中心失败</sys:String>
+	<sys:String x:Key="MakeTableTaskApproximationCalculationFailure">逼近计算失败</sys:String>
+
+	<!--XYYCalibShared-MatchTemplateTask-Tip-->
+	<sys:String x:Key="MatchTemplateTaskStopAutoMatching">停止自动匹配</sys:String>
+	<sys:String x:Key="MatchTemplateTaskTheIntervalParameterIsIncorrectlySet">间隔参数设置错误</sys:String>
+	<sys:String x:Key="MatchTemplateTaskErrorMatchingImageCenter">匹配图像中心出错</sys:String>
+	<sys:String x:Key="MatchTemplateTaskError">错误</sys:String>
+
+	<!--XYYCalibShared-MatchTemplateTask2-Tip-->
+	<sys:String x:Key="MatchTemplateTask2StopMatching">停止匹配</sys:String>
+	<sys:String x:Key="MatchTemplateTask2ErrorMatchingImageCenter">匹配图像中心出错</sys:String>
+	<sys:String x:Key="MatchTemplateTask2Error">错误</sys:String>
+
+	<!--XYYCalibShared-VerifyTask-Tip-->
+	<sys:String x:Key="VerifyTaskStopVerification">停止验证</sys:String>
+	<sys:String x:Key="VerifyTaskMiscalculation">计算错误</sys:String>
+	
+	<!--XYYCalibShared-VerifyTask2-Tip-->
+	<sys:String x:Key="VerifyTask2StopVerification">停止验证</sys:String>
+	<sys:String x:Key="VerifyTask2Miscalculation">计算错误</sys:String>
+
+	<!--XYYCalibShared-MatchTemplateView-Tip-->
+	<sys:String x:Key="MatchTemplateViewStep1">【第一步】标定板选择</sys:String>
+	<sys:String x:Key="MatchTemplateViewPlaceCalibrationBoard">把所选标定板放置到相机下方</sys:String>
+	<sys:String x:Key="MatchTemplateViewTemplate">模板</sys:String>
+	<sys:String x:Key="MatchTemplateViewMatchingCircle">匹配圆</sys:String>
+	<sys:String x:Key="MatchTemplateViewStep2">【第二步】模板制作</sys:String>
+	<sys:String x:Key="MatchTemplateViewTemplateMaking">模板制作</sys:String>
+	<sys:String x:Key="MatchTemplateViewStep3">【第三步】结果</sys:String>
+	<sys:String x:Key="MatchTemplateViewTemplatePath">模板路径</sys:String>
+
+	<!--XYYCalibShared-XYYAffineCalibrateView-Tip-->
+	<sys:String x:Key="XYYAffineCalibrateViewStep1">【第一步】Mark匹配</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewXInterval">X间距</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewYInterval">Y间距</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewStartAutomaticMatching">开始自动匹配</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewStop">停止</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewNumber">序号</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewStep2">【第二步】计算并保存</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewCalculate">计算</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewReadData">读取数据</sys:String>
+	<sys:String x:Key="XYYAffineCalibrateViewSaveData">保存数据</sys:String>
+
+	<!--XYYCalibShared-XYYCenterCalibrateView-Tip-->
+	<sys:String x:Key="XYYCenterCalibrateViewStep1">【第一步】旋转中心粗测</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewAngle">角度</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewExecute">执行</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewManualRotation">手动旋转</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewStep2">【第二步】旋转中心精测</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewReadData">读取数据</sys:String>
+	<sys:String x:Key="XYYCenterCalibrateViewSaveData">保存数据</sys:String>
+
+	<!--XYYCalibShared-XYYTableMakerView-Tip-->
+	<sys:String x:Key="XYYTableMakerViewStep1">【第一步】角度参数设置</sys:String>
+	<sys:String x:Key="XYYTableMakerViewCalibrationAngleRange">标定角度范围</sys:String>
+	<sys:String x:Key="XYYTableMakerViewAngularStep">角度步进</sys:String>
+	<sys:String x:Key="XYYTableMakerViewThreshold">阈值</sys:String>
+	<sys:String x:Key="XYYTableMakerViewStep2">【第二步】开启自动流程</sys:String>
+	<sys:String x:Key="XYYTableMakerViewStartExecution">开始执行</sys:String>
+	<sys:String x:Key="XYYTableMakerViewStopExecution">停止执行</sys:String>
+	<sys:String x:Key="XYYTableMakerViewStep3">【第三步】制表</sys:String>
+	<sys:String x:Key="XYYTableMakerViewReadData">读取数据</sys:String>
+	<sys:String x:Key="XYYTableMakerViewSaveData">保存数据</sys:String>
+
+	<!--XYYCalibShared-XYYVerifyView-Tip-->
+	<sys:String x:Key="XYYVerifyViewStep1">【第一步】调平设置</sys:String>
+	<sys:String x:Key="XYYVerifyViewOriginalPointA">原A点</sys:String>
+	<sys:String x:Key="XYYVerifyViewGetCurrentValue">获取当前值</sys:String>
+	<sys:String x:Key="XYYVerifyViewTheCoordinate(X,Y)">坐标(X,Y)</sys:String>
+	<sys:String x:Key="XYYVerifyViewOriginalPointB">原B点</sys:String>
+	<sys:String x:Key="XYYVerifyViewNewAPoint">新A点</sys:String>
+	<sys:String x:Key="XYYVerifyViewNewBPoint">新B点</sys:String>
+	<sys:String x:Key="XYYVerifyViewSettingTemplateA">设置模板A</sys:String>
+	<sys:String x:Key="XYYVerifyViewSettingTemplateB">设置模板B</sys:String>
+	<sys:String x:Key="XYYVerifyViewStep2">【第二步】调平</sys:String>
+	<sys:String x:Key="XYYVerifyViewLeveling1">调平1</sys:String>
+	<sys:String x:Key="XYYVerifyViewLeveling2">调平2</sys:String>
+	<sys:String x:Key="XYYVerifyViewStop">停止</sys:String>
+	<sys:String x:Key="XYYVerifyViewReturnToOrigin">回原点</sys:String>
+	<sys:String x:Key="XYYVerifyViewReadData">读取数据</sys:String>
+	<sys:String x:Key="XYYVerifyViewSaveData">保存数据</sys:String>
+
+	<!--XYYCalibShared-XYYCalibView-Tip-->
+	<sys:String x:Key="XYYCalibViewTemplateSelection">模板选择</sys:String>
+	<sys:String x:Key="XYYCalibViewAffineRelationCalibration">仿射关系标定</sys:String>
+	<sys:String x:Key="XYYCalibViewRotationCenterCalibration">旋转中心标定</sys:String>
+	<sys:String x:Key="XYYCalibViewRotationCalibration">旋转标定</sys:String>
+	<sys:String x:Key="XYYCalibViewVerify">验证</sys:String>
+
+    <!-- ************************************************* Menu **************************************** -->
+
+    <!--Menu-->
+    <sys:String x:Key="Jobs">工作台</sys:String>
+    <sys:String x:Key="Modules">模组</sys:String>
+    <sys:String x:Key="Recipes">程式</sys:String>
+    <sys:String x:Key="Systems">系统</sys:String>
+    <sys:String x:Key="Analysis">分析</sys:String>
+    <sys:String x:Key="Overview">概况</sys:String>
+    <sys:String x:Key="Tooling">制模</sys:String>
+    <sys:String x:Key="Facility">设备</sys:String>
+    <sys:String x:Key="Material">原料</sys:String>
+    <sys:String x:Key="I/O">输入/输出</sys:String>
+    <sys:String x:Key="Counter">抵消</sys:String>
+    <sys:String x:Key="Scripts">程式</sys:String>
+    <sys:String x:Key="Features">特征</sys:String>
+    <sys:String x:Key="Axis">轴</sys:String>
+    <sys:String x:Key="Equipment">设备型号</sys:String>
+    <sys:String x:Key="Setup">设置</sys:String>
+    <sys:String x:Key="UserInterface">用户界面</sys:String>
+
+
+</ResourceDictionary>

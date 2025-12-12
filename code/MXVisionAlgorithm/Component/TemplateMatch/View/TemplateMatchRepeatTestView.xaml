@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="MXVisionAlgorithm.Component.TemplateMatch.View.TemplateMatchRepeatTestView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MXVisionAlgorithm.Component.MarkLocation.View" 
+             xmlns:mw="http://www.maxwell-gp.com/"
+             xmlns:control="http://www.maxwell.com/controls" xmlns:viewmodel="clr-namespace:MXVisionAlgorithm.Component.MarkLocation.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MarkLocationViewModel}"
+             mc:Ignorable="d" 
+             d:DesignWidth="1800" d:DesignHeight="1350" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox x:Name="ImageRegion" Grid.Row="0" Grid.Column="0" Stretch="Uniform" Margin="5">
+            <control:DesignPanel Name="ImagePanel" Width="1500" Height="1300" Source="{Binding Image}"></control:DesignPanel>
+        </Viewbox>
+
+        <ScrollViewer Grid.Column="1" Grid.Row="0" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" >
+            <Grid Margin="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"></RowDefinition>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition Height="400"></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <GroupBox Grid.Column="0" Grid.Row="0" Header="TemplateCreate">
+                    <Grid Margin="4,0,6,0" >
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="No.1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"></Label>
+                        <ComboBox Grid.Row="0" Grid.Column ="1" Margin="5" Name="FirstTemplateType" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding FirstTemplateType}" ></ComboBox>
+                        <Button Grid.Row="0" Grid.Column="2" Name="FirstTemplateCreate" Content="TemplateCreate" Click="{mw:Action FirstTemplateCreateClick}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"></Button>
+
+                        <Label Grid.Row="1" Grid.Column="0" Content="No.2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="12"></Label>
+                        <ComboBox Grid.Row="1" Grid.Column ="1" Margin="5" Name="SecondTemplateType" VerticalAlignment="Center" HorizontalAlignment="Center" Text="{Binding SecondTemplateType}" ></ComboBox>
+                        <Button Grid.Row="1" Grid.Column="2" Name="SecondTemplateCreate" Content="TemplateCreate" Click="{mw:Action SecondTemplateCreateClick}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="120"></Button>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="0" Grid.Row="1" Header="SingleImageMatch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Name="TemplateMatch" Content="Match" Click="{mw:Action TemplateMatchClick}" HorizontalAlignment="Center" VerticalAlignment="Center"></Button>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Grid.Row="0" Name="FirstCenterLabel" Content="No.1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="0" Name="FirstCenterTbx" Text="{Binding SingleImageFirstCenterResult}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="290" IsReadOnly="True"></TextBox>
+
+                            <Label Grid.Column="0" Grid.Row="1" Name="SecondCenterLabel" Content="No.2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"></Label>
+                            <TextBox Grid.Column="1" Grid.Row="1" Name="SecondCenterTbx" Text="{Binding SingleImageSecondCenterResult}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="290" IsReadOnly="True"></TextBox>
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="0" Grid.Row="2" Header="MultiImageMatch">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="60"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Name="SelectMultiImageLabel" Content="SelectMultiImage" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="15"></Label>
+                        <TextBox Grid.Row="0" Name="DirTbx" Text="{Binding SelectImageName}" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="15" Width="290" IsReadOnly="True"></TextBox>
+                        <Button Grid.Row="0" Name="SelectMultiImage" Content="..." Click="{mw:Action SelectMultiImageClick}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="30" Height="30"></Button>
+                        <Button Grid.Row="1" Name="MatchMultiImage" Content="Match" Click="{mw:Action MatchMultiImageClick}" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
+                        <RichTextBox Grid.Row="2" Name="MatchMultiImageResult" IsReadOnly="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Visible" ></RichTextBox>
+                        <Button Grid.Row="3" Name="ClearRichTextBox" Content="Clear" Click="{mw:Action ClearRichTextBoxClick}" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

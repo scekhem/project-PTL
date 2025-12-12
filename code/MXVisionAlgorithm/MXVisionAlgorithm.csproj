@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.props" Condition="Exists('..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.props')" />
+  <Import Project="..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props" Condition="Exists('..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A89DDF79-E4E6-4B87-9AB5-ACDF50EC9D35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MXVisionAlgorithm</RootNamespace>
+    <AssemblyName>MXVisionAlgorithm</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnet">
+      <HintPath>..\..\..\UltrapreciseBounding-1\ultraprecisebounding\Ref\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxwellControl, Version=1.1.25.423, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxwellControl.1.1.250423\lib\net461\MaxwellControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxwellFramework, Version=1.1.25.423, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxwellFramework.Touchable.1.1.250423\lib\net461\MaxwellFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxwellFramework.Core, Version=1.1.25.423, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxwellFramework.Core.1.1.250423\lib\net461\MaxwellFramework.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MaxWellGeneralLog, Version=3.1.24.906, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxwellFramework.TxtLoggerManager.3.1.240906\lib\net461\MaxWellGeneralLog.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.AlarmManager, Version=1.1.25.423, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaxwellFramework.AlarmManager.1.1.250423\lib\net461\MwFramework.AlarmManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.Controls.Components, Version=1.1.25.424, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MwFramework.Controls.UIControl.1.1.250424\lib\net461\MwFramework.Controls.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.Controls.ControlCanvas, Version=1.1.24.826, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MwFramework.ImageViewer.1.1.240826\lib\net461\MwFramework.Controls.ControlCanvas.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.Controls.ImageViewer, Version=1.1.24.826, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MwFramework.ImageViewer.1.1.240826\lib\net461\MwFramework.Controls.ImageViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.Controls.UIControl, Version=1.1.23.1101, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MwFramework.Controls.UIControl.1.1.250424\lib\net461\MwFramework.Controls.UIControl.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.Device, Version=1.1.24.826, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\MwFramework.DeviceModule.1.0.24.826\lib\net461\MwFramework.Device.dll</HintPath>
+    </Reference>
+    <Reference Include="MwFramework.ManagerService, Version=1.1.25.424, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MwFramework.Controls.UIControl.1.1.250424\lib\net461\MwFramework.ManagerService.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged, Version=4.1.0.0, Culture=neutral, PublicKeyToken=ee3ee20bcf148ddd, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyChanged.Fody.4.1.0\lib\net40\PropertyChanged.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\Ref\DirectRef\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Common\AbstractBaseViewModel.cs" />
+    <Compile Include="Common\EnumTypes.cs" />
+    <Compile Include="Common\ImageHelper.cs" />
+    <Compile Include="Common\ImagePanelOperation.cs" />
+    <Compile Include="Common\OpticDistortService.cs" />
+    <Compile Include="Common\SingletonTemplate.cs" />
+    <Compile Include="Common\MarkLocationManagerService.cs" />
+    <Compile Include="Common\TemplateManagerService.cs" />
+    <Compile Include="Component\AreaProportion\ViewModel\AreaProportionViewModel.cs" />
+    <Compile Include="Component\AreaProportion\View\AreaProportionView.xaml.cs">
+      <DependentUpon>AreaProportionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\CalcMmppx\ViewModel\CalcMmppxViewModel.cs" />
+    <Compile Include="Component\CalcMmppx\View\CalcMmppxView.xaml.cs">
+      <DependentUpon>CalcMmppxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\ImageProcess\ViewModel\ImageEmphasizeViewModel.cs" />
+    <Compile Include="Component\ImageProcess\View\ImageEmphasizeView.xaml.cs">
+      <DependentUpon>ImageEmphasizeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\LightCenter\ViewModel\LightCenterViewModel.cs" />
+    <Compile Include="Component\LightCenter\View\LightCenterView.xaml.cs">
+      <DependentUpon>LightCenterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\MarkLocation\ViewModel\MarkLocationRepeatTestViewModel.cs" />
+    <Compile Include="Component\MarkLocation\ViewModel\MarkLocationViewModel.cs" />
+    <Compile Include="Component\MarkLocation\View\MarkLocationView.xaml.cs">
+      <DependentUpon>MarkLocationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\OpticDistortRate\ViewModel\OpticDistortTestViewModel.cs" />
+    <Compile Include="Component\OpticDistortRate\View\OpticDistortTestView.xaml.cs">
+      <DependentUpon>OpticDistortTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TemplateMatch\ViewModel\TemplateCreateViewModel.cs" />
+    <Compile Include="Component\TemplateMatch\ViewModel\TemplateMatchRepeatTestViewModel.cs" />
+    <Compile Include="Component\TemplateMatch\ViewModel\TemplateMatchViewModel.cs" />
+    <Compile Include="Component\TemplateMatch\View\TemplateCreateView.xaml.cs">
+      <DependentUpon>TemplateCreateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TemplateMatch\View\TemplateMatchRepeatTestView.xaml.cs">
+      <DependentUpon>TemplateMatchRepeatTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TemplateMatch\View\TemplateMatchView.xaml.cs">
+      <DependentUpon>TemplateMatchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TrainPattern\ViewModel\DisplayTemplateViewModel.cs" />
+    <Compile Include="Component\TrainPattern\ViewModel\TrainPatternViewModel.cs" />
+    <Compile Include="Component\TrainPattern\View\DisplayTemplateView.xaml.cs">
+      <DependentUpon>DisplayTemplateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Component\TrainPattern\View\TrainPatternView.xaml.cs">
+      <DependentUpon>TrainPatternView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\SystemDataPara.cs" />
+    <Compile Include="StartBootstrapper.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="DefaultConfig">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\Layout.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Component\0Auto\ViewModel\" />
+    <Folder Include="Component\0Auto\View\" />
+    <Folder Include="Component\2Teching\ViewModel\" />
+    <Folder Include="Component\2Teching\View\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Component\AreaProportion\View\AreaProportionView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Component\CalcMmppx\View\CalcMmppxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\ImageProcess\View\ImageEmphasizeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\LightCenter\View\LightCenterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\MarkLocation\View\MarkLocationRepeatTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\MarkLocation\View\MarkLocationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\OpticDistortRate\View\OpticDistortTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\TemplateMatch\View\TemplateCreateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\TemplateMatch\View\TemplateMatchRepeatTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\TemplateMatch\View\TemplateMatchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\TrainPattern\View\DisplayTemplateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Component\TrainPattern\View\TrainPatternView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Include="Language\MaxwellFramework_CN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Language\MaxwellFramework_EN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Language\MX10UBDBU01AA_EN.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MwTrainTemplate\MwTrainTemplate.csproj">
+      <Project>{0F60D0EF-FB16-4818-8626-FD04935B0B12}</Project>
+      <Name>MwTrainTemplate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UltrapreciseBonding\UltrapreciseBonding.csproj">
+      <Project>{da012943-63d2-435f-b1ef-2179664854d2}</Project>
+      <Name>UltrapreciseBonding</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>$(ProjectDir)..\Ref\CopyBuildFile.bat</PreBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Fody.6.8.0\build\Fody.targets" Condition="Exists('..\packages\Fody.6.8.0\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Fody.6.8.0\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Fody.6.8.0\build\Fody.targets'))" />
+    <Error Condition="!Exists('..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\PropertyChanged.Fody.4.1.0\build\PropertyChanged.Fody.props'))" />
+    <Error Condition="!Exists('..\packages\MwFramework.DeviceModule.1.0.24.826\build\MwFramework.DeviceModule.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MwFramework.DeviceModule.1.0.24.826\build\MwFramework.DeviceModule.targets'))" />
+    <Error Condition="!Exists('..\packages\MwFramework.Base.1.0.231228\build\MwFramework.Base.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MwFramework.Base.1.0.231228\build\MwFramework.Base.targets'))" />
+    <Error Condition="!Exists('..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.props'))" />
+    <Error Condition="!Exists('..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.targets'))" />
+  </Target>
+  <Import Project="..\packages\MwFramework.DeviceModule.1.0.24.826\build\MwFramework.DeviceModule.targets" Condition="Exists('..\packages\MwFramework.DeviceModule.1.0.24.826\build\MwFramework.DeviceModule.targets')" />
+  <Import Project="..\packages\MwFramework.Base.1.0.231228\build\MwFramework.Base.targets" Condition="Exists('..\packages\MwFramework.Base.1.0.231228\build\MwFramework.Base.targets')" />
+  <Import Project="..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.targets" Condition="Exists('..\packages\GitVersion.MsBuild.5.12.0\build\GitVersion.MsBuild.targets')" />
+</Project>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layout Version="1.0.0" WindowHeight="1024" WindowWidth="1280"  MachineId="12345678901234567">
+    <Header Title="MX10UBDBU01AA">
+        <!--显示急停按钮-->
+        <HeaderItem Id="EMO"/>
+        <!--隐藏状态按钮-->
+        <!--<HeaderItem Id="HideCIMStatus"/>-->
+        <!--隐藏Log按钮-->
+        <!--<HeaderItem Id="HideLogger"/>-->
+        <!--隐藏报警按钮-->
+        <!--<HeaderItem Id="HideAlarm"/>-->
+        <!--隐藏退出按钮-->
+        <!--<HeaderItem Id="HideExit"/>-->
+    </Header>
+    <Body>
+        <StatusBar>
+            <StatusLight Name="设备一"  LangName="Device" Binding="Device"></StatusLight>
+        </StatusBar>
+        <Pages>
+            <Page Name ="CalcMmppxView" LangName ="CalcMmppxView" Target ="CalcMmppxView" UserRightId ="CalcMmppxView">
+            </Page>     
+            
+            <Page Name ="ImageEmphasizeView" LangName ="ImageEmphasizeView" Target ="ImageEmphasizeView" UserRightId ="ImageEmphasizeView">
+            </Page>
+            <!--LangName对应资源文件下的Key-->
+            <Page Name ="MarkLocation" LangName ="MarkLocation" UserRightId ="MarkLocation">
+                <Menu ItemContentOffset="5">
+                    <MenuItem Name ="MarkLocationView" LangName ="MarkLocationView" Target ="MarkLocationView" UserRightId ="MarkLocationView"></MenuItem>
+                    <MenuItem Name ="MarkLocationRepeatTestView" LangName ="MarkLocationRepeatTestView" Target ="MarkLocationRepeatTestView" UserRightId ="MarkLocationRepeatTestView"></MenuItem>
+                </Menu>
+            </Page>
+            <Page Name ="TemplateMatchView" LangName ="TemplateMatchView" UserRightId ="TemplateMatchView">
+                <Menu ItemContentOffset="5">
+                    <MenuItem Name ="TemplateMatchView" LangName ="TemplateMatchView" Target ="TemplateMatchView" UserRightId ="TemplateMatchView"></MenuItem>
+                    <MenuItem Name ="TemplateMatchRepeatTestView" LangName ="TemplateMatchRepeatTestView" Target ="TemplateMatchRepeatTestView" UserRightId ="TemplateMatchRepeatTestView"></MenuItem>
+                </Menu>
+            </Page>
+            <!--光学畸变率计算-->
+            <Page Name ="OpticDistortTestView" LangName ="OpticDistortTestView" Target ="OpticDistortTestView" UserRightId ="OpticDistortTestView">
+            </Page>
+            <!--气泡面积占比计算-->
+            <Page Name ="AreaProportionView" LangName ="AreaProportionView" Target ="AreaProportionView" UserRightId ="AreaProportionView">
+            </Page>
+            <!--光源中心计算-->
+            <Page Name ="LightCenterView" LangName ="LightCenterView" Target ="LightCenterView" UserRightId ="LightCenterView">
+            </Page>
+            
+            <!--<Page Name="Teching" LangName="Teching"  Target="Teching"   UserRightId="Teching">
+                <Menu ItemContentOffset="5">
+                    <MenuItem Name="DeviceTeching" LangName="DeviceTeching" Target="DeviceTeching"  UserRightId="SystemTeching">
+                        <MenuItem Name="TopWaferTeching" LangName="TopWaferTeching" Target="TopWaferTeching"  UserRightId="TopWaferTeching"/>
+                        <MenuItem Name="TopChipSizeTeching" LangName="TopChipSizeTeching" Target="TopChipSizeTeching"  UserRightId="TopChipSizeTeching"/>
+                        <MenuItem Name="BaseChipSizeTeching" LangName="BaseChipSizeTeching" Target="BaseChipSizeTeching"  UserRightId="BaseChipSizeTeching"/>
+                        <MenuItem Name="FristPickupPosTeching" LangName="FristPickupPosTeching" Target="FristPickupPosTeching"  UserRightId="FristPickupPosTeching"/>
+                        <MenuItem Name="ICEjectTeching" LangName="ICEjectTeching" Target="ICEjectTeching"  UserRightId="ICEjectTeching"/>
+                        <MenuItem Name="ICPickupTeching" LangName="ICPickupTeching" Target="ICPickupTeching"  UserRightId="ICPickupTeching"/>
+                        <MenuItem Name="ToolICPosCheck" LangName="ToolICPosCheck" Target="ToolICPosCheck"  UserRightId="ToolICPosCheck"/>
+                        <MenuItem Name="ICTeching" LangName="ICTeching" Target="ICTeching"  UserRightId="ICTeching"/>
+                        <MenuItem Name="SubstTeching" LangName="SubstTeching" Target="SubstTeching"  UserRightId="SubstTeching"/>
+                        <MenuItem Name="BHRotateCenterTeching" LangName="BHRotateCenterTeching" Target="BHRotateCenterTeching"  UserRightId="BHRotateCenterTeching"/>
+                    </MenuItem>
+                    <MenuItem Name="SystemTeching" LangName="SystemTeching" Target="SystemTeching"  UserRightId="SystemTeching">
+                        <MenuItem Name="MagazineTeching" LangName="MagazineTeching" Target="MagazineTeching"  UserRightId="MagazineTeching"/>
+                        <MenuItem Name="LoadingTransferPosTeching" LangName="LoadingTransferPosTeching" Target="LoadingTransferPosTeching"  UserRightId="LoadingTransferPosTeching"/>
+                        <MenuItem Name="WaferHoldRotateCenter" LangName="WaferHoldRotateCenter" Target="WaferHoldRotateCenter"  UserRightId="WaferHoldRotateCenter"/>
+                        <MenuItem Name="CameraCalibration" LangName="CameraCalibration" Target="CameraCalibration"  UserRightId="CameraCalibration"/>
+                        <MenuItem Name="NeedleTeching" LangName="NeedleTeching" Target="NeedleTeching"  UserRightId="NeedleTeching"/>
+                        <MenuItem Name="ExchangeFlipTeching" LangName="ExchangeFlipTeching" Target="ExchangeFlipTeching"  UserRightId="ExchangeFlipTeching"/>
+                        <MenuItem Name="BondForceCalibration" LangName="BondForceCalibration" Target="BondForceCalibration"  UserRightId="BondForceCalibration"/>
+                        <MenuItem Name="GapSensorCalibration" LangName="GapSensorCalibration" Target="GapSensorCalibration"  UserRightId="GapSensorCalibration"/>
+                        <MenuItem Name="ExchangeToolTeching" LangName="ExchangeToolTeching" Target="ExchangeToolTeching"  UserRightId="ExchangeToolTeching"/>
+                        <MenuItem Name="HeadOwnWeightCalibration" LangName="HeadOwnWeightCalibration" Target="HeadOwnWeightCalibration"  UserRightId="HeadOwnWeightCalibration"/>
+                    </MenuItem>
+                </Menu>
+            </Page>-->
+        </Pages>
+        <ToolBox Target="ToolBox"/>
+    </Body>
+    <!--<Footer Target="Foot"/>-->
+</Layout>

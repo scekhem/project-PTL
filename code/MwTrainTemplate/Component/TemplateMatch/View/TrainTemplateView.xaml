@@ -1,0 +1,563 @@
+﻿<Window x:Class="MwTrainTemplate.Component.TemplateMatch.View.TrainTemplateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:control="http://www.maxwell.com/controls"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MwTrainTemplate.Component.TemplateMatch.View"
+             xmlns:common="clr-namespace:MwTrainTemplate.Common"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:mw="http://www.maxwell-gp.com/"
+             Title="TemplateView"
+             HorizontalAlignment="Center"
+             VerticalAlignment="Center"
+             HorizontalContentAlignment="Stretch"
+             VerticalContentAlignment="Stretch"
+             d:DesignHeight="1350"
+             d:DesignWidth="1800"
+             WindowStartupLocation="CenterScreen"
+             mc:Ignorable="d">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="visiableConverter" />
+        <Style x:Key="GroupBoxSecondaryExt" TargetType="GroupBox">
+            <Setter Property="Padding" Value="5,5" />
+            <Setter Property="Margin" Value="3,5,3,0" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+        <common:ComboxConverter x:Key="ComboxConver" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <GroupBox
+                Height="110"
+                BorderThickness="2"
+                FontSize="20"
+                Header="Mode"
+                Style="{StaticResource GroupBoxSecondaryExt}">
+                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <ToggleButton 
+                        x:Name="ContinueAcquistion"
+                        Margin="30,5,0,0"
+                        VerticalContentAlignment="Center"
+                        Content="ContinueAcquistion"
+                        Width="150" 
+                        IsChecked="{Binding IsAcquistion}" Checked="{mw:Action ContinueAcquistionCheck}" Unchecked="{mw:Action ContinueAcquistionUnCheck}"/>
+                </WrapPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <GroupBox
+                Grid.Row="0"
+                Grid.Column="0"
+                Height="100"
+                BorderThickness="2"
+                FontSize="20"
+                Header="Mode"
+                Style="{StaticResource GroupBoxSecondaryExt}">
+                <WrapPanel Orientation="Horizontal">
+                    <RadioButton
+                        x:Name="RegionModeMove"
+                        Margin="30,5,0,0"
+                        VerticalContentAlignment="Center"
+                        Content="Ncc"
+                        FontSize="19"
+                        IsChecked="{Binding SetNccModel}" Click="{mw:Action SetNccModelClick}"/>
+                    <RadioButton
+                        x:Name="RegionModeResize"
+                        Margin="50,5,0,0"
+                        VerticalContentAlignment="Center"
+                        Content="Shape"
+                        FontSize="19"
+                        IsChecked="{Binding SetShapeModel}" Click="{mw:Action SetShapeModelClick}" />
+                </WrapPanel>
+            </GroupBox>
+        </Grid>
+        <Viewbox
+            x:Name="LeftRegion"
+            Grid.Row="1"
+            Grid.RowSpan="2"
+            Grid.Column="0"
+            Stretch="Uniform">
+            <control:DesignPanel
+                x:Name="cameraPanel"
+                Width="1350"
+                Height="970"
+                MotorX="{Binding MotorX}"
+                MotorY="{Binding MotorY}"
+                MotorZ="{Binding MotorTH}"
+                Source="{Binding Image}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown">
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_MouseLeftButtonDown}" CommandParameter="{Binding ElementName=cameraPanel}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_MouseLeftButtonUp}" CommandParameter="{Binding ElementName=cameraPanel}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="OnSourceChange">
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_OnSourceChange}" CommandParameter="{Binding ElementName=cameraPanel}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="OnMouseMove">
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_OnMouseMove}" CommandParameter="{Binding ElementName=cameraPanel}" />
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="ReportItemSelected">
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_ReportItemSelected}" CommandParameter="{Binding ElementName=cameraPanel}" />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </control:DesignPanel>
+        </Viewbox>
+        <Border
+            x:Name="RightRegion"
+            Grid.Row="1"
+            Grid.Column="1"
+            BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <Expander
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        IsExpanded="{Binding SelectedExpander1, Mode=TwoWay}"
+                        SnapsToDevicePixels="True">
+                        <Expander.Header>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Text="Source"
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Button
+                                    Grid.Row="0"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Command="{mw:Action AcquiredImage}"
+                                    Content="Acquire Image" />
+                                <Button
+                                    Grid.Row="1"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Command="{mw:Action LoadImageFromFile}"
+                                    Content="From File" />
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        Grid.Row="0"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        IsExpanded="{Binding SelectedExpander1, Mode=TwoWay}"
+                        SnapsToDevicePixels="True">
+                        <Expander.Header>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Text="CreateParam"
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <StackPanel Orientation="Vertical">
+                                <ListBox ItemsSource="{Binding CreateParamsItemsList}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch" Width="370">
+                                                <TextBlock
+                                                    HorizontalAlignment="Left"
+                                                    FontSize="20"
+                                                    Text="{Binding ItemName}" />
+                                                <WrapPanel HorizontalAlignment="Right">
+                                                    <mw:NumberBox
+                                                        FontSize="20"
+                                                        Margin="5"
+                                                        MinWidth="200"
+                                                        Value="{Binding ItemValue}"
+                                                        Minimum="{Binding LowLimit}"
+                                                        Maximum="{Binding HighLimit}" 
+                                                        DecimalPlaces="{Binding DecimalPlaces}" />
+                                                    <!--<TextBlock
+                                                        TextAlignment="Center"
+                                                        Width="50"
+                                                        FontSize="20"
+                                                        Text="{Binding ItemUnit}" />-->
+                                                </WrapPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                                <ListBox ItemsSource="{Binding CreateEnumsItemsList}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch" Width="370">
+                                                <TextBlock
+                                                    HorizontalAlignment="Left"
+                                                    FontSize="20"
+                                                    Text="{Binding ItemName}" />
+                                                <WrapPanel HorizontalAlignment="Right">
+                                                    <ComboBox
+                                                        Margin="5"
+                                                        MinWidth="200"
+                                                        SelectionChanged="{mw:Action ComboboxSelectionChanged,ActionNotFound=Enable}"
+                                                        SelectedIndex="{Binding ItemIndex,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                        SelectedValue="{Binding ItemVlaue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                        ItemsSource="{Binding TemplateType}" />
+                                                </WrapPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        Grid.Row="1"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        IsExpanded="{Binding SelectedExpander1, Mode=TwoWay}"
+                        SnapsToDevicePixels="True">
+                        <Expander.Header>
+                            <TextBlock
+                                HorizontalAlignment="Center"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Text="MatchParam"
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <StackPanel Orientation="Vertical">
+                                <ListBox ItemsSource="{Binding MatchParamsItemsList}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch" Width="370">
+                                                <TextBlock
+                                                    HorizontalAlignment="Left"
+                                                    FontSize="20"
+                                                    Text="{Binding ItemName}" />
+                                                <WrapPanel HorizontalAlignment="Right">
+                                                    <mw:NumberBox
+                                                        FontSize="20"
+                                                        Margin="2"
+                                                        MinWidth="200"
+                                                        Value="{Binding ItemValue}"
+                                                        Minimum="{Binding LowLimit}"
+                                                        Maximum="{Binding HighLimit}" 
+                                                        DecimalPlaces="{Binding DecimalPlaces}"/>
+                                                    <!--<TextBlock
+                                                        TextAlignment="Center"
+                                                        Width="50"
+                                                        FontSize="20"
+                                                        Text="{Binding ItemUnit}" />-->
+                                                </WrapPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                                <ListBox ItemsSource="{Binding MatchEnumsItemsList}">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Grid HorizontalAlignment="Stretch" Width="370">
+                                                <TextBlock
+                                                    HorizontalAlignment="Left"
+                                                    FontSize="20"
+                                                    Text="{Binding ItemName}" />
+                                                <WrapPanel HorizontalAlignment="Right">
+                                                    <ComboBox
+                                                        Margin="5"
+                                                        MinWidth="200"
+                                                        SelectionChanged="{mw:Action ComboboxSelectionChanged,ActionNotFound=Enable}"
+                                                        SelectedIndex="{Binding ItemIndex,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                        SelectedValue="{Binding ItemVlaue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                        ItemsSource="{Binding TemplateType}" />
+                                                </WrapPanel>
+                                            </Grid>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                </ListBox>
+                            </StackPanel>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                       VerticalAlignment="Stretch"
+                       HorizontalContentAlignment="Left"
+                       Background="Gray"
+                       BorderBrush="AliceBlue"
+                       BorderThickness="5"
+                       ExpandDirection="Down"
+                       IsExpanded="{Binding SelectedExpander7, Mode=TwoWay}"
+                       SnapsToDevicePixels="True">
+                        <Expander.Header>
+                            <TextBlock
+                               Width="100"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               TextAlignment="Center"
+                               Text="Match "
+                               TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <GroupBox
+                                   Grid.Row="0"
+                                   BorderThickness="3"
+                                   Header="Operation"
+                                   Style="{StaticResource GroupBoxSecondaryExt}">
+                                    <StackPanel>
+                                        <WrapPanel Height="60" Orientation="Horizontal">
+                                            <Button
+                                               Width="150"
+                                               Height="60"
+                                               Margin="5,5,0,0"
+                                               Background="Gray"
+                                               Click="{mw:Action Search}"
+                                               Content="Search"
+                                               Foreground="AntiqueWhite" />
+                                            <Button
+                                               Width="150"
+                                               Height="60"
+                                               Margin="25,5,0,0"
+                                               Background="Gray"
+                                               Click="{mw:Action Acquire}"
+                                               Content="Acquired Image"
+                                               Foreground="AntiqueWhite" />
+                                        </WrapPanel>
+                                        <WrapPanel Height="60">
+                                            <mw:ProgressBar
+                                               Width="160"
+                                               Height="60"
+                                               Margin="5,0,0,0"
+                                               Maximum="100"
+                                               Minimum="0"
+                                               Value="{Binding ProgressValue, Mode=OneWay}" />
+                                        </WrapPanel>
+                                        <WrapPanel Height="60">
+                                            <TextBlock
+                                               Margin="15,20,0,0"
+                                               FontSize="15"
+                                               Text="Interval[ms]" />
+                                            <mw:IntNumberBox
+                                               Width="50"
+                                               Height="40"
+                                               Margin="10,10,0,0"
+                                               mw:NumericKeypadAttach.IsEnabled="False"
+                                               IsPopupShow="True"
+                                               Maximum="1000"
+                                               Minimum="0"
+                                               ShowUpDownButton="True"
+                                               Value="{Binding InterVal}" />
+                                            <TextBlock
+                                               Margin="15,20,0,0"
+                                               FontSize="15"
+                                               Text="Repeatings" />
+                                            <mw:IntNumberBox
+                                               Width="50"
+                                               Height="40"
+                                               Margin="10,10,0,0"
+                                               mw:NumericKeypadAttach.IsEnabled="False"
+                                               IsPopupShow="True"
+                                               Maximum="1000"
+                                               Minimum="0"
+                                               ShowUpDownButton="True"
+                                               Value="{Binding Repeatings}" />
+                                        </WrapPanel>
+                                    </StackPanel>
+                                </GroupBox>
+                                <GroupBox
+                                   Grid.Row="1"
+                                   BorderThickness="3"
+                                   Header="Display"
+                                   Style="{StaticResource GroupBoxSecondaryExt}">
+                                    <DataGrid Name="t1"
+                                       Height="270"
+                                       Margin="10"
+                                       AutoGenerateColumns="False"
+                                       CanUserAddRows="False"
+                                       CanUserDeleteRows="False"
+                                       CanUserResizeRows="False"
+                                       CanUserSortColumns="False"
+                                       IsReadOnly="True"
+                                       ItemsSource="{Binding MatchParameterList}"
+                                       SelectionMode="Single"
+                                       SelectionUnit="FullRow">
+                                        <DataGrid.Style>
+                                            <Style BasedOn="{StaticResource {x:Type DataGrid}}" TargetType="DataGrid">
+                                                <Style.Triggers>
+                                                    <Trigger Property="AlternationIndex" Value="0">
+                                                        <Setter Property="Background" Value="LightBlue" />
+                                                    </Trigger>
+                                                    <Trigger Property="AlternationIndex" Value="1">
+                                                        <Setter Property="Background" Value="LightYellow" />
+                                                    </Trigger>
+                                                    <Trigger Property="IsEnabled" Value="False">
+                                                        <Setter Property="Opacity" Value="1" />
+                                                    </Trigger>
+
+                                                </Style.Triggers>
+                                            </Style>
+                                        </DataGrid.Style>
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn
+                                               Width="70"
+                                               Binding="{Binding ParameterInfo}"
+                                               Header="Info" />
+                                            <DataGridTextColumn
+                                               Width="70"
+                                               Binding="{Binding ParameterX}">
+                                                <DataGridTextColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Path=DataContext.ParameterXUnit,RelativeSource={RelativeSource AncestorType=Grid, AncestorLevel=2}}"/>
+                                                    </DataTemplate>
+                                                </DataGridTextColumn.HeaderTemplate>
+                                            </DataGridTextColumn>
+                                            <DataGridTextColumn
+                                               Width="70"
+                                               Binding="{Binding ParameterY}">
+                                                <DataGridTextColumn.HeaderTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Text="{Binding Path=DataContext.ParameterYUnit,RelativeSource={RelativeSource AncestorType=Grid, AncestorLevel=2}}"/>
+                                                    </DataTemplate>
+                                                </DataGridTextColumn.HeaderTemplate>
+                                            </DataGridTextColumn>
+                                            <DataGridTextColumn
+                                               Width="80"
+                                               Binding="{Binding ParameterRatation}"
+                                               Header="Rotation °" />
+                                            <DataGridTextColumn
+                                               Width="80"
+                                               Binding="{Binding ParameterScore}"
+                                               Header="Score ％" />
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </GroupBox>
+                                <!--<GroupBox  Grid.Row="2"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}"  Header="Chart">
+                                   <lvc:CartesianChart Height="400" Name="myLiveChart"  DisableAnimations="True"  LegendLocation="Top" >
+                                   </lvc:CartesianChart>
+                               </GroupBox>-->
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        SnapsToDevicePixels="True"
+                        IsExpanded="True">
+                        <Expander.Header>
+                            <TextBlock
+                                Width="100"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                TextAlignment="Center"
+                                Text="Camera "
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock Text="Camera:" FontSize="20" VerticalAlignment="Center"/>
+                                <ComboBox 
+                                    Margin="10,0" MinWidth="150"
+                                    ItemsSource="{Binding CameraList}"
+                                    SelectedItem="{Binding SelectedCamera}"
+                                    DisplayMemberPath="PO.CategoryName"/>
+                            </StackPanel>
+                        </Grid>
+                    </Expander>
+                    <Expander
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        SnapsToDevicePixels="True"
+                        IsExpanded="True">
+                        <Expander.Header>
+                            <TextBlock
+                                Width="200"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                TextAlignment="Center"
+                                Text="Load Template "
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button
+                                    Grid.Row="0"
+                                    HorizontalContentAlignment="Center"
+                                    VerticalContentAlignment="Center"
+                                    Command="{mw:Action LoadTemplateClick}"
+                                    Content="Load From File" />
+                                <ComboBox 
+                                    Name="templateComboBox"
+                                    Margin="10,0" MinWidth="150"
+                                    SelectionChanged="{mw:Action ChangeTemplate}"
+                                    />
+                            </StackPanel>
+                        </Grid>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <!--<WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">-->
+        <Grid Grid.Row="2" Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Margin="50,0"  Click="{mw:Action SetOk}" VerticalContentAlignment="Center" Content="OK" FontSize="19"></Button>
+                <Button Grid.Column="1" Margin="50,0" Click="{mw:Action SetCancel}" VerticalContentAlignment="Center" Content="Cancel" FontSize="19"></Button>
+        </Grid>
+        <!--</WrapPanel>-->
+        <!--<WrapPanel
+            Grid.Row="2"
+            Grid.Column="1"
+            Orientation="Horizontal">
+            <Button
+                Margin="130,0"
+                VerticalContentAlignment="Center"
+                Command="{mw:Action SetOk}"
+                Content="OK"
+                FontSize="19" />
+            <Button
+                Margin="40,0,0,0"
+                VerticalContentAlignment="Center"
+                Command="{mw:Action SetCancel}"
+                Content="Cancle"
+                FontSize="19" />
+        </WrapPanel>-->
+    </Grid>
+</Window>

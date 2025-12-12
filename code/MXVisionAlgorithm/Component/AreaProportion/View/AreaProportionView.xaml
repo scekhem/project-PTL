@@ -1,0 +1,128 @@
+<UserControl x:Class="MXVisionAlgorithm.Component.AreaProportion.View.AreaProportionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:drawingControl="http://www.maxwell.com/controls"
+             mc:Ignorable="d" 
+             xmlns:mw="http://www.maxwell-gp.com/"
+             xmlns:viewmodel="clr-namespace:MXVisionAlgorithm.Component.AreaProportion.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:AreaProportionViewModel}"
+             d:DesignWidth="1800" d:DesignHeight="1372.501" >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox x:Name="ImageRegion" Grid.Row="0" Grid.Column="0" Stretch="Uniform" Margin="5">
+            <drawingControl:DesignPanel  Width="1500" Height="1300"  Name="ImagePanel"  Source="{Binding Image}" Shapes="{Binding Regions}">
+
+            </drawingControl:DesignPanel>
+        </Viewbox>
+
+
+        <ScrollViewer Grid.Column="1" Grid.Row="0" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" >
+            <Grid Margin="5" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="121"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="205"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="35*"></ColumnDefinition>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="20"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <GroupBox Grid.Column="0" Header="Image" Grid.ColumnSpan="3" Height="120" VerticalAlignment="Center">
+                    <Grid Height="85">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+
+                        <Button  Grid.Row="0" Grid.Column="0" Name="UpDateImage" Content="UpDateImage" Click="{mw:Action UpDateImageClick}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5"></Button>
+
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="0" Grid.Row="1" Header="Wafer" Grid.ColumnSpan="3" Grid.RowSpan="2" Height="220" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid  Grid.Row="0" >
+                            <Button  Grid.Row="0" Grid.Column="0" Name="SetWafer" Content="SetWafer" Click="{mw:Action SetWaferClick}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="5"></Button>
+                        </Grid>
+                        <Grid  Grid.Row="1" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="22*"/>
+                                <RowDefinition Height="25*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" x:Name="AreaWaferLabel" Content="AreaWafer:" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Height="32" Width="115" Margin="0,31,0,0" Grid.RowSpan="2"/>
+                            <TextBox Grid.Column="1" x:Name="AreaWaferTbx" Text="{Binding AreaWafer}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="False" Height="34" Grid.RowSpan="2"/>
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="0" Grid.Row="3" Header="Bubble" Grid.ColumnSpan="3" Height="204" VerticalAlignment="Center" RenderTransformOrigin="0.439,-0.36">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid  Grid.Row="0" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" x:Name="SetBubble" Content="SetBubble" Click="{mw:Action SetBubbleClick}" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+                            <Button Grid.Column="1" x:Name="CleanBubble" Content="CleanBubble" Click="{mw:Action CleanBubbleClick}" HorizontalAlignment="Center" VerticalAlignment="Center" ></Button>
+                        </Grid>
+                        <Grid Grid.Row = "1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90"/>
+                            </Grid.RowDefinitions>
+
+                            <Label Grid.Row="1" Grid.Column="0" x:Name="AreaAllLabel" Content="AreaBubble:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="32" Width="115"/>
+                            <TextBox Grid.Column="1" Grid.Row="1" x:Name="AreaAllTbx" Text="{Binding AreaBubble}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="False" Height="35"/>
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Grid.Column="0" Grid.Row="4"  Header="AreaRatio" Grid.ColumnSpan="3" Height="200" VerticalAlignment="Center">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="90"/>
+                            <RowDefinition Height="1*"/>
+                        </Grid.RowDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Name="AreaRatio" Content="AreaRation" Click="{mw:Action AreaRatioClick}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"></Button>
+                        <Grid Grid.Row = "1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Label Grid.Row="0" Grid.Column="0" x:Name="AreaRationLabel" Content="AreaRatio:" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Height="32" Width="115" Margin="5,0,0,14"/>
+                            <TextBox Grid.Row="0" Grid.Column="1" x:Name="AreaRationTbx" Text="{Binding AreaRatio}" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Width="160" IsReadOnly="False" Height="35" Margin="0,0,0,12"/>
+                        </Grid>
+                    </Grid>
+                </GroupBox>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+
+</UserControl>

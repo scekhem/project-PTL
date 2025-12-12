@@ -1,0 +1,299 @@
+﻿<Window x:Class="MXVisionAlgorithm.Component.TemplateMatch.View.TemplateCreateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mw="http://www.maxwell-gp.com/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:converter="clr-namespace:MwFramework.Controls.UIControl;assembly=MwFramework.Controls.UIControl"
+             xmlns:control="http://www.maxwell.com/controls"
+             mc:Ignorable="d"             
+             HorizontalContentAlignment="Stretch"
+             VerticalContentAlignment="Stretch"
+             HorizontalAlignment="Center" 
+             VerticalAlignment="Center" 
+             WindowStartupLocation="CenterScreen"
+             WindowState="Maximized"
+             d:DesignHeight="1350" d:DesignWidth="1800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Viewbox x:Name="ImageRegion" Grid.Row="0" Grid.Column="0" Stretch="Uniform" Margin="5">
+            <control:DesignPanel Name="ImagePanel" Width="1500" Height="1300" Source="{Binding Image}"></control:DesignPanel>
+        </Viewbox>
+        <Border x:Name="RightRegion" Grid.Row="0" Grid.Column="1" BorderThickness="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel >
+                    <Expander Name="NccCreateParamExpander"  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding NccCreateParamExpander,Mode=TwoWay}" 
+                              Visibility="{Binding NccCreateParamExpanderVisibility,Mode=TwoWay}">
+                        <Expander.Header>
+                            <TextBlock Text="NccCreateParam" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" TextAlignment="Center" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Pyramid" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="0" Grid.Column="1" Minimum="-1" Maximum="5" Value="{Binding NccCreatePyramid}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+                                <Label Grid.Row="1" Grid.Column="0" Content="AngleStart" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="1" Grid.Column="1"  Value="{Binding NccCreateAngleStart}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="2" Grid.Column="0" Content="AngleExtent" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="2" Grid.Column="1"  Value="{Binding NccCreateAngleExtent}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="3" Grid.Column="0" Content="AngleStep" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="3" Grid.Column="1" Width="200" Name="NccCreateAngleStepCbx" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding NccCreateAngleStep}" >
+
+                                </ComboBox>
+
+                                <Label Grid.Row="4" Grid.Column="0" Content="Metric" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="4" Grid.Column="1" x:Name="NccCreateMetricCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding NccCreateMetric}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="5" Grid.Column="0" Content="SmoothImg" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="5" Grid.Column="1" x:Name="NccCreateSmoothImgCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding NccCreateSmoothImg}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="6" Grid.Column="0" Content="FilterSize" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="6" Grid.Column="1" Minimum="0" Maximum="5" Value="{Binding NccCreateFilterSize}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+                            </Grid>
+
+                        </Expander.Content>
+                    </Expander>
+                    <Expander Name="ShapeCreateParamExpander"  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding ShapeCreateParamExpander,Mode=TwoWay}" Visibility="{Binding ShapeCreateParamExpanderVisibility,Mode=TwoWay}" >
+                        <Expander.Header>
+                            <TextBlock Text="ShapeCreateParam" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" TextAlignment="Center" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="Pyramid" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="0" Grid.Column="1" Minimum="-1" Maximum="5" Value="{Binding ShapeCreatePyramid}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+
+                                <Label Grid.Row="1" Grid.Column="0" Content="AngleStart" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="1" Grid.Column="1"  Value="{Binding ShapeCreateAngleStart}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="2" Grid.Column="0" Content="AngleExtent" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="2" Grid.Column="1"  Value="{Binding ShapeCreateAngleExtent}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="3" Grid.Column="0" Content="AngleStep" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="3" Grid.Column="1" Name="ShapeCreateAngleStepCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateAngleStep}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="4" Grid.Column="0" Content="ScaleMin" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="4" Grid.Column="1"  Value="{Binding ShapeCreateScaleMin}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="5" Grid.Column="0" Content="ScaleMax" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="5" Grid.Column="1"  Value="{Binding ShapeCreateScaleMax}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="6" Grid.Column="0" Content="ScaleStep" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="6" Grid.Column="1" x:Name="ShapeCreateScaleStepCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateScaleStep}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="7" Grid.Column="0" Content="Optimization" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="7" Grid.Column="1" x:Name="ShapeCreateOptimizationCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateOptimization}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="8" Grid.Column="0" Content="Metric" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="8" Grid.Column="1" x:Name="ShapeCreateMetricCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateMetric}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="9" Grid.Column="0" Content="Contrast" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="9" Grid.Column="1" x:Name="ShapeCreateContrastCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateContrast}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="10" Grid.Column="0" Content="MinContrast" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="10" Grid.Column="1" x:Name="ShapeCreateMinContrastCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateMinContrast}">
+    
+                                </ComboBox>
+
+                                <Label Grid.Row="11" Grid.Column="0" Content="SmoothImg" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="11" Grid.Column="1" x:Name="ShapeCreateSmoothImgCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeCreateSmoothImg}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="12" Grid.Column="0" Content="FilterSize" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="12" Grid.Column="1" Minimum="0" Maximum="5" Value="{Binding ShapeCreateFilterSize}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+                            </Grid>
+
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  x:Name="NccMatchParamExpander"  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                             BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding NccMatchParamExpander,Mode=TwoWay}" Visibility="{Binding NccMatchParamExpanderVisibility,Mode=TwoWay}" >
+                        <Expander.Header>
+                            <TextBlock Text="NccMatchParam" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="AngleStart" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="0" Grid.Column="1"  Value="{Binding NccMatchAngleStart}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="1" Grid.Column="0" Content="AngleExtent" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="1" Grid.Column="1"  Value="{Binding NccMatchAngleExtent}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="2" Grid.Column="0" Content="MinScore" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="1"  Value="{Binding NccMatchMinScore}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="3" Grid.Column="0" Content="NumMatches" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="3" Grid.Column="1" Minimum="0" Value="{Binding NccMatchNumMatches}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+
+                                <Label Grid.Row="4" Grid.Column="0" Content="MaxOverlap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="4" Grid.Column="1" Minimum="0" Maximum="1"  Value="{Binding NccMatchMaxOverlap}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+
+                                <Label Grid.Row="5" Grid.Column="0" Content="SubPixel" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="5" Grid.Column="1" x:Name="NccMatchSubPixelCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding NccMatchSubPixel}">
+                                    
+                                </ComboBox>
+
+                                <Label Grid.Row="6" Grid.Column="0" Content="Pyramid" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="6" Grid.Column="1" Minimum="0" Maximum="5"  Value="{Binding NccMatchPyramid}" FontSize="20" ></mw:IntNumberBox>
+
+
+                                <Label Grid.Row="7" Grid.Column="0" Content="SmoothImg" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="7" Grid.Column="1" x:Name="NccMatchSmoothImgCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding  NccMatchSmoothImg}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="8" Grid.Column="0" Content="FilterSize" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="8" Grid.Column="1" Minimum="0" Maximum="5" Value="{Binding  NccMatchFilterSize}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  x:Name="ShapeMatchParamExpander"  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                             BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding ShapeMatchParamExpander,Mode=TwoWay}" Visibility="{Binding ShapeMatchParamExpanderVisibility,Mode=TwoWay}" >
+                        <Expander.Header>
+                            <TextBlock Text="ShapeMatchParam" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="AngleStart" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="0" Grid.Column="1"  Value="{Binding ShapeMatchAngleStart}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="1" Grid.Column="0" Content="AngleExtent" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="1" Grid.Column="1"  Value="{Binding ShapeMatchAngleExtent}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="2" Grid.Column="0" Content="ScaleMin" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="2" Grid.Column="1"  Value="{Binding ShapeMatchScaleMin}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+                                <Label Grid.Row="3" Grid.Column="0" Content="ScaleMax" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="3" Grid.Column="1"  Value="{Binding ShapeMatchScaleMax}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="4" Grid.Column="0" Content="MinScore" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="4" Grid.Column="1" Minimum="0" Maximum="1"  Value="{Binding ShapeMatchMinScore}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="5" Grid.Column="0" Content="NumMatches" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="5" Grid.Column="1" Minimum="0" Value="{Binding ShapeMatchNumMatches}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:IntNumberBox>
+
+                                <Label Grid.Row="6" Grid.Column="0" Content="MaxOverlap" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="6" Grid.Column="1" Minimum="0" Maximum="1"  Value="{Binding ShapeMatchMaxOverlap}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+
+                                <Label Grid.Row="7" Grid.Column="0" Content="SubPixel" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="7" Grid.Column="1" x:Name="ShapeMatchSubPixelCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding ShapeMatchSubPixel}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="8" Grid.Column="0" Content="Pyramid" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="8" Grid.Column="1" Minimum="0" Maximum="5"  Value="{Binding ShapeMatchPyramid}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="9" Grid.Column="0" Content="Greediness" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:NumberBox Grid.Row="9" Grid.Column="1" Minimum="0" Maximum="1"  Value="{Binding ShapeMatchGreediness}" FontSize="20" mw:NumericKeypadAttach.IsEnabled="True" ShowUpDownButton="True"></mw:NumberBox>
+
+                                <Label Grid.Row="10" Grid.Column="0" Content="SmoothImg" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <ComboBox Grid.Row="10" Grid.Column="1" x:Name="ShapeMatchSmoothImgCbx" Width="200" HorizontalContentAlignment="Center" FontSize="13" SelectedItem="{Binding  ShapeMatchSmoothImg}">
+
+                                </ComboBox>
+
+                                <Label Grid.Row="11" Grid.Column="0" Content="FilterSize" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"></Label>
+                                <mw:IntNumberBox Grid.Row="11" Grid.Column="1" Minimum="0" Maximum="5" Value="{Binding  ShapeMatchFilterSize}" FontSize="20" ></mw:IntNumberBox>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <WrapPanel Orientation="Horizontal" Grid.Column="1"  Grid.Row="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Content="OK" FontSize="19" Command="{mw:Action SetOk}"  Width="280" Height="60"  VerticalContentAlignment="Center"></Button>
+                <Button Grid.Column="1" Content="Cancel" FontSize="19" Command="{mw:Action SetCancel}" Width="280" Height="60"  VerticalContentAlignment="Center" Margin="40,0,0,0"></Button>
+            </Grid>
+
+        </WrapPanel>
+    </Grid>
+</Window>

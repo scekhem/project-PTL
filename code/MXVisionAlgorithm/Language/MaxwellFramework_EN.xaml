@@ -1,0 +1,2220 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <!-- ************************************************* MaxwellFramework **************************************** -->
+
+    <!--Header-->
+    <sys:String x:Key="HeaderProgram">Program</sys:String>
+    <sys:String x:Key="HeaderAlarm">Alarm</sys:String>
+    <sys:String x:Key="HeaderLogger">Logger</sys:String>
+    <sys:String x:Key="HeaderOnline">Online</sys:String>
+    <sys:String x:Key="HeaderOffline">Offline</sys:String>
+    <sys:String x:Key="HeaderSet">Set</sys:String>
+    <sys:String x:Key="HeaderUser">User</sys:String>
+    <sys:String x:Key="HeaderSwitchUser">SwitchUser</sys:String>
+    <sys:String x:Key="HeaderLogout">Logout</sys:String>
+    <sys:String x:Key="HeaderExit">Exit</sys:String>
+    <sys:String x:Key="MainViewClose">Close</sys:String>
+    <sys:String x:Key="MainViewEMO">EMO</sys:String>
+
+    <!--UserRightAttach-->
+    <sys:String x:Key="UserRightAttachUserRightSetting">UserRightSetting</sys:String>
+    <sys:String x:Key="UserRightAttachVisible">Visible</sys:String>
+    <sys:String x:Key="UserRightAttachEnable">Enable</sys:String>
+
+    <!--UserManager-->
+    <sys:String x:Key="UserManagerModleSet">UserModleSet</sys:String>
+    <sys:String x:Key="UserManagerIsUsingVisitor">IsUsingVisitor</sys:String>
+    <sys:String x:Key="UserManagerSwitchVisitorTime">SwitchVisitorTime(min)</sys:String>
+    <sys:String x:Key="UserManagerUsingAdminLogin">UsingAdminLogin</sys:String>
+    <sys:String x:Key="UserManagerVisitor">Visitor</sys:String>
+    <sys:String x:Key="UserManagerUsingKeyPadLogin">UsingKeyPadLogin</sys:String>
+
+    <!--ChangePassword-->
+    <sys:String x:Key="ChangePasswordTitle">ChangePwd</sys:String>
+    <sys:String x:Key="ChangePasswordOldPwd">OldPwd</sys:String>
+    <sys:String x:Key="ChangePasswordNewPwd">NewPwd</sys:String>
+    <sys:String x:Key="ChangePasswordConfirmPwd">ConfirmPwd</sys:String>
+
+    <!--CheckPasswordDialog-->
+    <sys:String x:Key="CheckPasswordDialogTitle">CheckPwd</sys:String>
+
+    <!--ConfigManager-->
+    <sys:String x:Key="ConfigManagerCancelChange">Cancel</sys:String>
+    <sys:String x:Key="ConfigManagerApplyChange">Apply</sys:String>
+
+    <!--Loading-->
+    <sys:String x:Key="LoadingContent">Loading...</sys:String>
+
+    <!--LockScreen-->
+    <sys:String x:Key="LockScreenText">SafetyLockScreen DoNotOperate</sys:String>
+    <sys:String x:Key="LockScreenUnLock">UNLOCK</sys:String>
+
+    <!--Login-->
+    <sys:String x:Key="LoginVisitorLogin">VisitorLogin</sys:String>
+    <sys:String x:Key="LoginLogin">Login</sys:String>
+
+    <!--Root-->
+    <sys:String x:Key="RootNoActWhenRepairing">Do not operate when maintenance work in progress...</sys:String>
+
+    <!--SecurityDialog-->
+    <sys:String x:Key="SecurityDialogTitle">FunctionalSecurityProtection</sys:String>
+
+    <!--SwitchUser-->
+    <sys:String x:Key="SwitchUserTitle">SwitchUser</sys:String>
+
+    <!--SystemConfigSetting-->
+    <sys:String x:Key="SystemConfigSettingWindowSetting">WindowSetting</sys:String>
+    <sys:String x:Key="SystemConfigSettingIsTopMost">KeepTop</sys:String>
+    <sys:String x:Key="SystemConfigSettingKeyboardSetting">KeyboardSetting</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAll">Disable All</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableWin">Disable Win</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAltWithTab">Disable Alt+Tab</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableAltWithF4">Disable Alt+F4</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableCtrlWithAltDel">Disable Ctrl+Alt+Del</sys:String>
+    <sys:String x:Key="SystemConfigSettingDisableCtrlWithShiftEsc">Disable Ctrl+Shift+Esc</sys:String>
+    <sys:String x:Key="SystemConfigSettingSystemSetting">SystemSetting</sys:String>
+    <sys:String x:Key="SystemConfigSettingSecuritySetting">SecuritySetting</sys:String>
+    <sys:String x:Key="SystemConfigSettingChangeSecurityPassword">ModifyPwd</sys:String>
+    <sys:String x:Key="SystemConfigSettingUserManagerSetting">UserManagerSetting</sys:String>
+
+    <!--UserManager-->
+    <sys:String x:Key="UserManagerUserRole">UserRole</sys:String>
+    <sys:String x:Key="UserManagerLastLoginTime">LastLoginTime</sys:String>
+    <sys:String x:Key="UserManagerAddUser">Add</sys:String>
+    <sys:String x:Key="UserManagerDeleteUser">Delete</sys:String>
+    <sys:String x:Key="UserManagerShowPassword">ShowPwd</sys:String>
+    <sys:String x:Key="UserManagerChangePassword">ModifyPwd</sys:String>
+    <sys:String x:Key="UserManagerWarning">Warning</sys:String>
+    <sys:String x:Key="UserManagerName">Manager</sys:String>
+
+    <!--PCHeader-->
+    <sys:String x:Key="PCHeaderSoftwareVersion">SoftwareVersion</sys:String>
+    <sys:String x:Key="PCHeaderEquipmentNo">EquipmentNo</sys:String>
+    <sys:String x:Key="PCHeaderEmergencyStop">EmergencyStop</sys:String>
+
+    <!--SameMessage-->
+    <sys:String x:Key="UserName">UserName</sys:String>
+    <sys:String x:Key="Password">Password</sys:String>
+    <sys:String x:Key="ButtonConfirm">Confirm</sys:String>
+    <sys:String x:Key="ButtonCancel">Cancel</sys:String>
+    <sys:String x:Key="ButtonYes">Yes</sys:String>
+    <sys:String x:Key="ButtonNo">No</sys:String>
+    <sys:String x:Key="TipTitle">Tip</sys:String>
+    <sys:String x:Key="CantFind">Can't Find</sys:String>
+    <sys:String x:Key="PleaseChooseUserName">PleaseChoose UserName</sys:String>
+    <sys:String x:Key="PleaseEnterPassword">PleaseEnterPassword</sys:String>
+
+    <!--SplashView-->
+    <sys:String x:Key="SplashViewWelcome">Welcome Using</sys:String>
+    <sys:String x:Key="SplashViewLoading">Loading</sys:String>
+    <sys:String x:Key="SplashViewLoading1">Loading.</sys:String>
+    <sys:String x:Key="SplashViewLoading2">Loading..</sys:String>
+    <sys:String x:Key="SplashViewLoading3">Loading...</sys:String>
+    <sys:String x:Key="SplashViewLoadingError">LoadingError</sys:String>
+    <sys:String x:Key="SplashViewClickExitAndRollingBack">ClickExit，RollingBack</sys:String>
+    <sys:String x:Key="SplashViewClickContinueIgnoreErrorAndContinueLoading">ClickContinue，IgnoreErrorAndContinueLoading</sys:String>
+    <sys:String x:Key="SplashViewExiting">Exiting</sys:String>
+    <sys:String x:Key="SplashViewExiting1">Exiting.</sys:String>
+    <sys:String x:Key="SplashViewExiting2">Exiting..</sys:String>
+    <sys:String x:Key="SplashViewExiting3">Exiting...</sys:String>
+    <sys:String x:Key="SplashViewExit">Exit</sys:String>
+    <sys:String x:Key="SplashViewRedo">Redo</sys:String>
+    <sys:String x:Key="SplashViewIgnoreContinue">Continue</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="ChangePasswordErrorPwdEmpty">*The old password is empty.</sys:String>
+    <sys:String x:Key="ChangePasswordErrorPwdWrongFormat">*The password must be 3 to 16 alphanumeric characters or symbols.</sys:String>
+
+    <sys:String x:Key="LoginErrorMessage">*Please enter the correct username and password.</sys:String>
+    <sys:String x:Key="UserManagerDeleteFail">Delete Failed!</sys:String>
+    <sys:String x:Key="UserManagerCannotDeleteManager">CannotDeleteManager</sys:String>
+    <sys:String x:Key="ChangePasswordErrorPwdInconsistent">*The new passwords entered twice do not match.</sys:String>
+    <sys:String x:Key="ChangePasswordErrorOldPwdWrong">*The old password is incorrect.</sys:String>
+    <sys:String x:Key="UserManagerChangeUserNameFail">Change username failed!</sys:String>
+    <sys:String x:Key="UserManagerSameName">Same name exists. Please change another name.</sys:String>
+    <sys:String x:Key="UserManagerIllegalName">Illegal name!</sys:String>
+    <sys:String x:Key="UserManagerNameFormat">Name must consist of 3-16 Chinese characters, letters, numbers, or underscores, and cannot begin with a number!</sys:String>
+    <sys:String x:Key="UserManagerDeleteMessage1">Are you sure you want to delete the user name</sys:String>
+    <sys:String x:Key="UserManagerDeleteMessage2">?</sys:String>
+
+    <!-- ************************************************* Alarm **************************************** -->
+
+    <!--AlarmDataGrid-->
+    <sys:String x:Key="AlarmDataGridAlarmType">Type</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmLevel">Level</sys:String>
+    <sys:String x:Key="AlarmDataGridTriggerTime">TriggerTime</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmDescribe">Describe</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmReason">Reason</sys:String>
+    <sys:String x:Key="AlarmDataGridAlarmSolution">Solution</sys:String>
+
+    <!--AlarmStatisticsView-->
+    <sys:String x:Key="AlarmStatisticsViewDateTimeChoose">DateTimeSelect</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewQuickQuery">QuickQuery</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewQuery">Query</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewClearAlarm">ClearAlarm</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewAlarmRank">RankOfAlarmTime</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewNumber">No</sys:String>
+    <sys:String x:Key="AlarmStatisticsViewTimes">Times</sys:String>
+
+    <!--AgingStatisticsView-->
+    <sys:String x:Key="AgingStatisticsViewDateTimeChoose">DateTimeChoose</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQuickQuery">QuickQuery</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQueryCurrentParameterFile">QueryCurrentParameterFile</sys:String>
+    <sys:String x:Key="AgingStatisticsViewQueryAllParameterFile">QueryAllParameterFile</sys:String>
+    <sys:String x:Key="AgingStatisticsViewMTBAList">MTBAList</sys:String>
+    <sys:String x:Key="AgingStatisticsViewNumber">Number</sys:String>
+    <sys:String x:Key="AgingStatisticsRecipeName">RecipeName</sys:String>
+    <sys:String x:Key="AgingStatisticsWorkingTime">WorkingTime</sys:String>
+    <sys:String x:Key="AgingStatisticsAlarmTimes">AlarmTimes</sys:String>
+    <sys:String x:Key="AgingStatisticsMTBAValue">MTBAValue</sys:String>
+    <sys:String x:Key="AgingStatisticsAlarmRanking">AlarmRanking</sys:String>
+    <sys:String x:Key="AgingStatisticsDescribe">Describe</sys:String>
+    <sys:String x:Key="AgingStatisticsViewID">ID</sys:String>
+    <sys:String x:Key="AgingStatisticsViewTimes">Times</sys:String>
+
+    <!--AlarmView-->
+    <sys:String x:Key="AlarmViewTimeOrder">TimeOrder</sys:String>
+    <sys:String x:Key="AlarmViewAlarmStatistics">AlarmStatistics</sys:String>
+    <sys:String x:Key="AlarmViewExportCurrent">ExportCurrent</sys:String>
+    <sys:String x:Key="AlarmViewExportAll">ExportAll</sys:String>
+    <sys:String x:Key="AlarmViewClearPLCAlarm">ClearAlarm</sys:String>
+    <sys:String x:Key="AlarmViewCloseBuzzer">CloseBuzzer</sys:String>
+    <sys:String x:Key="AlarmViewReturn">Return</sys:String>
+    <sys:String x:Key="RealTimeAlarm">RealTimeAlarm</sys:String>
+    <sys:String x:Key="HistoryAlarm">HistoryAlarm</sys:String>
+    <sys:String x:Key="AlarmViewAgingStatistics">AgingStatistics</sys:String>
+    
+    <!--AlarmModule-->
+    <sys:String x:Key="AlarmModule">AlarmModule</sys:String>
+    <sys:String x:Key="OpenAlarmModule">OpenAlarmModule</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="AlarmViewErrorNoMessage">The information does not exist!</sys:String>
+    <sys:String x:Key="AlarmViewExportSuccess">Export successful!</sys:String>
+    <sys:String x:Key="HistoryViewErrorConnectDB">Exception information: Database connection failed</sys:String>
+    <sys:String x:Key="AlarmViewErrorConnectDevice">Exception information: :Connect device failed</sys:String>
+
+    <!--AlarmService-->
+    <sys:String x:Key="AlarmServiceIDOutOfRange">Custom alarm error, Alarm ID out of range, ID range should be 0-10000</sys:String>
+    <sys:String x:Key="AlarmServiceIDCannotBeNegative">Alarm ID Cannot Be Negative</sys:String>
+    <sys:String x:Key="AlarmServiceCustomAlarmTrigger">CustomAlarmTrigger(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceCustomAlarmResolved">CustomAlarmResolved(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalAlarmTrigger">ElectricalAlarmTrigger(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalAlarmResolved">ElectricalAlarmResolved(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalWarningTrigger">ElectricalWarningTrigger(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceElectricalWarningResolved">ElectricalWarningResolved(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceHardwareAlarmTrigger">HardwareAlarmTrigger(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+    <sys:String x:Key="AlarmServiceHardwareAlarmResolved">HardwareAlarmResolved(ID : {0}, Message : {1}, Reason : {2}, Solution : {3}, Type : {4})</sys:String>
+
+    <!-- ************************************************* Logger **************************************** -->
+
+    <!--Logger-->
+    <sys:String x:Key="LoggerTitle">Logger</sys:String>
+    <sys:String x:Key="RealTimeLogger">RealTimeLog</sys:String>
+    <sys:String x:Key="HistoryLogger">HistoryLog</sys:String>
+
+    <!--ExportOptionsDialogView-->
+    <sys:String x:Key="ExportOptionsDialogViewTitle">ExportOptions</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSegmentation">Segmentation</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewTimeSeg">Time</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSizeSeg">Size</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewSegUnit">SegmentationUnit</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewExportPosition">ExportLocation</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewChoosePath">SelectPath</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewExportProgress">ExportProgress</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewFileFormat">FileFormat</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewStartExport">StartExport</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView3Hour">3Hour</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView12Hour">12Hour</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView1Day">1Day</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView10Thousand">10,000</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView50Thousand">50,000</sys:String>
+    <sys:String x:Key="ExportOptionsDialogView100Thousand">100,000</sys:String>
+
+    <!--HistoryLoggerView-->
+    <sys:String x:Key="HistoryViewLogLevel">LogLevel</sys:String>
+    <sys:String x:Key="HistoryViewModule">Module</sys:String>
+    <sys:String x:Key="HistoryViewTimeOrder">TimeOrder</sys:String>
+    <sys:String x:Key="HistoryViewMessageKeyword">MessageKeyword</sys:String>
+    <sys:String x:Key="HistoryViewLogList">LogList</sys:String>
+    <sys:String x:Key="HistoryViewTime">Time</sys:String>
+    <sys:String x:Key="HistoryViewLevel">Level</sys:String>
+    <sys:String x:Key="HistoryViewMessage">Message</sys:String>
+    <sys:String x:Key="HistoryViewThreadId">ThreadId</sys:String>
+    <sys:String x:Key="HistoryViewDetail">Detail</sys:String>
+    <sys:String x:Key="HistoryViewDate">Date</sys:String>
+    <sys:String x:Key="HistoryViewBelongsModule">BelongsModule</sys:String>
+    <sys:String x:Key="HistoryViewLogMessage">LogMessage</sys:String>
+    <sys:String x:Key="HistoryLoggerViewAscOrder">AscOrder</sys:String>
+    <sys:String x:Key="HistoryLoggerViewDescOrder">DescOrder</sys:String>
+    <sys:String x:Key="HistoryLoggerViewEmpty">Empty</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneMinute">PreOneMinute</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTenMinute">PreTenMinute</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThirtyMinute">PreThirtyMinute</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneHour">PreOneHour</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThreeHour">PreOneHour</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTwelveHour">PreTwelveHour</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneDay">PreOneDay</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreThreeDay">PreThreeDay</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreTenDay">PreTenDay</sys:String>
+    <sys:String x:Key="HistoryLoggerViewPreOneMonth">PreOneMonth</sys:String>
+    <sys:String x:Key="HistoryLoggerViewAll">All</sys:String>
+	<sys:String x:Key="HistoryLoggerViewServiceConnectionFailure">ServiceConnectionFailure!</sys:String>
+	<sys:String x:Key="HistoryLoggerViewDatabaseConnectionFailure">DatabaseConnectionFailure!</sys:String>
+
+
+ 	<!--UserManagerHelper-->
+    <sys:String x:Key="UserManagerHelperDeleteData">Delete data from {0} days ago?</sys:String>
+	<sys:String x:Key="UserManagerHelperServiceConnectionFails">ServiceConnectionFails! </sys:String>
+	
+	 <!--ReceiverConfigViewModel-->
+	<sys:String x:Key="ReceiverConfigViewModelPortOccupiedProcedure">PortOccupiedProcedure! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelInvalidPort">InvalidPort! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelSaveSuccessfully">SaveSuccessfully! </sys:String>
+	<sys:String x:Key="ReceiverConfigViewModelServiceConnectionFails">ServiceConnectionFails! </sys:String>
+    <sys:String x:Key="ReceiverConfigViewModelServiceConnectionSuccessful">ServiceConnectionSuccessful! </sys:String>
+	
+	  <!--LogApi-->
+	<sys:String x:Key="LogApiDescriptionFailedToObtainHistoricalLogData">DescriptionFailedToObtainHistoricalLogData</sys:String>
+	<sys:String x:Key="LogApiFailedTo0btainLoggerData">FailedTo0btainLoggerData </sys:String>
+	<sys:String x:Key="LogApiFailedTo0btainLevelAndLoggerData">FailedTo0btainLevelAndLoggerData  </sys:String>
+	<sys:String x:Key="LogApiFailedToObtainTimeoutLogQuantityData">FailedToObtainTimeoutLogQuantityData </sys:String>
+	<sys:String x:Key="LogApiFailedToObtainRealTimeLogQuantityData">FailedToObtainRealTimeLogQuantityData </sys:String>
+    <sys:String x:Key="LogApiFailedToObtainRealTimeLogData">FailedToObtainRealTimeLogData </sys:String>
+    <sys:String x:Key="LogApiFailedToObtainHistoricalLogData">FailedToObtainHistoricalLogData </sys:String>
+    <sys:String x:Key="LogApiFailedToDeleteData">FailedToDeleteData </sys:String>
+    
+<!--LoggerMainView-->
+    <sys:String x:Key="LoggerMainViewExportLog">ExportLog</sys:String>
+
+    <!--RealTimeView-->
+    <sys:String x:Key="RealTimeViewStart">Start</sys:String>
+    <sys:String x:Key="RealTimeViewPause">Pause</sys:String>
+    <sys:String x:Key="RealTimeViewClear">Clear</sys:String>
+
+    <!--ReceiveConfig-->
+    <sys:String x:Key="ReceiveConfigNetworkSettings">NetworkSet</sys:String>
+    <sys:String x:Key="ReceiveConfigSaveCycleSettings">SaveCycleSet</sys:String>
+    <sys:String x:Key="ReceiveConfigSaveDays">SaveDays</sys:String>
+    <sys:String x:Key="ReceiveConfigNetworkAddress">NetworkAddress</sys:String>
+    <sys:String x:Key="ReceiveConfigPort">Port</sys:String>
+
+    <!--Tip-->
+    <sys:String x:Key="LogLoadFail">Log Startup Failed!</sys:String>
+    <sys:String x:Key="LogNotInstall">Log viewing tool is not installed or incorrectly installed. Please try installing it again.</sys:String>
+    <sys:String x:Key="ProgramNotInstall">The project program is not installed or has an installation error. Please try reinstalling it.</sys:String>
+    <sys:String x:Key="ExportOptionsDialogViewEmptyExport">ExportOptionsDialogViewEmptyExport</sys:String>
+    <sys:String x:Key="ReceiveConfigErrorNetwork">Unable to parse the input network address!</sys:String>
+    <sys:String x:Key="HistoryViewTipNoLog">There are currently no logs to save.</sys:String>
+    <!-- ************************************************* Control **************************************** -->
+
+    <!--Control-->
+    <sys:String x:Key="ControlTotal">Total</sys:String>
+    <sys:String x:Key="ControlItem">Item</sys:String>
+    <sys:String x:Key="ControlHome">Home</sys:String>
+    <sys:String x:Key="ControlPrePage">PrePage</sys:String>
+    <sys:String x:Key="ControlGoTo">GoTo</sys:String>
+    <sys:String x:Key="ControlNextPage">NextPage</sys:String>
+    <sys:String x:Key="ControlLastPage">LastPage</sys:String>
+    <sys:String x:Key="ControlCurrentPage">CurrentPage</sys:String>
+    <sys:String x:Key="ControlPreStep">PreStep</sys:String>
+    <sys:String x:Key="ControlNextStep">NextStep</sys:String>
+    <sys:String x:Key="ControlStepFrameFinished">Finished</sys:String>
+    <sys:String x:Key="ControlBack">Back</sys:String>
+    <sys:String x:Key="ControlCannotEmpty">Cannot Empty</sys:String>
+    <sys:String x:Key="ControlExceedingThresholdRange">Exceeding Threshold Range</sys:String>
+    <sys:String x:Key="ControlInputValueRange">Input Value Should Be Between {0} And {1}</sys:String>
+    <sys:String x:Key="ControlIsChangeValue">Modify The Value To {0}?</sys:String>
+    <sys:String x:Key="ControlFormatError">Format Error</sys:String>
+    <sys:String x:Key="ControlTypeError">TypeError</sys:String>
+    <sys:String x:Key="ControlFinished">Finished</sys:String>
+    <sys:String x:Key="ControlSchedule">Schedule</sys:String>
+    <sys:String x:Key="ControlNow">Now</sys:String>
+    <sys:String x:Key="ControlClear">Clear</sys:String>
+    <sys:String x:Key="ControlConfirm">Confirm</sys:String>
+    <sys:String x:Key="ControlSelectDateTime">SelectDateTime</sys:String>
+    <sys:String x:Key="ControlHour">Hour</sys:String>
+    <sys:String x:Key="ControlMinute">Minute</sys:String>
+    <sys:String x:Key="ControlSecond">Second</sys:String>
+    <sys:String x:Key="ControlPleaseInputPassword">PleaseInputPwd</sys:String>
+    <sys:String x:Key="ControlPleaseEnterAValueOfUpToSevenDigits">Please enter a value of up to seven digits</sys:String>
+    <!--Bootstrapper-->
+    <sys:String x:Key="BootstrapperDontFindLayout">Layout.xml not found, please confirm</sys:String>
+    <sys:String x:Key="BootstrapperPleaseRunProgramByAdministrator">Please start this program as an administrator</sys:String>
+    <sys:String x:Key="BootstrapperUnSelect">Not selected</sys:String>
+    <sys:String x:Key="BootstrapperUnFind">Not found</sys:String>
+
+    <!-- ************************************************* MwFramework **************************************** -->
+
+    <!--ManagerService-MwFrameworkModule-->
+    <sys:String x:Key="MwFrameworkModuleDeviceManager">DeviceManager</sys:String>
+    <sys:String x:Key="MwFrameworkModuleOpenDevice">OpenDevice</sys:String>
+    <sys:String x:Key="MwFrameworkParameterManager">ParameterManager</sys:String>
+    <sys:String x:Key="MwFrameworkReadParameter">ReadParameter</sys:String>
+
+    <!--ManagerService-DeviceManagerService-->
+    <sys:String x:Key="DeviceManagerService1StartLoadingAllHardwareInParallel">1StartLoadingAllHardwareInParallel</sys:String>
+    <sys:String x:Key="DeviceManagerServiceStartLoading">StartLoading</sys:String>
+    <sys:String x:Key="DeviceManagerServiceCreateError">CreateError</sys:String>
+    <sys:String x:Key="DeviceManagerServiceLoadingError">Loading{0}Error</sys:String>
+    <sys:String x:Key="DeviceManagerServiceLoaded">Loaded</sys:String>
+
+    <!--UIControl-RecipeView -->
+    <sys:String x:Key="RecipeViewRecipeList">RecipeList</sys:String>
+    <sys:String x:Key="RecipeViewNewFolder">NewFolder</sys:String>
+    <sys:String x:Key="RecipeViewDeleteFolder">DeleteFolder</sys:String>
+    <sys:String x:Key="RecipeViewImport">Import</sys:String>
+    <sys:String x:Key="RecipeViewExport">Export</sys:String>
+    <sys:String x:Key="RecipeViewOpen">Open</sys:String>
+    <sys:String x:Key="RecipeViewApply">Apply</sys:String>
+    <sys:String x:Key="RecipeViewSave">Save</sys:String>
+    <sys:String x:Key="RecipeViewDelete">Delete</sys:String>
+    <sys:String x:Key="RecipeViewNew">New</sys:String>
+    <sys:String x:Key="RecipeViewCopy">Copy</sys:String>
+    <sys:String x:Key="RecipeViewRename">Rename</sys:String>
+    <sys:String x:Key="RecipeViewBack">Back</sys:String>
+
+    <!--UIControl-RecipeNewFolder -->
+    <sys:String x:Key="RecipeNewFolderTitle">New Folder</sys:String>
+    <sys:String x:Key="RecipeNewFolderOK">OK</sys:String>
+    <sys:String x:Key="RecipeNewFolderCancel">Cancel</sys:String>
+
+    <!--UIControl-RecipeNewWindow -->
+    <sys:String x:Key="RecipeNewWindowTitle">New Recipe</sys:String>
+    <sys:String x:Key="RecipeNewWindowPPID">RecipeID</sys:String>
+    <sys:String x:Key="RecipeNewWindowComment">Comment</sys:String>
+    <sys:String x:Key="RecipeNewWindowOK">OK</sys:String>
+    <sys:String x:Key="RecipeNewWindowCancel">Cancel</sys:String>
+    <sys:String x:Key="RecipeNewWindowNewTitle">Rename/Copy</sys:String>
+
+    <!--UIControl-RenameWindowTitle -->
+    <sys:String x:Key="RenameWindowTitle">Rename</sys:String>
+    <sys:String x:Key="RenameWindowPPID">Recipe</sys:String>
+    <sys:String x:Key="RenameWindowOK">OK</sys:String>
+    <sys:String x:Key="RenameWindowCancel">Cancel</sys:String>
+    <!--UIControl-Tips -->
+    <sys:String x:Key="RenameWindowPPIDCannotEmpty">Recipe ID is required and cannot be empty</sys:String>
+    <sys:String x:Key="RenameWindowPPIDCannotExceed50Characters">Recipe ID length exceeds 50 characters</sys:String>
+    <sys:String x:Key="RenameWindowPPIDCannotContainsIllegalCharacters">The Recipe ID contains illegal characters</sys:String>
+    <sys:String x:Key="RenameWindowPPIDFirstAndLastCannotContainsDrop">The first and last characters of the Recipe ID cannot be '.'</sys:String>
+
+    <sys:String x:Key="RecipeServiceSameNameCover">There is an export item with the same name in the selected folder. Do you want to overwrite it?</sys:String>
+    <sys:String x:Key="RecipeServiceSameRecipe">Same recipe item exists</sys:String>
+    <sys:String x:Key="RecipeServiceFolderCannotExceed50Characters">The folder name exceeds 50 characters in length</sys:String>
+    <sys:String x:Key="RecipeServiceDirectorySameFolder">The current directory has the same folder</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeFolderConnotDelete">The current recipe folder cannot be deleted</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeConnotDelete">The current recipe cannot be deleted</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeFolderNotExist">Folder does not exist</sys:String>
+    <sys:String x:Key="RecipeServiceRecipeDoesNotExist">Recipe does not exist, please save it first!</sys:String>
+    <sys:String x:Key="RecipeServiceIsDeleteSelecteRecipe">Do you want to delete the selected recipe</sys:String>
+    <sys:String x:Key="RecipeServiceNotSelecteRecipe">No recipe selected</sys:String>
+    <sys:String x:Key="RecipeServiceCurrentRecipeUserConnotVisible">The current application recipe is not visible to this user</sys:String>
+    <sys:String x:Key="RecipeServiceNotFindKey">Key not found</sys:String>
+    <sys:String x:Key="RecipeServiceTheCurrentRecipeCannotBeRenamed">TheCurrentRecipeCannotBeRenamed</sys:String>
+    <sys:String x:Key="RecipeServiceRenamingFailedPleaseCheckWhetherThePathContainsIllegalCharacters">RenamingFailedPleaseCheckWhetherThePathContainsIllegalCharacters</sys:String>
+    <sys:String x:Key="RecipeServiceTheSelectedProgramDoesNotExist">TheSelectedProgramDoesNotExist</sys:String>
+
+    <!--UIControl-AxisControlView -->
+    <sys:String x:Key="AxisControlViewAxisList">Axis List</sys:String>
+    <sys:String x:Key="AxisControlViewAxis">Axis</sys:String>
+    <sys:String x:Key="AxisControlViewPosition">Position(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewEnable">Enable</sys:String>
+    <sys:String x:Key="AxisControlViewHomeFinished">HomeFinished</sys:String>
+    <sys:String x:Key="AxisControlViewNegLimit">NegLimit</sys:String>
+    <sys:String x:Key="AxisControlViewPosLimit">PosLimit</sys:String>
+    <sys:String x:Key="AxisControlViewPoint">Point</sys:String>
+    <sys:String x:Key="AxisControlViewInPosition">InPosition</sys:String>
+    <sys:String x:Key="AxisControlViewInMove">Move</sys:String>
+    <sys:String x:Key="AxisControlViewInRelativeDistance">RelativeDistance(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewAbsolutePosition">AbsolutePosition(mm)</sys:String>
+    <sys:String x:Key="AxisControlViewTargetPosition">TargetPosition</sys:String>
+    <sys:String x:Key="AxisControlViewRun">Run</sys:String>
+    <sys:String x:Key="AxisControlViewStop">Stop</sys:String>
+    <sys:String x:Key="AxisControlViewVelocity">Velocity</sys:String>
+    <sys:String x:Key="AxisControlViewVelocityUnits">Velocity(mm/s)</sys:String>
+    <sys:String x:Key="AxisControlViewSetup">Setup</sys:String>
+    <sys:String x:Key="AxisControlViewAcceleration">Acceleration</sys:String>
+    <sys:String x:Key="AxisControlViewAccelerationUnits">Acceleration(mm/s²)</sys:String>
+    <sys:String x:Key="AxisControlViewJerk">Jerk</sys:String>
+    <sys:String x:Key="AxisControlViewJerkUnits">Jerk(mm/s³)</sys:String>
+    <sys:String x:Key="AxisControlViewDeceleration">Deceleration</sys:String>
+    <sys:String x:Key="AxisControlViewDecelerationUnits">Deceleration(mm/s²)</sys:String>
+
+    <!--UIControl-AxisParameterSettingView -->
+    <sys:String x:Key="AxisParameterSettingViewAxisName">AxisName</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewVelocityUnits">Velocity(mm/s)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewAccelerationUnits">Acceleration(mm/s²)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewDecelerationUnits">Deceleration(mm/s²)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewJerkUnits">Jerk(mm/s³)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewSnap">Snap</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewPosition">Position(mm)</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewMin">Min</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewMax">Max</sys:String>
+    <sys:String x:Key="AxisParameterSettingViewParameterRange">ParameterRange</sys:String>
+
+    <!--UIControl-AxisPositionView -->
+    <sys:String x:Key="AxisPositionViewAxisList">AxisList</sys:String>
+    <sys:String x:Key="AxisPositionViewPrePage">PrePage</sys:String>
+    <sys:String x:Key="AxisPositionViewNextPage">NextPage</sys:String>
+    <sys:String x:Key="AxisPositionViewPosition">Position(mm)</sys:String>
+    <sys:String x:Key="AxisPositionViewInPosition">InPosition</sys:String>
+    <sys:String x:Key="AxisPositionViewNew">New</sys:String>
+    <sys:String x:Key="AxisPositionViewDelete">Delete</sys:String>
+
+    <!--UIControl-AxisStateView -->
+    <sys:String x:Key="AxisStateViewAxis">Axis</sys:String>
+    <sys:String x:Key="AxisStateViewVelocityUnits">Velocity(mm/s)</sys:String>
+    <sys:String x:Key="AxisStateViewSteppingUnits">Stepping(mm)</sys:String>
+    <sys:String x:Key="AxisStateViewPosition">Position(mm)</sys:String>
+    <sys:String x:Key="AxisStateViewEnable">Enable</sys:String>
+    <sys:String x:Key="AxisStateViewHomeFinished">HomeFinished</sys:String>
+    <sys:String x:Key="AxisStateViewNegLimit">NegLimit</sys:String>
+    <sys:String x:Key="AxisStateViewPosLimit">PosLimit</sys:String>
+    <sys:String x:Key="AxisStateViewStop">Stop</sys:String>
+    <sys:String x:Key="AxisStateViewHome">Home</sys:String>
+    <sys:String x:Key="AxisStateViewServerOn">ServerOn</sys:String>
+    <sys:String x:Key="AxisStateViewServerOff">ServerOff</sys:String>
+    <sys:String x:Key="AxisStateViewReduceSlowIndex">-SlowIndex</sys:String>
+    <sys:String x:Key="AxisStateViewAddSlowIndex">+SlowIndex</sys:String>
+    <sys:String x:Key="AxisStateViewReduceIndex">-Index</sys:String>
+    <sys:String x:Key="AxisStateViewAddIndex">+Index</sys:String>
+    <sys:String x:Key="AxisStateViewReduceSlowScan">-SlowScan</sys:String>
+    <sys:String x:Key="AxisStateViewAddSlowScan">+SlowScan</sys:String>
+    <sys:String x:Key="AxisStateViewReduceScan">-Scan</sys:String>
+    <sys:String x:Key="AxisStateViewAddScan">+Scan</sys:String>
+
+    <!--Tip-->  
+	<sys:String x:Key="AxisStateViewOffline">Offline status, device not connected!</sys:String>
+        <sys:String x:Key="AxisStateViewNotEnabled">NotEnabled</sys:String>
+	<sys:String x:Key="AxisStateViewSetSpeed">The speed is 0, please set the speed first</sys:String>
+	<sys:String x:Key="AxisStateViewStepIsZero">Step 0, axis cannot move!</sys:String>
+
+    <!--UIControl-SingleAxisController -->
+    <sys:String x:Key="SingleAxisControllerVelocity">Velocity</sys:String>
+
+    <!--UIControl-CameraBaseView -->
+    <sys:String x:Key="CameraBaseViewShowDoubleLines">DoubleLine</sys:String>
+
+    <!--UIControl-Generic -->
+    <sys:String x:Key="GenericYAxisPointCurve">YAxisPointCurve</sys:String>
+    <sys:String x:Key="GenericCurrentWavelength">CurrentWavelength</sys:String>
+    <sys:String x:Key="GenericIsHome">IsHome</sys:String>
+    <sys:String x:Key="GenericNo">No</sys:String>
+
+    <sys:String x:Key="CountConverterChannel">Channel</sys:String>
+
+    <!--UIControl-HammerView -->
+    <sys:String x:Key="HammerViewHammerControl">HammerControl</sys:String>
+
+    <!--UIControl-HammerView -->
+    <sys:String x:Key="HammerViewHammer1Voltage">Hammer1Voltage</sys:String>
+    <sys:String x:Key="HammerViewHammer2Voltage">Hammer2Voltage</sys:String>
+    <sys:String x:Key="HammerViewRead">Read</sys:String>
+    <sys:String x:Key="HammerViewSetup">Setup</sys:String>
+    <sys:String x:Key="HammerViewStart">Start</sys:String>
+    <sys:String x:Key="HammerViewStop">Stop</sys:String>
+
+    <!--UIControl-BoolIOView -->
+    <sys:String x:Key="BoolIOViewIOQuantityControl">IO quantity control</sys:String>
+
+    <!--UIControl-BoolUmacIO -->
+    <sys:String x:Key="BoolUmacIOOn">On</sys:String>
+    <sys:String x:Key="BoolUmacIOOff">Off</sys:String>
+
+    <!--UIControl- FloatIOView -->
+    <sys:String x:Key="FloatIOViewInputValue">InputValue</sys:String>
+    <sys:String x:Key="FloatIOViewSetup">Setup</sys:String>
+
+    <!--UIControl- IntIOView -->
+    <sys:String x:Key="IntIOViewInputValue">InputValue</sys:String>
+    <sys:String x:Key="IntIOViewSetup">Setup</sys:String>
+
+    <!--UIControl- IOPanel -->
+    <sys:String x:Key="IOPanelLineMarked">LineMarked</sys:String>
+    <sys:String x:Key="IOPanelComment">Comment</sys:String>
+    <sys:String x:Key="IOPanelState">State</sys:String>
+
+    <!--UIControl- IOView -->
+    <sys:String x:Key="IOViewFilterGroup">FilterGroup</sys:String>
+    <sys:String x:Key="IOViewState">State</sys:String>
+    <sys:String x:Key="IOViewName">Name</sys:String>
+    <sys:String x:Key="IOViewLineMarked">LineMarked</sys:String>
+    <sys:String x:Key="IOViewType">Type</sys:String>
+    <sys:String x:Key="IOViewNotes">Notes</sys:String>
+
+    <!--UIControl-BoolParam -->
+    <sys:String x:Key="BoolParamOn">On</sys:String>
+    <sys:String x:Key="BoolParamOff">Off</sys:String>
+
+    <!--UIControl-DoubleDualPower -->
+    <sys:String x:Key="DoubleDualPowerSend">Send</sys:String>
+
+    <!--UIControl-EnumParam -->
+    <sys:String x:Key="EnumParamControlMode">ControlModel</sys:String>
+
+    <!--UIControl-LaserControllorManualOperation -->
+    <sys:String x:Key="LaserControllorManualOperationLaser">Laser</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationLaserShutter">LaserShutter</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationSetupPower">SetupPower</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationMeasurementPosition">MeasurementPosition</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationSetupMeasurementPosition">SetupMeasurementPosition</sys:String>
+    <sys:String x:Key="LaserControllorManualOperationMoveToMeasurementPosition">MoveToMeasurementPosition</sys:String>
+
+    <!--UIControl-LaserView -->
+    <sys:String x:Key="LaserViewCount">Count</sys:String>
+    <sys:String x:Key="LaserViewSerial">Serial</sys:String>
+    <sys:String x:Key="LaserViewConnect">Connect</sys:String>
+    <sys:String x:Key="LaserViewDisConnect">DisConnect</sys:String>
+
+    <!--UIControl-OpcUnitView -->
+    <sys:String x:Key="OpcUnitViewPower">Power[W]</sys:String>
+    <sys:String x:Key="OpcUnitViewEnergy">Energy[J]</sys:String>
+    <sys:String x:Key="OpcUnitViewReset">Reset</sys:String>
+
+    <!--UIControl-OpcView -->
+    <sys:String x:Key="OpcViewLasterList">LasterList</sys:String>
+    <sys:String x:Key="OpcViewErrorInfo">ErrorInfo</sys:String>
+
+    <!--UIControl-PWMPower -->
+    <sys:String x:Key="PWMPowerPEC">PEC(%)</sys:String>
+    <sys:String x:Key="PWMPowerControlMode">ControlModel</sys:String>
+    <sys:String x:Key="PWMPowerDutyWidth">DutyWidth(%)</sys:String>
+    <sys:String x:Key="PWMPowerSend">Send</sys:String>
+
+    <!--UIControl-LighterView -->
+    <sys:String x:Key="LighterViewName">Name</sys:String>
+    <sys:String x:Key="LighterViewChannel">Channel</sys:String>
+    <sys:String x:Key="LighterViewState">State</sys:String>
+    <sys:String x:Key="LighterViewBrightness">Brightness</sys:String>
+    <sys:String x:Key="LighterViewInputValue">InputValue</sys:String>
+    <sys:String x:Key="LighterViewSetup">Setup</sys:String>
+    <sys:String x:Key="LighterViewPrePage">PrePage</sys:String>
+    <sys:String x:Key="LighterViewNextPage">NextPage</sys:String>
+
+    <!--UIControl-InitView -->
+    <sys:String x:Key="InitViewAxis">Axis</sys:String>
+    <sys:String x:Key="InitViewPosition">Position(mm)</sys:String>
+    <sys:String x:Key="InitViewEnable">Enable</sys:String>
+    <sys:String x:Key="InitViewHomeFinished">HomeFinished</sys:String>
+    <sys:String x:Key="InitViewNegLimit">NegLimit</sys:String>
+    <sys:String x:Key="InitViewPosLimit">PosLimit</sys:String>
+    <sys:String x:Key="InitViewSingleAxisControl">SingleAxisControl</sys:String>
+    <sys:String x:Key="InitViewServerOn">ServerOn</sys:String>
+    <sys:String x:Key="InitViewServerOff">ServerOff</sys:String>
+    <sys:String x:Key="InitViewStop">Stop</sys:String>
+    <sys:String x:Key="InitViewHome">Home</sys:String>
+    <sys:String x:Key="InitViewInchingMove">InchingMove（mm）</sys:String>
+    <sys:String x:Key="InitViewReduceJog">Jog -</sys:String>
+    <sys:String x:Key="InitViewAddJog">Jog +</sys:String>
+    <sys:String x:Key="InitViewParaSetup">ParameterSetup</sys:String>
+    <sys:String x:Key="InitViewVelocityUnits">Velocity(mm/s)</sys:String>
+    <sys:String x:Key="InitViewAccelerationUnits">Acceleration(mm/s²)</sys:String>
+    <sys:String x:Key="InitViewJerkUnits">Jerk(mm/s³)</sys:String>
+    <sys:String x:Key="InitViewDecelerationUnits">Deceleration(mm/s²)</sys:String>
+    <sys:String x:Key="InitViewAbsoluteRelative">AbsoluteRelativeMotion(mm)</sys:String>
+    <sys:String x:Key="InitViewAbsolute">AbsoluteMotion</sys:String>
+    <sys:String x:Key="InitViewRelative">RelativeMotion</sys:String>
+    <sys:String x:Key="InitViewRun">Run</sys:String>
+    <sys:String x:Key="InitViewMultiAxisControl">MultiAxisControl</sys:String>
+    <sys:String x:Key="InitViewAllServerOn">AllServerOn</sys:String>
+    <sys:String x:Key="InitViewAllServerOff">AllServerOff</sys:String>
+
+    <!--UIControl-ManualControlView -->
+    <sys:String x:Key="ManualControlViewPositionAxis">PositionAxis</sys:String>
+    <sys:String x:Key="ManualControlViewVelocityAxis">VelocityAxis</sys:String>
+    <sys:String x:Key="ManualControlViewParameter">Parameter</sys:String>
+
+    <!--UIControl-MotionParameterView -->
+    <sys:String x:Key="MotionParameterViewAxisName">AxisName</sys:String>
+    <sys:String x:Key="MotionParameterViewAcceleration">Acceleration</sys:String>
+    <sys:String x:Key="MotionParameterViewDeceleration">Deceleration</sys:String>
+    <sys:String x:Key="MotionParameterViewJerk">Jerk</sys:String>
+    <sys:String x:Key="MotionParameterViewSpeed">Speed</sys:String>
+    <sys:String x:Key="MotionParameterViewHomeSpeed">HomeSpeed</sys:String>
+
+    <!--UIControl-VelAxisView -->
+    <sys:String x:Key="VelAxisViewAxis">Axis</sys:String>
+    <sys:String x:Key="VelAxisViewVelocity">Velocity</sys:String>
+    <sys:String x:Key="VelAxisViewEnable">Enable</sys:String>
+    <sys:String x:Key="VelAxisViewHomeFinished">HomeFinished</sys:String>
+    <sys:String x:Key="VelAxisViewNegLimit">NegLimit</sys:String>
+    <sys:String x:Key="VelAxisViewPosLimit">PosLimit</sys:String>
+    <sys:String x:Key="VelAxisViewSingleAxisControl">SingleAxisControl</sys:String>
+    <sys:String x:Key="VelAxisViewServerOn">ServerOn</sys:String>
+    <sys:String x:Key="VelAxisViewServerOff">ServerOff</sys:String>
+    <sys:String x:Key="VelAxisViewStop">Stop</sys:String>
+    <sys:String x:Key="VelAxisViewHome">Home</sys:String>
+    <sys:String x:Key="VelAxisViewInchingMove">InchingMove（mm）</sys:String>
+    <sys:String x:Key="VelAxisViewReduceJog">Jog -</sys:String>
+    <sys:String x:Key="VelAxisViewAddJog">Jog +</sys:String>
+    <sys:String x:Key="VelAxisViewParaSetup">ParameterSetup</sys:String>
+    <sys:String x:Key="VelAxisViewVelocityUnits">Velocity(mm/s)</sys:String>
+    <sys:String x:Key="VelAxisViewAccelerationUnits">Acceleration(mm/s²)</sys:String>
+    <sys:String x:Key="VelAxisViewJerkUnits">Jerk(mm/s³)</sys:String>
+    <sys:String x:Key="VelAxisViewSnapUnits">Snap(mm/s⁴)</sys:String>
+    <sys:String x:Key="VelAxisViewDecelerationUnits">Deceleration(mm/s²)</sys:String>
+    <sys:String x:Key="VelAxisViewAbsoluteRelative">AbsoluteRelativeMotion(mm)</sys:String>
+    <sys:String x:Key="VelAxisViewAbsoluteVelocity">AbsoluteVelocity</sys:String>
+    <sys:String x:Key="VelAxisViewRelativeVelocity">RelativeVelocity</sys:String>
+    <sys:String x:Key="VelAxisViewRun">Run</sys:String>
+    <sys:String x:Key="VelAxisViewBackAndForthMove">BackAndForthMove（mm）</sys:String>
+    <sys:String x:Key="VelAxisViewStart">Start</sys:String>
+    <sys:String x:Key="VelAxisViewEnd">End</sys:String>
+    <sys:String x:Key="VelAxisViewMultiAxisControl">MultiAxisControl</sys:String>
+    <sys:String x:Key="VelAxisViewAllServerOn">AllServerOn</sys:String>
+    <sys:String x:Key="VelAxisViewAllServerOff">AllServerOff</sys:String>
+    <sys:String x:Key="VelAxisViewAllHome">AllHome</sys:String>
+    <sys:String x:Key="VelAxisViewAllStop">AllStop</sys:String>
+
+    <!--UIControl-CameraAxisControl -->
+    <sys:String x:Key="CameraAxisControlExposure/Gain">Exposure/Gain</sys:String>
+    <sys:String x:Key="CameraAxisControlLightSourceSelection">LightSourceSelection</sys:String>
+    <sys:String x:Key="CameraAxisControlExposureShowDoubleLines">ExposureShowDoubleLines</sys:String>
+    <sys:String x:Key="CameraAxisControlExposure">Exposure</sys:String>
+    <sys:String x:Key="CameraAxisControlGain">Gain</sys:String>
+    <sys:String x:Key="CameraAxisControlContinuousAcquisition">ContinuousAcquisition</sys:String>
+
+    <!--UIControl-CameraAxisControlEvolutionA -->
+    <sys:String x:Key="CameraAxisControlEvolutionAExposure">Exposure</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAGain">Gain</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAContinuousAcquisition">ContinuousAcquisition</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionAShowDoubleLines">DoubleLine</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionABaselineZoomOut">BaselineZoomOut</sys:String>
+    <sys:String x:Key="CameraAxisControlEvolutionABaselineExpansion">BaselineExpansion</sys:String>
+
+    <!--UIControl-ImageViewer -->
+    <sys:String x:Key="ImageViewerAddMark">AddMark</sys:String>
+    <sys:String x:Key="ImageViewerAppMark">AppMark</sys:String>
+    <sys:String x:Key="ImageViewerDeleteLastMark">DeleteLastMark</sys:String>
+    <sys:String x:Key="ImageViewerLineMeasure">LineMeasure</sys:String>
+    <sys:String x:Key="ImageViewerClearROI">ClearROI</sys:String>
+    <sys:String x:Key="ImageViewerOpen">Open</sys:String>
+    <sys:String x:Key="ImageViewerSave">Save</sys:String>
+    <sys:String x:Key="ImageViewerClear">Clear</sys:String>
+    <sys:String x:Key="ImageViewerRectangle1">Rectangle1</sys:String>
+    <sys:String x:Key="ImageViewerRectangle2">Rectangle2</sys:String>
+    <sys:String x:Key="ImageViewerCircle">Circle</sys:String>
+    <sys:String x:Key="ImageViewerEllipse">Ellipse</sys:String>
+    <sys:String x:Key="ImageViewerLine">Line</sys:String>
+    <sys:String x:Key="ImageViewerDelete">Delete</sys:String>
+
+    <!--UIControl-Tips -->
+    <sys:String x:Key="VelAxisViewExceedingLimit">Exceeding Limit</sys:String>
+    <sys:String x:Key="VelAxisViewOffline">Offline status, device not connected!</sys:String>
+    <sys:String x:Key="VelAxisViewNotEnabled">Not Enabled</sys:String>
+    <sys:String x:Key="VelAxisViewHomeUnFinished">Home UnFinished</sys:String>
+    <sys:String x:Key="VelAxisViewNegLimitUnFinished">Negative Limit Incomplete</sys:String>
+    <sys:String x:Key="VelAxisViewPosLimitUnFinished">Positive Limit Incomplete</sys:String>
+
+    <!--UIControl-SlitControllerView -->
+    <sys:String x:Key="SlitControllerViewTitle">SlitController</sys:String>
+    <sys:String x:Key="SlitControllerViewPort">SlitPort</sys:String>
+    <sys:String x:Key="SlitControllerViewContent">Content</sys:String>
+    <sys:String x:Key="SlitControllerViewSize">Size</sys:String>
+    <sys:String x:Key="SlitControllerViewXmicron">X（micron）</sys:String>
+    <sys:String x:Key="SlitControllerViewYmicron">Y（micron）</sys:String>
+    <sys:String x:Key="SlitControllerViewSetup">Setup</sys:String>
+    <sys:String x:Key="SlitControllerViewSlitAngle">SlitAngle</sys:String>
+    <sys:String x:Key="SlitControllerViewCurrentAngle">CurrentAngle</sys:String>
+    <sys:String x:Key="SlitControllerViewUpdate">Update</sys:String>
+    <sys:String x:Key="SlitControllerViewTargetAngle">Target angle(-45~45 degrees)</sys:String>
+
+    <!--BoxCalibrate-Tip-->
+    <sys:String x:Key="ApproachCenterTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="ApproachCenterTaskTip">Tip</sys:String>
+
+    <!--BoxCalibrate-BoxCalibrateView-->
+    <sys:String x:Key="BoxCalibrateViewHeader">ParameterSetting</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxXLength">Box X Length</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxYLength">Box Y Length</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxInterval">BoxInterval</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkZAxis">Mark Z-axis</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStep1">【Step1】Adjust Mark Position</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCrossLength">CrossLength</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCameraZAxis">Camera Z-axis</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCurrentLocation">CurrentLocation</sys:String>
+    <sys:String x:Key="BoxCalibrateViewVisualCenterX">VisualCenterX</sys:String>
+    <sys:String x:Key="BoxCalibrateViewVisualCenterY">VisualCenterY</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkPositionX">MarkPositionX</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMarkPositionY">MarkPositionY</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToMarkPosition">MoveToMarkPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToVisualCenter">MoveToVisualCenter</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCrossMark">CrossMark</sys:String>
+    <sys:String x:Key="BoxCalibrateViewAdjustMarkPosition">AdjustMarkPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStep2">【Step2】Adjust</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartPointX">StartPointX</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartPointY">StartPointY</sys:String>
+    <sys:String x:Key="BoxCalibrateViewBoxMark">BoxMark</sys:String>
+    <sys:String x:Key="BoxCalibrateViewCalculateStartPoint">CalculateStartPoint</sys:String>
+    <sys:String x:Key="BoxCalibrateViewMoveToStartPoint">MoveToStartPoint</sys:String>
+    <sys:String x:Key="BoxCalibrateViewApproximationThreshold">ApproximationThreshold</sys:String>
+    <sys:String x:Key="BoxCalibrateViewAccuracyError">AccuracyError</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStartMark">StartMark</sys:String>
+    <sys:String x:Key="BoxCalibrateViewStopMark">StopMark</sys:String>
+    <sys:String x:Key="BoxCalibrateViewImportGalvanometer">ImportGalv</sys:String>
+    <sys:String x:Key="BoxCalibrateViewClearData">ClearData</sys:String>
+    <sys:String x:Key="BoxCalibrateViewReadData">ReadData</sys:String>
+    <sys:String x:Key="BoxCalibrateViewSaveData">SaveData</sys:String>
+
+    <!--BoxCalibrate-ScannerRelationCalibrateView-->
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvanometerFusionCalibration">Galvanometer Fusion Calibration</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewStep1">【Step1】Single axis calibration</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewTargetRows">TargetRows</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewTargetColumns">TargetColumns</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPitch">Pitch(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCameraZAxis">Camera Z-axis(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPixelX">PixelX</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPixelY">PixelY</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealX">RealX</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealY">RealY</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCenterRealX">CenterRealX</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCenterRealY">CenterRealY</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCameraY">CameraY</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealXAxisForward">RealXAaxisForward</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealYAxisForward">RealYAxisForward</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewRealXYExchange">RealXYExchange</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewAddRows">AddRows</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewDeleteRows">DeleteRows</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCalculationRelationship">CalculationRelationship</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMoveToPhotoPosition">MoveToPhotoPosition</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewStep2">【Step2】Galvanometer fusion</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxLength">BoxLength(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxInterval">BoxInterval(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewLaserPower">LaserPower(%)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMarkZAxis">MarkZAxis(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPhotoPositionX">PhotoPositionX(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewPhotoPositionY">PhotoPositionY(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewMoveToProcessPosition">MoveToProcessPosition</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvCenterXOffset">GalvCenterXOffset(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewGalvCenterYOffset">GalvCenterYOffset(mm)</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewOffsetZeroing">OffsetZeroing</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCrossMark">CrossMark</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewCalculateCenterOffset">CalculateCenterOffset</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewBoxMark">BoxMark</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewClearData">ClearData</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewReadData">ReadData</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-CameraDistortionCalibControl-->
+    <sys:String x:Key="CameraDistortionCalibControlCameraDistortionCalibration">CameraDistortionCalibration</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep1">【Step1】File Path Settings</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlImagePath">ImagePath</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadImage">LoadImage</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlRepresentFilePath">RepresentFilePath</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadRepresentFile">LoadRepresentFile</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep2">【Step2】Calibration Parameter Settings</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlType">Type</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLensFocalLength">LensFocalLength</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlDistortionParameters">DistortionParameters</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep3">【Step3】Calibration Calculation</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlCalibrationDistortion">CalibrationDistortion</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlStep4">【Step4】Calibration Verification</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlLoadCorrectionImage">LoadCorrectionImage</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlCorrectingImage">CorrectingImage</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="CameraDistortionCalibControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-CameraParaCalibControl-->
+    <sys:String x:Key="CameraParaCalibControlStep1">【Step1】Calibration Board Selection</sys:String>
+    <sys:String x:Key="CameraParaCalibControlPlaceCalibrationBoard">Place the selected calibration board under the camera</sys:String>
+    <sys:String x:Key="CameraParaCalibControlType1">Type######</sys:String>
+    <sys:String x:Key="CameraParaCalibControlType2">Type*****</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep2">【Step2】Angle calibration</sys:String>
+    <sys:String x:Key="CameraParaCalibControlMeasuredSpacing">MeasuredSpacing</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalculateAngle">CalculateAngle</sys:String>
+    <sys:String x:Key="CameraParaCalibControlAngleToX">AngleToX</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep3">【Step3】Pixel Ratio Calibration</sys:String>
+    <sys:String x:Key="CameraParaCalibControlXDirectionSpacing">X-directionSpacing</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalibrationX">CalibrationX</sys:String>
+    <sys:String x:Key="CameraParaCalibControlXDirectionResolution">X-directionResolution</sys:String>
+    <sys:String x:Key="CameraParaCalibControlYDirectionSpacing">Y-directionSpacing</sys:String>
+    <sys:String x:Key="CameraParaCalibControlCalibrationY">CalibrationY</sys:String>
+    <sys:String x:Key="CameraParaCalibControlYDirectionResolution">Y-directionResolution</sys:String>
+    <sys:String x:Key="CameraParaCalibControlStep4">【Step4】Calibration Verification</sys:String>
+    <sys:String x:Key="CameraParaCalibControlIdentifyAndAlignCenters">Identify and align centers</sys:String>
+    <sys:String x:Key="CameraParaCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="CameraParaCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="CameraParaCalibControlSaveData">SaveData</sys:String>
+    <sys:String x:Key="CameraParaCalibControlPictureSize">PictureSize</sys:String>
+    <sys:String x:Key="CameraParaCalibControlDrawingSizeHigh">DrawingSizeHigh</sys:String>
+
+    <!--SystemCalib-CameraRelationCalibControl-->
+    <sys:String x:Key="CameraRelationCalibControlStep1">【Step1】Collect Calibration Board Coordinates</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFirstPoint">DetermineFirstPoint①</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlAlignCenter">AlignCenter</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlGetCurrentValue">GetCurrentValue</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCoordinate">Coordinate(X:Y)</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineSecondPoint">DetermineSecondPoint②</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineThirdPoint">DetermineThirdPoint③</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFourthPoint">DetermineFourthPoint④</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlDetermineFifthPoint">DetermineFifthPoint⑤</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlStep2">【Step2】Calculation Relationship</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCalculate">Calculate</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlClear">Clear</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlStep3">【Step3】Verify Relationship</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlMoveToPoint">MoveToThisPoint</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlThickCameraRulerX">ThickCameraRuler_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlPrecisionCameraRulerX">PrecisionCameraRuler_X</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlThickCameraRulerY">ThickCameraRuler_Y</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlPrecisionCameraRulerY">PrecisionCameraRuler_Y</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlSaveData">SaveData</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCameraRelationshipCalibration">CameraRelationshipCalibration</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRulerX">CenterCameraRulerX</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRulerY">CenterCameraRulerY</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRealX">CameraRealX</sys:String>
+    <sys:String x:Key="CameraRelationCalibControlCenterCameraRealY">CenterCameraRealY</sys:String>
+
+    <!--SystemCalib-LargeFieldCameraCalibControl-->
+    <sys:String x:Key="LargeFieldCameraCalibControlWideAngleCalibration">WideAngleCalibration</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1">Point1</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4">Point4</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5">Point5</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2">Point2</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3">Point3</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1CoordinateX">Point1CoordinateX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1CoordinateY">Point1CoordinateY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlMoveToPoint">MoveToThisPoint</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2CoordinateX">Point2CoordinateX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2CoordinateY">Point2CoordinateY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3CoordinateX">Point3CoordinateX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3CoordinateY">Point3CoordinateY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4CoordinateX">Point4CoordinateX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4CoordinateY">Point4CoordinateY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5CoordinateX">Point5CoordinateX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5CoordinateY">Point5CoordinateY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlStep1">【Step1】Wide Angle Camera Pixel Coordinates</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlObtainPixelCoordinateValues">ObtainPixelCoordinateValues</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1WideAnglePixelX">Point1WideAnglePixelX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint1WideAnglePixelY">Point1WideAnglePixelY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2WideAnglePixelX">Point2WideAnglePixelX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint2WideAnglePixelY">Point2WideAnglePixelY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3WideAnglePixelX">Point3WideAnglePixelX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint3WideAnglePixelY">Point3WideAnglePixelY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4WideAnglePixelX">Point4WideAnglePixelX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint4WideAnglePixelY">Point4WideAnglePixelY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5WideAnglePixelX">Point5WideAnglePixelX</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlPoint5WideAnglePixelY">Point5WideAnglePixelY</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlStep3">【Step3】Calculate Calibration</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlCalculateCalibration">CalculateCalibration</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-LargeFieldLinkerCalibControl-->
+    <sys:String x:Key="LargeFieldLinkerCalibControlRotationCenterCalibration">RotationCenterCalibration</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep1">【Step1】Camera Point Setting</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint1">DeterminePoint1①</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlAlignCenter">AlignCenter</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlGetCurrentValue">GetCurrentValue</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlCoordinate">Coordinate(X:Y)</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint2">DeterminePoint2②</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint3">DeterminePoint3③</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint4">DeterminePoint4④</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlDeterminePoint5">DeterminePoint5⑤</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep2">【Step2】Data Acquisition</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint1RealValue">Point1RealValue①</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint2RealValue">Point2RealValue②</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint3RealValue">Point3RealValue③</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint4RealValue">Point4RealValue④</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlPoint5RealValue">Point5RealValue⑤</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlStep3">【Step3】Calibration Calculation</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlCalculate">Calculate</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-MotionSysCalibControl-->
+    <sys:String x:Key="MotionSysCalibControlStep1">【Step1】CalibrationBoardLeveling</sys:String>
+    <sys:String x:Key="MotionSysCalibControlXInterval">XInterval</sys:String>
+    <sys:String x:Key="MotionSysCalibControlClockwiseIsPositive">ClockwiseIsPositive</sys:String>
+    <sys:String x:Key="MotionSysCalibControlLevelingX">LevelingX</sys:String>
+    <sys:String x:Key="MotionSysCalibControlAngleInXDirection">AngleInX-direction(°)</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep2">【Step2】CalibrationSettings</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartPointX">StartPointX</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartPointY">StartPointY</sys:String>
+    <sys:String x:Key="MotionSysCalibControlMoveToStartPoint">MoveToStartPoint</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRealValueX">RealValueX</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRealValueY">RealValueY</sys:String>
+    <sys:String x:Key="MotionSysCalibControlSetStartPoint">SetStartPoint</sys:String>
+    <sys:String x:Key="MotionSysCalibControlRows">Rows</sys:String>
+    <sys:String x:Key="MotionSysCalibControlColumns">Columns</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep">Step</sys:String>
+    <sys:String x:Key="MotionSysCalibControlCameraHeight">CameraHeight</sys:String>
+    <sys:String x:Key="MotionSysCalibControlThreshold">Threshold</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep3">【Step3】Perform Calibration</sys:String>
+    <sys:String x:Key="MotionSysCalibControlIsCalibrated">IsCalibrated</sys:String>
+    <sys:String x:Key="MotionSysCalibControlIsVerify">WhetherToVerify</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStartExecution">StartExecution</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStopExecution">StopExecution</sys:String>
+    <sys:String x:Key="MotionSysCalibControlStep4">【Step4】View Validation Results</sys:String>
+    <sys:String x:Key="MotionSysCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="MotionSysCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="MotionSysCalibControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-RepetitivenessValidateControl-->
+    <sys:String x:Key="RepetitivenessValidateControlRepeatabilityVerification">RepeatabilityVerification</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep1">【Step1】Parameter Settings</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlRows">Rows</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep">Step(mm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlColumns">Columns</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlTimes">Times</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlSpeed">Speed(mm/s)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlCameraHeight">CameraHeight(mm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep2">【Step2】Perform Validation</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStopCollection">StopCollection</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlStep3">【Step3】Measurement Result</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlMaximumDistanceDeviation">MaxDistanceDeviation(µm)</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlClearData">ClearData</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlReadData">ReadData</sys:String>
+    <sys:String x:Key="RepetitivenessValidateControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-RotateCenterCalibControl-->
+    <sys:String x:Key="RotateCenterCalibControlStep1">【Step1】Start Position Setting</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlInitialAngle">InitialAngle(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlSetInitialAngle">SetInitialAngle</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationInterval">RotationInterval(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep2">【Step2】Data Acquisition</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlInitialAngle1">InitialAngle①</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlAlignCenter">AlignCenter</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCoordinate">Coordinate(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlControlMoveToPoint">MoveToThisPoint</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle2">RotationAngle②</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle3">RotationAngle③</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle4">RotationAngle④</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle5">RotationAngle⑤</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep3">【Step3】Calibration Calculation</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationCenterX">RotationCenterX</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationCenterY">RotationCenterY</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCalculate">Calculate</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlStep4">【Step4】Calibration Verification</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlCalculateCurrentRealValue">CalculateCurrentRealValue</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationAngle">RotationAngle(°)</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlClockwiseIsPositive">ClockwiseIsPositive</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotationVerification">RotationVerification</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlRotateToPosition">RotateToPosition</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlClearData">ClearData</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlReadData">ReadData</sys:String>
+    <sys:String x:Key="RotateCenterCalibControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-RotateCenterSimpleControl-->
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterCalibration">RotationCenterCalibration</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep1">【Step1】Start Position Setting</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlIsRotatingPositive">IsRotatingInPositiveDirection</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlClockwiseIsPositive">ClockwiseIsPositive</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlIsProductCalibrated">IsProductCalibrated</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationAngle">RotationAngle(°)</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep2">【Step2】Data Acquisition</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSetPoint1">SetPoint1</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlAlignCenter">AlignCenter</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlMoveToPoint">MoveToThisPoint</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCoordinate">Coordinate(X:Y)</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotate">Rotate</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSetPoint2">SetPoint2</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep3">【Step3】Calibration Calculation</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCalculate">Calculate</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterReal">RotationCenterReal</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationCenterRuler">RotationCenterRuler</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlStep4">【Step4】Calibration Verification</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlCalculateCurrentRealValue">CalculateCurrentRealValue</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotationVerification">RotationVerification</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlRotateToPosition">RotateToPosition</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlClearData">ClearData</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlReadData">ReadData</sys:String>
+    <sys:String x:Key="RotateCenterSimpleControlSaveData">SaveData</sys:String>
+
+    <!--SystemCalib-StraightnessValidateControl-->
+    <sys:String x:Key="StraightnessValidateControlStraightnessVerification">StraightnessVerification</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep1">【Step1】Parameter Settings</sys:String>
+     <sys:String x:Key="StraightnessValidateControlRows">Rows</sys:String>
+     <sys:String x:Key="StraightnessValidateControlStep">Step</sys:String>
+    <sys:String x:Key="StraightnessValidateControlColumns">Columns</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStepUnit">Step(mm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlTimes">Times</sys:String>
+    <sys:String x:Key="StraightnessValidateControlSpeed">Speed(mm/s)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlCameraHeight">CameraHeight(mm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep2">【Step2】Perform Validation</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStopCollection">StopCollection</sys:String>
+    <sys:String x:Key="StraightnessValidateControlStep3">【Step3】Measurement Result</sys:String>
+    <sys:String x:Key="StraightnessValidateControlMeanDeviation">MeanDeviation(µm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlMaxDeviation">MaxDeviation(µm)</sys:String>
+    <sys:String x:Key="StraightnessValidateControlClearData">ClearData</sys:String>
+    <sys:String x:Key="StraightnessValidateControlReadData">ReadData</sys:String>
+    <sys:String x:Key="StraightnessValidateControlSaveData">SaveData</sys:String>
+
+    <!--PowerCalibComponent-AdjustParamentWindow-->
+    <sys:String x:Key="AdjustParamentWindowTitle">Power correction configuration</sys:String>
+    <sys:String x:Key="AdjustParamentWindowChannel">Channel</sys:String>
+    <sys:String x:Key="AdjustParamentWindowFrequency">Frequency</sys:String>
+    <sys:String x:Key="AdjustParamentWindowPulse">Pulse</sys:String>
+    <sys:String x:Key="AdjustParamentWindowStabilityTime">StabilityTime（S）</sys:String>
+    <sys:String x:Key="AdjustParamentWindowSampleTime">SampleTime（S）</sys:String>
+    <sys:String x:Key="AdjustParamentWindowDataProcessingTime">DataProcessingTime</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterResolution">MeasureParaResolution</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterStartValue">MeasurementParameterStartValue</sys:String>
+    <sys:String x:Key="AdjustParamentWindowMeasurementParameterEndValue">MeasurementParameterEndValue</sys:String>
+    <sys:String x:Key="AdjustParamentWindowAddLayer">AddLayer</sys:String>
+    <sys:String x:Key="AdjustParamentWindowDeleteSelectedLayer">DeleteSelectedLayer</sys:String>
+
+    <!--PowerCalibComponent-AutoWaveLine-->
+    <sys:String x:Key="AutoWaveLineRealTimePower">RealTimePower</sys:String>
+    <sys:String x:Key="AutoWaveLineCurrentWavelength">CurrentWavelength</sys:String>
+    <sys:String x:Key="AutoWaveLineZeroOrNot">ZeroOrNot</sys:String>
+    <sys:String x:Key="AutoWaveLineNo">No</sys:String>
+
+    <!--PowerCalibComponent-HistoryDataView-->
+    <sys:String x:Key="HistoryDataViewTestData">TestData</sys:String>
+    <sys:String x:Key="HistoryDataViewSerialNumber">SerialNumber</sys:String>
+    <sys:String x:Key="HistoryDataViewMeasurementParameters">MeasurementParameters</sys:String>
+    <sys:String x:Key="HistoryDataViewRealPower">RealPower(W)</sys:String>
+    <sys:String x:Key="HistoryDataViewHistoryData">HistoryData</sys:String>
+    <sys:String x:Key="HistoryDataViewApplySelectedItems">ApplySelectedItems</sys:String>
+    <sys:String x:Key="HistoryDataViewDeleteSelectedItems">DeleteSelectedItems</sys:String>
+    <sys:String x:Key="HistoryDataViewTestDate">TestDate</sys:String>
+    <sys:String x:Key="HistoryDataViewChannel">Channel</sys:String>
+    <sys:String x:Key="HistoryDataViewFrequency">Frequency(HZ)</sys:String>
+    <sys:String x:Key="HistoryDataViewPulse">Pulse</sys:String>
+    <sys:String x:Key="HistoryDataViewStabilityTime">StabilityTime(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewSampleTime">SampleTime(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewProcessingTime">ProcessingTime(s)</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterMIN">ParameterMIN</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterMAX">ParameterMAX</sys:String>
+    <sys:String x:Key="HistoryDataViewParameterResolution">ParameterResolution</sys:String>
+    <sys:String x:Key="HistoryDataViewFittingAlgorithm">FittingAlgorithm</sys:String>
+
+    <!--PowerCalibComponent_Shared-LaserParamsetView-->
+    <sys:String x:Key="LaserParamsetViewPowerW">Power(W)</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerHZ">Power(HZ)</sys:String>
+    <sys:String x:Key="LaserParamsetViewSetup">Setup</sys:String>
+
+    <!--PowerCalibComponent_Shared-LaserPowerCheckView-->
+    <sys:String x:Key="LaserPowerCheckViewFrequency">Frequency(KHZ))</sys:String>
+    <sys:String x:Key="LaserPowerCheckViewSetup">Setup</sys:String>
+    <sys:String x:Key="LaserPowerCheckViewPulse">Pulse</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerAW">PowerA(w)</sys:String>
+    <sys:String x:Key="LaserParamsetViewPowerBW">PowerB(w)</sys:String>
+    <sys:String x:Key="LaserParamsetViewCheckRealPower">CheckRealPower</sys:String>
+    <sys:String x:Key="LaserParamsetViewCheckRealPowerAlgorithm">CheckRealPowerAlgorithm</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerCheck-->
+    <sys:String x:Key="PowerCheckPowerMeterDeviceEmpty">The power meter device is empty</sys:String>
+    <sys:String x:Key="PowerCheckTip">Tip</sys:String>
+    <sys:String x:Key="PowerCheckPowerMeterDeviceOffline">Power meter device not connected</sys:String>
+    <sys:String x:Key="PowerCheckMeasurementDeviceEmpty">The power meter device is empty</sys:String>
+    <sys:String x:Key="PowerCheckMeasurementDeviceException">Abnormal power meter equipment</sys:String>
+    <sys:String x:Key="PowerCheckDeviceStateError">Check hardware status and report errors</sys:String>
+    <sys:String x:Key="PowerCheckDeviceCollectionFailed">Power meter device failed to start collection</sys:String>
+
+    <!--PowerCalibComponent-PowerAdjustView-->
+    <sys:String x:Key="PowerAdjustViewParaInputSetup">InputParameterSettings</sys:String>
+    <sys:String x:Key="PowerAdjustViewPowerMeasurement">PowerMeasurement</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep1">【Step1】Move To Measurement Position</sys:String>
+    <sys:String x:Key="PowerAdjustViewAxisXYZ">Axis(XYZ)</sys:String>
+    <sys:String x:Key="PowerAdjustViewPositionCorrection">PositionCorrection</sys:String>
+    <sys:String x:Key="PowerAdjustViewMoveInPosition">ExerciseInPlace</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep2">【Step2】Setting Measurement Parameters</sys:String>
+    <sys:String x:Key="PowerAdjustViewStabilizeTime">PowerStabilityTime(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewSampleTime">SampleTime(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewDataProcessTime">DataProcessTime(s)</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameterResolution">MeasurementParameterResolution</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameterRange">MeasurementParameterRange</sys:String>
+    <sys:String x:Key="PowerAdjustViewLaserMaxPower">LaserMaxPower</sys:String>
+    <sys:String x:Key="PowerAdjustViewPaddleCorrection">PaddleCorrection</sys:String>
+    <sys:String x:Key="PowerAdjustViewChannel">Channel</sys:String>
+    <sys:String x:Key="PowerAdjustViewFrequency">Frequency(HZ)</sys:String>
+    <sys:String x:Key="PowerAdjustViewPulse">Pulse</sys:String>
+    <sys:String x:Key="PowerAdjustViewMultipleCorrections">MultipleCorrections</sys:String>
+    <sys:String x:Key="PowerAdjustViewCorrectionsSetup">CorrectionsSetup</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep3">【第3步】Execute Measurement Process</sys:String>
+    <sys:String x:Key="PowerAdjustViewStart">Start</sys:String>
+    <sys:String x:Key="PowerAdjustViewStop">Stop</sys:String>
+    <sys:String x:Key="PowerAdjustViewHistory">History</sys:String>
+    <sys:String x:Key="PowerAdjustViewIndex">Index</sys:String>
+    <sys:String x:Key="PowerAdjustViewMeasurementParameter">MeasurementParameter</sys:String>
+    <sys:String x:Key="PowerAdjustViewRealPower">RealPower(W)</sys:String>
+    <sys:String x:Key="PowerAdjustViewStep4">【第4步】Power Conversion</sys:String>
+    <sys:String x:Key="PowerAdjustViewCalc">Calc</sys:String>
+    <sys:String x:Key="PowerMeterAxisControlTestControl">ControlTestControl</sys:String>
+
+    <!--PowerCalibComponent-PowerMeterControl-->
+    <sys:String x:Key="PowerMeterControlPowerMeter">PowerMeter</sys:String>
+    <sys:String x:Key="PowerMeterControlSerial">Serial</sys:String>
+    <sys:String x:Key="PowerMeterControlWavelength">Wavelength(nm)</sys:String>
+    <sys:String x:Key="PowerMeterControlSetup">Setup</sys:String>
+    <sys:String x:Key="PowerMeterControlStart">Start</sys:String>
+    <sys:String x:Key="PowerMeterControlHome">Home</sys:String>
+
+    <!--PowerCalibComponent-PowerMeasurementView-->
+    <sys:String x:Key="PowerMeasurementViewRealCurve">RealCurve</sys:String>
+    <sys:String x:Key="PowerMeasurementViewUsing">Using</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementItem">MeasurementItem</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementTarget">MeasurementTarget</sys:String>
+    <sys:String x:Key="PowerMeasurementViewPowerMeter">PowerMeter</sys:String>
+    <sys:String x:Key="PowerMeasurementViewSerial">Serial</sys:String>
+    <sys:String x:Key="PowerMeasurementViewWavelength">Wavelength(nm)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewPositionCorrection">PositionCorrection</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMoveInPosition">MoveInPosition</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStart">Start</sys:String>
+    <sys:String x:Key="PowerMeasurementViewHome">Home</sys:String>
+    <sys:String x:Key="PowerMeasurementViewInitSetup">InitSetup</sys:String>
+    <sys:String x:Key="PowerMeasurementViewInputVariables">InputVariables</sys:String>
+    <sys:String x:Key="PowerMeasurementViewRange">Range</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStep">Step</sys:String>
+    <sys:String x:Key="PowerMeasurementViewMeasurementParameter">MeasurementParameter</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStartMeasurement">Measurement</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStabilizeTime">StabilizeTime(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewSampleTime">SampleTime(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewDataProcessTime">DataProcessTime(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewStop">Stop</sys:String>
+    <sys:String x:Key="PowerMeasurementViewThisResult">ThisResult</sys:String>
+    <sys:String x:Key="PowerMeasurementViewHistory">History</sys:String>
+    <sys:String x:Key="PowerMeasurementViewSave">Save</sys:String>
+
+    <!--PowerCalibComponent_LSD-Tip -->
+    <sys:String x:Key="PowerCalibComponentLSDFileDonetExist">FileDonetExist</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDLagrangeInterpolation">LagrangeInterpolation</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDLeastSquareMethod">LeastSquareMethod</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDConnectionStatusCheck">ConnectionStatusCheck</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasurementDeviceEmpty">MeasurementDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasureDeviceEmpty">MeasureDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDMeasureDeviceException">MeasureDeviceException</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDDeviceCollectionFailed">DeviceCollectionFailed</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDSetZero">SetZero</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDNotSetZero">NotSetZero</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDHome">Home</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDStartStatistics">StartStatistics</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDNoFoundPowerComparisonTable">NoFoundPowerComparisonTable</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDPowerCorrectionPositionException">PowerCorrectionPositionException</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDParameterSettingError">ParameterSettingError</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDOutputPower">OutputPower</sys:String>
+    <sys:String x:Key="PowerCalibComponentLSDTestingParameter">TestingParameter</sys:String>
+
+    <!--PatternTemplate-CaliperParamView-->
+    <sys:String x:Key="CaliperParamViewCalipersNum">CalipersNum</sys:String>
+    <sys:String x:Key="CaliperParamViewProjectionLength">ProjectionLength</sys:String>
+    <sys:String x:Key="CaliperParamViewIgnoreNum">IgnoreNum</sys:String>
+    <sys:String x:Key="CaliperParamViewSmoothingFactor">SmoothingFactor</sys:String>
+    <sys:String x:Key="CaliperParamViewSearchLength">SearchLength</sys:String>
+    <sys:String x:Key="CaliperParamViewEdgeThreshold">EdgeThreshold</sys:String>
+    <sys:String x:Key="CaliperParamViewCalipersScore">CalipersScore</sys:String>
+    <sys:String x:Key="CaliperParamViewSelectEdge">SelectEdge</sys:String>
+    <sys:String x:Key="CaliperParamViewEdgeDirection">EdgeDirection</sys:String>
+    <sys:String x:Key="CaliperParamViewInterpolationAlgorithm">InterpolationAlgorithm</sys:String>
+    <sys:String x:Key="CaliperParamViewCatch">Catch</sys:String>
+    <sys:String x:Key="CaliperParamViewApply">Apply</sys:String>
+
+    <!--PatternTemplate-PowerMeasureHistoryDataView-->
+    <sys:String x:Key="PowerMeasureHistoryDataViewHistory">HistoryData</sys:String>
+    <sys:String x:Key="PowerMeasureHistoryDataViewApply">Apply</sys:String>
+
+    <!--PatternTemplate-CameraImageView-->
+    <sys:String x:Key="CameraImageViewCreateTemplate">CreateTemplate</sys:String>
+    <sys:String x:Key="CameraImageViewTemplateParameter">TemplateParameter</sys:String>
+    <sys:String x:Key="CameraImageViewCalipers">Calipers</sys:String>
+    <sys:String x:Key="CameraImageViewGraphType">GraphType</sys:String>
+    <sys:String x:Key="CameraImageViewTemplateType">TemplateType</sys:String>
+    <sys:String x:Key="CameraImageViewOpenTemplate">OpenTemplate</sys:String>
+    <sys:String x:Key="CameraImageViewSaveTemplate">SaveTemplate</sys:String>
+
+    <!--PatternTemplate-CameraObliqueView-->
+    <sys:String x:Key="CameraObliqueViewGraphType">GraphType</sys:String>
+    <sys:String x:Key="CameraObliqueViewSave">Save</sys:String>
+
+    <!--PatternTemplate-CameraVision-->
+    <sys:String x:Key="CameraVisionCreateTemplate">CreateTemplate</sys:String>
+    <sys:String x:Key="CameraVisionMate">Mate</sys:String>
+    <sys:String x:Key="CameraVisionCalipers">Calipers</sys:String>
+    <sys:String x:Key="CameraVisionGraphType">GraphType</sys:String>
+    <sys:String x:Key="CameraVisionTemplateType">TemplateType</sys:String>
+    <sys:String x:Key="CameraVisionOpenTemplate">OpenTemplate</sys:String>
+
+    <!--PatternTemplate-TemplateParamView-->
+    <sys:String x:Key="TemplateParamViewStarteAngle">StarteAngle</sys:String>
+    <sys:String x:Key="TemplateParamViewAngleRange">AngleRange</sys:String>
+    <sys:String x:Key="TemplateParamViewPyramid">Pyramid</sys:String>
+    <sys:String x:Key="TemplateParamViewNumMatches">NumMatches</sys:String>
+    <sys:String x:Key="TemplateParamViewMaxOverlap">MaxOverlap</sys:String>
+    <sys:String x:Key="TemplateParamViewMinScore">MinScore</sys:String>
+    <sys:String x:Key="TemplateParamViewGreediness">Greediness</sys:String>
+    <sys:String x:Key="TemplateParamViewSearchAccuracy">SearchAccuracy</sys:String>
+    <sys:String x:Key="TemplateParamViewSaveOriginalTemplateParameters">SaveOriginalTemplateParameters</sys:String>
+    <sys:String x:Key="TemplateParamViewImagePreprocessing">ImagePreprocessing</sys:String>
+    <sys:String x:Key="TemplateParamViewMate">Mate</sys:String>
+    <sys:String x:Key="TemplateParamViewOpen">Open</sys:String>
+
+    <!--PatternTemplate-TemplateCreateView-->
+    <sys:String x:Key="TemplateCreateViewStarteAngle">StarteAngle</sys:String>
+    <sys:String x:Key="TemplateCreateViewAngleRange">AngleRange</sys:String>
+    <sys:String x:Key="TemplateCreateViewAngleStep">AngleStep</sys:String>
+    <sys:String x:Key="TemplateCreateViewAuto">Auto</sys:String>
+    <sys:String x:Key="TemplateCreateViewOptimizationAlgorithm">OptimizationAlgorithm</sys:String>
+    <sys:String x:Key="TemplateCreateViewMatchingMethod">MatchingMethod</sys:String>
+    <sys:String x:Key="TemplateCreateViewContrastRatio">ContrastRatio</sys:String>
+    <sys:String x:Key="TemplateCreateViewMinContrast">MinContrast</sys:String>
+    <sys:String x:Key="TemplateCreateViewImagePreprocessing">ImagePreprocessing</sys:String>
+    <sys:String x:Key="TemplateCreateViewPyramid">Pyramid</sys:String>
+    <sys:String x:Key="TemplateCreateViewOpen">Open</sys:String>
+
+    <!--PatternTemplate-CameraModelViewModel-Tip-->
+    <sys:String x:Key="CameraModelViewModelOpenCameraContinuousAcquisition">OpenCameraContinuousAcquisition</sys:String>
+    <sys:String x:Key="CameraModelViewModelTemplateNotLoad">TemplateNotLoad</sys:String>
+    <sys:String x:Key="FailedToOpenTemplatePleaseCheckTheTemplateSavePath">FailedToOpenTemplatePleaseCheckTheTemplateSavePath</sys:String>
+    <sys:String x:Key="MatchingFailed">MatchingFailed</sys:String>
+    <sys:String x:Key="MatchingFailedPleaseCheckTheSavePath">MatchingFailedPleaseCheckTheSavePath</sys:String>
+    <sys:String x:Key="ROIWithoutSpecifyingATemplateType">ROIWithoutSpecifyingATemplateType</sys:String>
+    <sys:String x:Key="UndefinedROI">UndefinedROI！</sys:String>
+
+    <!--PatternTemplate-StaticString-Tip-->
+    <sys:String x:Key="StaticStringCalipers">Calipers</sys:String>
+    <sys:String x:Key="CreateTemplate">CreateTemplate</sys:String>
+    <sys:String x:Key="MatchTemplate">MatchTemplate</sys:String>
+
+    <!--ProductCalib-ProductCalibStepFrameView-->
+    <sys:String x:Key="ProductCalibStepFrameViewSelectTemplate">SelectTemplate</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalibCCD">CalibCCD</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewLeveling">Leveling</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalculateInterval">CalculateInterval</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewMoveCalib">MoveCalib</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCalibDataVisual">CalibDataVisual</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewCameraFuseCalib">CameraFuseCalib</sys:String>
+    <sys:String x:Key="ProductCalibStepFrameViewRotateCenterCalib">RotateCenterCalib</sys:String>
+
+    <!--ProductCalib-CalculateIntervalView-->
+    <sys:String x:Key="CalculateIntervalViewStep1">Step1</sys:String>
+    <sys:String x:Key="CalculateIntervalViewHorizontalDistance">HorizontalDistance</sys:String>
+    <sys:String x:Key="CalculateIntervalViewSearch">Search</sys:String>
+    <sys:String x:Key="CalculateIntervalViewVerticalDistance">VerticalDistance</sys:String>
+    <sys:String x:Key="CalculateIntervalViewStopSearch">StopSearch</sys:String>
+
+    <!--ProductCalib-CalibDataVisualView-->
+    <sys:String x:Key="CalibDataVisualViewStep1">Step1</sys:String>
+    <sys:String x:Key="CalibDataVisualViewRange">Range</sys:String>
+    <sys:String x:Key="CalibDataVisualViewStartEndYDeviation">StartEndYDeviation</sys:String>
+    <sys:String x:Key="CalibDataVisualViewReadData">ReadData</sys:String>
+    <sys:String x:Key="CalibDataVisualViewSaveData">SaveData</sys:String>
+
+    <!--ProductCalib-CalibRunView-->
+    <sys:String x:Key="CalibRunViewStep1">Step1</sys:String>
+    <sys:String x:Key="CalibRunViewRowStep">RowStep</sys:String>
+    <sys:String x:Key="CalibRunViewColumnStep">ColumnStep</sys:String>
+    <sys:String x:Key="CalibRunViewCameraHeight">CameraHeight</sys:String>
+    <sys:String x:Key="CalibRunViewThreshold">Threshold</sys:String>
+    <sys:String x:Key="CalibRunViewOpenAutofocus">OpenAutofocus</sys:String>
+    <sys:String x:Key="CalibRunViewSerial">Serial</sys:String>
+    <sys:String x:Key="CalibRunViewFocusingAccuracy">FocusingAccuracy</sys:String>
+    <sys:String x:Key="CalibRunViewFocusingStep">FocusingStep</sys:String>
+    <sys:String x:Key="CalibRunViewStep2">Step2</sys:String>
+    <sys:String x:Key="CalibRunViewOpenDialog">OpenDialog</sys:String>
+    <sys:String x:Key="CalibRunViewDontOpenDialog">DontOpenDialog</sys:String>
+    <sys:String x:Key="CalibRunViewStartExcute">StartExcute</sys:String>
+    <sys:String x:Key="CalibRunViewStopExcute">StopExcute</sys:String>
+    <sys:String x:Key="CalibRunViewStep3">Step3</sys:String>
+
+    <!--ProductCalib-CameraFuseView-->
+    <sys:String x:Key="CameraFuseViewStep1">Step1</sys:String>
+    <sys:String x:Key="CameraFuseViewGetCurrentValue">GetCurrentValue</sys:String>
+    <sys:String x:Key="CameraFuseViewCoordinate">Coordinate</sys:String>
+    <sys:String x:Key="CameraFuseViewStep2">Step2</sys:String>
+    <sys:String x:Key="CameraFuseViewCalc">Calc</sys:String>
+    <sys:String x:Key="CameraFuseViewStep3">Step3</sys:String>
+    <sys:String x:Key="CameraFuseViewStartVerify">StartVerify</sys:String>
+    <sys:String x:Key="CameraFuseViewStopVerify">StopVerify</sys:String>
+    <sys:String x:Key="CameraFuseViewReadData">ReadData</sys:String>
+    <sys:String x:Key="CameraFuseViewSaveData">SaveData</sys:String>
+
+    <!--ProductCalib-CCDCalibView-->
+    <sys:String x:Key="CCDCalibViewStep1">Step1</sys:String>
+    <sys:String x:Key="CCDCalibViewMeasuredSpacing">MeasuredSpacing</sys:String>
+    <sys:String x:Key="CCDCalibViewCalculateAngle">CalculateAngle</sys:String>
+    <sys:String x:Key="CCDCalibViewAngleToX">AngleToX</sys:String>
+    <sys:String x:Key="CCDCalibViewStep2">Step2</sys:String>
+    <sys:String x:Key="CCDCalibViewXDirectionSpacing">XDirectionSpacing</sys:String>
+    <sys:String x:Key="CCDCalibViewYDirectionSpacing">YDirectionSpacing</sys:String>
+    <sys:String x:Key="CCDCalibViewCalibrationX">CalibrationX</sys:String>
+    <sys:String x:Key="CCDCalibViewCalibrationY">CalibrationY</sys:String>
+    <sys:String x:Key="CCDCalibViewXDirectionResolution">XDirectionResolution</sys:String>
+    <sys:String x:Key="CCDCalibViewYDirectionResolution">YDirectionResolution</sys:String>
+    <sys:String x:Key="CCDCalibViewStep3">Step3</sys:String>
+    <sys:String x:Key="CCDCalibViewIdentifyAndAlignCenters">IdentifyAndAlignCenters</sys:String>
+    <sys:String x:Key="CCDCalibViewClearData">ClearData</sys:String>
+    <sys:String x:Key="CCDCalibViewReadData">ReadData</sys:String>
+    <sys:String x:Key="CCDCalibViewSaveData">SaveData</sys:String>
+
+    <!--ProductCalib-CCDCalibViewModel-->
+    <sys:String x:Key="CCDCalibViewModelIsUseROI">Please confirm whether to use ROI? (Using ROI may result in template recognition failure)</sys:String>
+
+    <!--ProductCalib-LevelingView-->
+    <sys:String x:Key="LevelingViewStep1">Step1</sys:String>
+    <sys:String x:Key="LevelingViewFirstPoint">FirstPoint</sys:String>
+    <sys:String x:Key="LevelingViewGetCurrentValue">GetCurrentValue</sys:String>
+    <sys:String x:Key="LevelingViewMoveToPoint">MoveToPoint</sys:String>
+    <sys:String x:Key="LevelingViewSecondPoint">SecondPoint</sys:String>
+    <sys:String x:Key="LevelingViewThreshold">Threshold</sys:String>
+    <sys:String x:Key="LevelingViewXInterval">XInterval</sys:String>
+    <sys:String x:Key="LevelingViewStep2">Step2</sys:String>
+    <sys:String x:Key="LevelingViewManualLeveling">ManualLeveling</sys:String>
+    <sys:String x:Key="LevelingViewAutoLeveling">AutoLeveling</sys:String>
+    <sys:String x:Key="LevelingViewAngleInXDirection">AngleInXDirection</sys:String>
+    <sys:String x:Key="LevelingViewTheCoordinate(X,Y)">TheCoordinate(X,Y)</sys:String>
+    <!--ProductCalib-MatchSelectView-->
+    <sys:String x:Key="MatchSelectViewStep1">Step1</sys:String>
+    <sys:String x:Key="MatchSelectViewRotateCarrierToTemplatePosition">RotateCarrierToTemplatePosition</sys:String>
+    <sys:String x:Key="MatchSelectViewStep2">Step2</sys:String>
+    <sys:String x:Key="MatchSelectViewCreateTemplate">CreateTemplate</sys:String>
+    <sys:String x:Key="MatchSelectViewStep3">Step3</sys:String>
+    <sys:String x:Key="MatchSelectViewTemplatePath">TemplatePath</sys:String>
+
+    <!--ProductCalib-RotateCenterView-->
+    <sys:String x:Key="RotateCenterViewStep1">Step1</sys:String>
+    <sys:String x:Key="RotateCenterViewCreateTemplate">CreateTemplate</sys:String>
+    <sys:String x:Key="RotateCenterViewStep2">Step2</sys:String>
+    <sys:String x:Key="RotateCenterViewThreshold">Threshold</sys:String>
+    <sys:String x:Key="RotateCenterViewCurrentAngle">CurrentAngle</sys:String>
+    <sys:String x:Key="RotateCenterViewRotation90">Rotation90</sys:String>
+    <sys:String x:Key="RotateCenterViewCoordinate">VCoordinate</sys:String>
+    <sys:String x:Key="RotateCenterViewAlignCenter">AlignCenter</sys:String>
+    <sys:String x:Key="RotateCenterViewMoveToPoint">MoveToPoint</sys:String>
+    <sys:String x:Key="RotateCenterViewStep3">Step3</sys:String>
+    <sys:String x:Key="RotateCenterViewCalc">Calc</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationCenterX">RotationCenterX</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationCenterY">RotationCenterY</sys:String>
+    <sys:String x:Key="RotateCenterViewTemplatePath">TemplatePath</sys:String>
+    <sys:String x:Key="RotateCenterViewStep4">Step4</sys:String>
+    <sys:String x:Key="RotateCenterViewCalcValue">CalcValue</sys:String>
+    <sys:String x:Key="RotateCenterViewCalcCurrentValue">CalcCurrentValue</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationVerification">RotationVerification</sys:String>
+    <sys:String x:Key="RotateCenterViewRotationAngle">RotationAngle</sys:String>
+    <sys:String x:Key="RotateCenterViewReadData">ReadData</sys:String>
+    <sys:String x:Key="RotateCenterViewSaveData">SaveData</sys:String>
+
+    <!--DFTComponent-DFTMaintanceView-->
+    <sys:String x:Key="DFTMaintanceViewDFTEnable">DFTEnable</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDFTState">DFTState</sys:String>
+    <sys:String x:Key="DFTMaintanceViewAlarmReset">AlarmReset</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderLocationConfiguration">RangefinderLocationConfiguration</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDFTScanMode">DFTScanMode</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADDataDirection">ADDataDirection</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADAndDirection">ADAndDirection</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderObjectiveSpacing">RangefinderObjectiveSpacing</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSpecifyInstructionSending">SpecifyInstructionSending</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSendingInstruction">SendingInstruction</sys:String>
+    <sys:String x:Key="DFTMaintanceViewAcceptContent">AcceptContent</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSend">Send</sys:String>
+    <sys:String x:Key="DFTMaintanceViewReadLocalityData">ReadLocalityData</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRead">Read</sys:String>
+    <sys:String x:Key="DFTMaintanceViewFeedbackConfiguration">FeedbackConfiguration</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSetOutputValue">SetOutputValue</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADUpperEdgeThreshold">ADUpperEdgeThreshold</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeThreshold">ADFallingEdgeThreshold</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeRange">ADFallingEdgeRange</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADFallingEdgeNum">ADFallingEdgeNum</sys:String>
+    <sys:String x:Key="DFTMaintanceViewXOriginSetting">XOriginSetting</sys:String>
+    <sys:String x:Key="DFTMaintanceViewRangefinderObjectiveSpacingCorrect">RangefinderObjectiveSpacingCorrect</sys:String>
+    <sys:String x:Key="DFTMaintanceViewObjectiveSpacingMagnification">ObjectiveSpacingMagnification</sys:String>
+    <sys:String x:Key="DFTMaintanceViewCurrentLocation">CurrentLocation</sys:String>
+    <sys:String x:Key="DFTMaintanceViewADEffectiveWorkRange">ADEffectiveWorkRange"</sys:String>
+    <sys:String x:Key="DFTMaintanceViewErrorMessage">ErrorMessage"</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMinimum(V)">DAMinimum(V)</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMaximum (V)">DAMaximum (V)</sys:String>
+    <sys:String x:Key="DFTMaintanceViewDAMedianOfV">DAMedianOf（V）</sys:String>
+    <sys:String x:Key="DFTMaintanceViewSaveData">SaveData</sys:String>
+
+    <!--DFTComponent-ValueRange-->
+    <sys:String x:Key="ValueRange">ValueRange</sys:String>
+
+    <!--ATFComponent-ATFController"-->
+    <sys:String x:Key="AbnormalFocusingPleaseCheckTheFocusingFunction">AbnormalFocusingPleaseCheckTheFocusingFunction</sys:String>
+
+    <!-- Controls.UIControl.Axis-AxisController-->
+    <sys:String x:Key="TheZeroReturnOperationCannotBeUndone">TheZeroReturnOperationCannotBeUndone</sys:String>
+    <sys:String x:Key="AreYouSureYouWantToPerformTheZeroReturnOperation">AreYouSureYouWantToPerformTheZeroReturnOperation？</sys:String>
+
+    <!-- Controls.UIControl.Axis-AxisControllerEvolutionA-->
+    <sys:String x:Key="AxisControllerEvolutionATips">Tips</sys:String>
+
+    <!-- Controls.UIControl-AxisControlViewModel-Tips-->
+    <sys:String x:Key="HardwareNotConnectedOffline">HardwareNotConnectedOffline</sys:String>
+    <sys:String x:Key="ExceedingNegativeLimit">ExceedingNegativeLimit</sys:String>
+    <sys:String x:Key="ExceedingThePositiveLimit">ExceedingThePositiveLimit</sys:String>
+    <sys:String x:Key="AxisNotEnabled">AxisNotEnabled</sys:String>
+    <sys:String x:Key="AxisNotReturningToZero">AxisNotReturningToZero</sys:String>
+
+    <!-- Controls.UIControl.Helper-ZipHelper -Tips-->
+    <sys:String x:Key="TheCompressedPackageNameDoesNotMatchTheInternalFolder">TheCompressedPackageNameDoesNotMatchTheInternalFolder</sys:String>
+
+    <!-- MwFramework.Controls.UIControl-LighterViewModel -Tips-->
+    <sys:String x:Key="LightSourceController">LightSourceController</sys:String>
+    <sys:String x:Key="OpenFailed">OpenFailed</sys:String>
+    <sys:String x:Key="CloseFailed">CloseFailed</sys:String>
+
+    <!-- UIControl.LogView-->
+    <sys:String x:Key="LogType">LogType</sys:String>
+    <sys:String x:Key="SortOrder">SortOrder</sys:String>
+    <sys:String x:Key="TimeReverseOrder">TimeReverseOrder</sys:String>
+    <sys:String x:Key="TimeOrder">TimeOrder</sys:String>
+    <sys:String x:Key="DateTimeSelection">DateTimeSelection</sys:String>
+    <sys:String x:Key="BeforeQuickQuery">BeforeQuickQuery</sys:String>
+    <sys:String x:Key="TenMinutes">TenMinutes</sys:String>
+    <sys:String x:Key="HalfAnHour">HalfAnHour</sys:String>
+    <sys:String x:Key="AnHour">AnHour</sys:String>
+    <sys:String x:Key="ThreeHours">ThreeHours</sys:String>
+    <sys:String x:Key="HalfADay">HalfADay</sys:String>
+    <sys:String x:Key="ADay">ADay</sys:String>
+    <sys:String x:Key="TwoDays">TwoDays</sys:String>
+    <sys:String x:Key="TenDays">TenDays</sys:String>
+    <sys:String x:Key="Query">Query</sys:String>
+    <sys:String x:Key="Date">Date</sys:String>
+    <sys:String x:Key="Time">Time</sys:String>
+    <sys:String x:Key="Category">Category</sys:String>
+    <sys:String x:Key="Message">Message</sys:String>
+
+    <!-- MwFramework.Controls.UIControl -RecipeNewFolder -->
+    <sys:String x:Key="TheFolderNameCannotBeEmpty">TheFolderNameCannotBeEmpty</sys:String>
+    <sys:String x:Key="TheFolderNameExceeds50CharactersInLength">TheFolderNameExceeds50CharactersInLength</sys:String>
+    <sys:String x:Key="TheFolderNameContainsIllegalCharacters">TheFolderNameContainsIllegalCharacters</sys:String>
+    <sys:String x:Key="TheFirstAndLastCharactersOfAFolderNameCannotBe.">TheFirstAndLastCharactersOfAFolderNameCannotBe.</sys:String>
+    <sys:String x:Key="PPIDIsMandatoryAndCannotBeEmpty">PPIDIsMandatoryAndCannotBeEmpty</sys:String>
+    <sys:String x:Key="TheFolderContainsIllegalCharacters">TheFolderContainsIllegalCharacters</sys:String>
+    <!-- MwFramework.Controls.UIControl -RecipeNewWindow - Tips -->
+    <sys:String x:Key="RecipeIDCannotBeEmpty">RecipeIDCannotBeEmpty</sys:String>
+    <sys:String x:Key="RecipeIDLengthExceeds50Characters">RecipeIDLengthExceeds50Characters</sys:String>
+    <sys:String x:Key="RecipeIDContainsIllegalCharacters">RecipeIDContainsIllegalCharacters</sys:String>
+    <sys:String x:Key="TheFirstAndLastCharactersOfTheRecipeIDCannotBe.">TheFirstAndLastCharactersOfTheRecipeIDCannotBe</sys:String>
+    <sys:String x:Key="PPIDLengthExceeds50Characters">PPIDLengthExceeds50Characters</sys:String>
+    <sys:String x:Key="PPIDContainsIllegalCharacters">PPIDContainsIllegalCharacters</sys:String>
+    <!-- MwFramework.Controls.UIControl.ViewModel -RecipeService - Tips -->
+    <sys:String x:Key="ExportCompleted">ExportCompleted</sys:String>
+    <sys:String x:Key="DeleteAllFormulasInTheCurrentFolder">DeleteAllFormulasInTheCurrentFolder!</sys:String>
+    <sys:String x:Key="TheSelectedFormulaIsEmpty">TheSelectedFormulaIsEmpty。</sys:String>
+    <sys:String x:Key="RecipeServiceNoSaveRecipe">Recipe {0} not saved! Do you want to save the recipe?</sys:String>
+
+    <!-- MwFramework.BoxCalibrate.Tasks -ApproachCenterTask - Tips -->
+    <sys:String x:Key="CameraNotStarted">CameraNotStarted！</sys:String>
+    <sys:String x:Key="StartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="NotEnabled">NotEnabled</sys:String>
+    <sys:String x:Key="NotReturningToZero">NotReturningToZero</sys:String>
+    <sys:String x:Key="AlignmentFailed">AlignmentFailed</sys:String>
+    <sys:String x:Key="SpeedZero">SpeedZero</sys:String>
+    <sys:String x:Key="AlignToCenterSuccessful">AlignToCenterSuccessful</sys:String>
+
+    <!--  MwFramework.BoxCalibrate.Tasks -AutoCalibrateTask - Tips -->
+    <sys:String x:Key="JudgingApproximationAccuracy">The approximation accuracy has not been reached. Do you want to try again? Click 'Yes' to try again,'No' to save the current data, and 'Cancel' to directly find the next point.</sys:String>
+    <sys:String x:Key="ApproachingFailedAndIsRetry">Approaching failed! Do you want to retry?</sys:String>
+    <sys:String x:Key="ExitProcess">ExitProcess</sys:String>
+    <sys:String x:Key="BoxCalibrateFailed">BoxCalibrateFailed</sys:String>
+    <sys:String x:Key="BoxCalibrateSuccessfulCorrectionError">BoxCalibrateSuccessfulCorrectionError</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskNotStarted">NotStarted</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskApproachingFailed">ApproachingFailed</sys:String>
+    <sys:String x:Key="AutoCalibrateTaskProcess">Process</sys:String>
+
+    <!--  MwFramework.BoxCalibrate.Tasks -MarkBoxTask - Tips -->
+    <sys:String x:Key="GalvanometerNotInitialized">GalvanometerNotInitialized！</sys:String>
+    <sys:String x:Key="AbnormalGalvanometerConnection">AbnormalGalvanometerConnection！</sys:String>
+    <sys:String x:Key="MarkingSuccessful">MarkingSuccessful！</sys:String>
+    <sys:String x:Key="RealValuenotProvided">RealValuenotProvided</sys:String>
+    <sys:String x:Key="MirrorCoordinateAcquisitionFailed">MirrorCoordinateAcquisitionFailed</sys:String>
+    <sys:String x:Key="ImageMatchingFailed">ImageMatchingFailed！</sys:String>
+    <sys:String x:Key="FoundTargetQuantity">FoundTargetQuantity</sys:String>
+    <sys:String x:Key="MirrorNotInitializedImportFailed!">MirrorNotInitializedImportFailed</sys:String>
+    <sys:String x:Key="CorrectionFileDoesNotExist">CorrectionFileDoesNotExist</sys:String>
+    <sys:String x:Key="SuccessfullyImportedGalvanometer">SuccessfullyImportedGalvanometer</sys:String>
+    <sys:String x:Key="MarkBoxTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+
+    <!--BoxShared-BoxCalibrateViewModel -->
+    <sys:String x:Key="BoxCalibrateViewModelLaserPower">LaserPower(%)</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoMarkingPosition">NoMarkingPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoStartPosition">NoStartPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoCenterPosition">NoCenterPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoInputParameter">NoInputParameter</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNoData">NoData</sys:String>
+    <sys:String x:Key="BoxCalibrateViewNophotoPosition">NophotoPosition</sys:String>
+    <sys:String x:Key="BoxCalibrateViewLineDistance">LineDistance：{0:F3}</sys:String>
+
+    <!--ImageViewer-Tip -->
+    <sys:String x:Key="ImageViewerLoadImage">LoadImage</sys:String>
+    <sys:String x:Key="ImageViewerFileDonetExist">FileDonetExist</sys:String>
+    <sys:String x:Key="ImageViewerAfterSettingClickSave">AfterSettingClickSave</sys:String>
+
+    <!--PowerCalibComponent_PC-PowerMeasureItem-Tip-->
+    <sys:String x:Key="PowerMeasureItemPowerMeterDeviceEmpty">PowerMeterDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerMeasureItemPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+    <sys:String x:Key="PowerMeasureItemPowerMeterOpenError">MeterOpenError</sys:String>
+
+    <!--PowerCalibComponent_PC-PowerMeasurementViewModel-Tip-->
+    <sys:String x:Key="PowerMeasurementViewModelPowerW">PowerW</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelTime">Time(s)</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelParameterLoadingException">ParameterLoadingException</sys:String>
+    <sys:String x:Key="PowerMeasurementViewModelConpletionOfPowerMeasurement">ConpletionOfPowerMeasurement</sys:String>
+    <sys:String x:Key="PowerMeasureItemIsConstraintRelationship">IsConstraintRelationship</sys:String>
+
+    <!--PowerCalibComponent_Shared-CsvHelper-Tip-->
+    <sys:String x:Key="CsvHelperReadFileNotExist">ReadFileNotExist</sys:String>
+    <sys:String x:Key="CsvHelperFileWritingFailure">FileWritingFailure</sys:String>
+    <sys:String x:Key="CsvHelperFileNotExist">FileNotExist</sys:String>
+    <sys:String x:Key="CsvHelperFileReadingFailure">FileReadingFailure</sys:String>
+
+    <!--PowerCalibComponent_Shared-LinearFit-Tip-->
+    <sys:String x:Key="LinearFitLeastSquareMethod">LeastSquareMethod</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerMeterControl-Tip-->
+    <sys:String x:Key="PowerMeterControlStartStatistics">StartStatistics</sys:String>
+    <sys:String x:Key="PowerMeterControlPowerMeterDeviceEmpty">PowerMeterDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerMeterControlPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerAdjustViewModel-Tip-->
+    <sys:String x:Key="PowerAdjustViewModelNoFoundPowerComparisonTableCheckFrequencyAndChannelSettings">NoFoundPowerComparisonTableCheckFrequencyAndChannelSettings</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerMeterDeviceEmpty">PowerMeterDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelDeviceCollectionFailed">DeviceCollectionFailed</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelMeasureDeviceEmpty">MeasureDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelMeasureDeviceException">MeasureDeviceException</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelPowerCorrectionPositionException">PowerCorrectionPositionException</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelParameterSettingError">ParameterSettingError</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelOutputPower">OutputPower</sys:String>
+    <sys:String x:Key="PowerAdjustViewModelTestingParameter">TestingParameter</sys:String>
+
+    <!--ProductCalib-ProductCalib-Tip-->
+    <sys:String x:Key="ProductCalibGetCrossPointsFailed">Failed to obtain cross points!</sys:String>
+    <sys:String x:Key="ProductCalibCrossPointsFew">Too few cross points！Please modify the step size of the row and column!</sys:String>
+
+    <!--ProductCalib-ProductCalibAlg-Tip-->
+    <sys:String x:Key="ProductCalibAlgMarkFailedMoveToImageCenter">MarkFailedMoveToImageCenter</sys:String>
+    <sys:String x:Key="ProductCalibAlgTemplateFetchingFailure">TemplateFetchingFailure</sys:String>
+    <sys:String x:Key="ProductCalibAlgTablePositionIsNotSet">TablePositionIsNotSet</sys:String>
+    <sys:String x:Key="ProductCalibAlgReferencePointError">ReferencePointError</sys:String>
+    <sys:String x:Key="ProductCalibAlgNoTemplate">No template created</sys:String>
+
+    <!--ProductCalib-AccurateLeveling-Tip-->
+    <sys:String x:Key="AccurateLevelingStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="AccurateLevelingFineLevelingDistanceIsNotSet">FineLevelingDistanceIsNotSet</sys:String>
+    <sys:String x:Key="AccurateLevelingFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="AccurateLevelingDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="AccurateLevelingCalculationFailure">CalculationFailure</sys:String>
+    <sys:String x:Key="AccurateLevelingManualLevelingIsComplete">ManualLevelingIsComplete</sys:String>
+    <sys:String x:Key="AccurateLevelingExitLeveling">ExitLeveling</sys:String>
+    <sys:String x:Key="AccurateLevelingFineLevelingCompleted">FineLevelingCompleted</sys:String>
+    <sys:String x:Key="AccurateLevelingAxis_Cut_TurnDoesNotReturnZero">Axis_Cut_TurnDoesNotReturnZero</sys:String>
+
+    <!--ProductCalib-AdjacentItemXDistance-Tip-->
+    <sys:String x:Key="AdjacentItemXDistanceStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceFailedToObtainTemplate">FailedToObtainTemplat</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceSearchFailure">SearchFailure</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceShaftControlFailedCheckHardwareStatus">ShaftControlFailedCheckHardwareStatus</sys:String>
+    <sys:String x:Key="AdjacentItemXDistanceStopSearch">StopSearch</sys:String>
+
+    <!--ProductCalib-AutoLeveling-Tip-->
+    <sys:String x:Key="AutoLevelingStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="AutoLevelingParityThresholdIsNotSetProcedure">ParityThresholdIsNotSetProcedure</sys:String>
+    <sys:String x:Key="AutoLevelingFineLevelingDistanceIsNotSet">FineLevelingDistanceIsNotSet</sys:String>
+    <sys:String x:Key="AutoLevelingPleaseAdjustLevelManuallyFirstAndAdjustToYAxisWithLittleDeviation">PleaseAdjustLevelManuallyFirstAndAdjustToYAxisWithLittleDeviation</sys:String>
+    <sys:String x:Key="AutoLevelingFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="AutoLevelingDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="AutoLevelingFirstPointIsNotFound">FirstPointIsNotFound</sys:String>
+    <sys:String x:Key="AutoLevelingSecondPointIsNotFound">SecondPointIsNotFound</sys:String>
+    <sys:String x:Key="AutoLevelingCalculationFailure">CalculationFailure</sys:String>
+    <sys:String x:Key="AutoLevelingFineLevelingCompleted">FineLevelingCompleted</sys:String>
+    <sys:String x:Key="AutoLevelingAxis_Cut_TurnDoesNotReturnZero">Axis_Cut_TurnDoesNotReturnZero</sys:String>
+    <sys:String x:Key="AutoLevelingExitLeveling">ExitLeveling</sys:String>
+    <sys:String x:Key="AutoLevelingImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--ProductCalib-CCDAngle-Tip-->
+    <sys:String x:Key="CCDAngleExitCalibrationAngle">ExitCalibrationAngle</sys:String>
+    <sys:String x:Key="CCDAngleCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CCDAngleStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CCDAngleSetXDistanceFirst">SetXDistanceFirst</sys:String>
+    <sys:String x:Key="CCDAngleFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="CCDAngleDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="CCDAngleImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="CCDAngleMatchingFailed">MatchingFailed</sys:String>
+
+    <!--ProductCalib-CCDCenter-Tip-->
+    <sys:String x:Key="CCDCenterExitAlignmentToCenter">ExitAlignmentToCenter</sys:String>
+    <sys:String x:Key="CCDCenterStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CCDCenterMustBeCalibratedFirst">MustBeCalibratedFirst</sys:String>
+    <sys:String x:Key="CCDCenterFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="CCDCenterDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="CCDCenterAlignToCenterSuccessful">AlignToCenterSuccessful</sys:String>
+    <sys:String x:Key="CCDCenterImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--ProductCalib-CCDDet-Tip-->
+    <sys:String x:Key="CCDDetCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CCDDetStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="CCDDetCalculateXAngleFirst">CalculateXAngleFirst</sys:String>
+    <sys:String x:Key="CCDDetFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="CCDDetDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="CCDDetImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="CCDDetFailedToAlignTemplateCenter">FailedToAlignTemplateCenter</sys:String>
+    <sys:String x:Key="CCDDetExitCalibrationXDirectionPixelRatio">ExitCalibrationXDirectionPixelRatio</sys:String>
+    <sys:String x:Key="CCDDetSetXDistanceFirst">SetXDistanceFirst</sys:String>
+    <sys:String x:Key="CCDDetCurrentGivenMovingDistanceExceedsTheLowerLimitOfPosition">CurrentGivenMovingDistanceExceedsTheLowerLimitOfPosition{0}</sys:String>
+    <sys:String x:Key="CCDDetCurrentGivenTravelDistanceExceedsThePositionBelowAndAbove">CurrentGivenTravelDistanceExceedsThePositionBelowAndAbove{0}</sys:String>
+    <sys:String x:Key="CCDDetExitCalibrationYDirectionPixelRatio">ExitCalibrationYDirectionPixelRatio</sys:String>
+    <sys:String x:Key="CCDDetSetYDistanceFirst">SetYDistanceFirst</sys:String>
+
+    <!--ProductCalib-MatchPoint-Tip-->
+    <sys:String x:Key="MatchPointStopMatching">StopMatching</sys:String>
+    <sys:String x:Key="MatchPointStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MatchPointFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="MatchPointDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue？</sys:String>
+    <sys:String x:Key="MatchPointFailedToMatchTemplatePleaseCheckCCDCalibration">FailedToMatchTemplatePleaseCheckCCDCalibration</sys:String>
+    <sys:String x:Key="MatchPointFailedToObtainTheCurrentValue">FailedToObtainTheCurrentValue</sys:String>
+    <sys:String x:Key="MatchPointImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--ProductCalib-MotionCalib-Tip-->
+    <sys:String x:Key="MotionCalibStopProcess">StopProcess</sys:String>
+    <sys:String x:Key="MotionCalibStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MotionCalibThresholdIsNotSet">ThresholdIsNotSet</sys:String>
+    <sys:String x:Key="MotionCalibXSpacingError">XSpacingError</sys:String>
+    <sys:String x:Key="MotionCalibYSpacingError">YSpacingError</sys:String>
+    <sys:String x:Key="MotionCalibColumnSpacingError">ColumnSpacingError</sys:String>
+    <sys:String x:Key="MotionCalibLineSpacingError">LineSpacingError</sys:String>
+    <sys:String x:Key="MotionCalibFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO"</sys:String>
+    <sys:String x:Key="MotionCalibDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue？</sys:String>
+    <sys:String x:Key="MotionCalibErrorSendingMotionScript">ErrorSendingMotionScript</sys:String>
+    <sys:String x:Key="MotionCalibImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="MotionCalibErrorSavingCalibrationData">ErrorSavingCalibrationData</sys:String>
+    <sys:String x:Key="MotionCalibTemplateCenterNotFoundWhetherToTryAgain">TemplateCenterNotFoundWhetherToTryAgain</sys:String>
+    <!--ProductCalib-MotionCalib2-Tip-->
+    <sys:String x:Key="MotionCalib2StopProcess">StopProcess</sys:String>
+    <sys:String x:Key="MotionCalib2XAxisIsNotEnabled">XAxisIsNotEnabled</sys:String>
+    <sys:String x:Key="MotionCalib2YAxisIsNotEnabled">YAxisIsNotEnabled</sys:String>
+    <sys:String x:Key="MotionCalib2ZAxisIsNotEnabled">ZAxisIsNotEnabled</sys:String>
+    <sys:String x:Key="MotionCalib2StartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MotionCalib2ThresholdIsNotSet">ThresholdIsNotSet</sys:String>
+    <sys:String x:Key="MotionCalib2XSpacingError">XSpacingError</sys:String>
+    <sys:String x:Key="MotionCalib2YSpacingError">YSpacingError</sys:String>
+    <sys:String x:Key="MotionCalib2ColumnSpacingError">ColumnSpacingError</sys:String>
+    <sys:String x:Key="MotionCalib2LineSpacingError">LineSpacingError</sys:String>
+    <sys:String x:Key="MotionCalib2FailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO</sys:String>
+    <sys:String x:Key="MotionCalib2DefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue？</sys:String>
+    <sys:String x:Key="MotionCalib2ErrorSendingMotionScript">ErrorSendingMotionScript</sys:String>
+    <sys:String x:Key="MotionCalib2ErrorSavingCalibrationData">ErrorSavingCalibrationData</sys:String>
+    <sys:String x:Key="MotionCalib2ImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="MotionCalib2JudgingApproximationAccuracy">The approximation accuracy has not been reached. Do you want to try again? Click 'Yes' to try again,'No' to save the current data, and 'Cancel' to directly find the next point.</sys:String>
+    <sys:String x:Key="MotionCalib2TemplateRecognitionFailed">Template Recognition Failed!</sys:String>
+
+    <!--ProductCalib-RotateAlignCenter-Tip-->
+    <sys:String x:Key="RotateAlignCenterExitProcess">ExitProcess</sys:String>
+    <sys:String x:Key="RotateAlignCenterStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="RotateAlignCenterFailedToObtainAxisShiftParameterPO">FailedToObtainAxisShiftParameterPO"</sys:String>
+    <sys:String x:Key="RotateAlignCenterDefaultAxisSpeedIs0WhetherToContinue">DefaultAxisSpeedIs0WhetherToContinue</sys:String>
+    <sys:String x:Key="RotateAlignCenterImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--ProductCalib-RotatingAngle-Tip-->
+    <sys:String x:Key="RotatingAngleSpinFailedExitSpin">SpinFailedExitSpin转</sys:String>
+    <sys:String x:Key="RotatingAngleStartingPointCoordinatesAreNotCollected">StartingPointCoordinatesAreNotCollected</sys:String>
+    <sys:String x:Key="RotatingAngleTerminationPointCoordinatesAreNotCollected">TerminationPointCoordinatesAreNotCollected</sys:String>
+    <sys:String x:Key="RotatingAngleRotationAngleIsNotSet">RotationAngleIsNotSet</sys:String>
+    <sys:String x:Key="RotatingAngleCurrentRasterValueAndServoCoordinateCalculationFailed">CurrentRasterValueAndServoCoordinateCalculationFailed</sys:String>
+    <sys:String x:Key="RotatingAngleRotatedInPlace">RotatedInPlace</sys:String>
+
+    <!--ProductCalib-CalibRunViewModel-Tip-->
+    <sys:String x:Key="CalibRunViewModelXSpacingError">XSpacingError</sys:String>
+    <sys:String x:Key="CalibRunViewModelYSpacingError">YSpacingError</sys:String>
+    <sys:String x:Key="CalibRunViewModelColumnSpacingError">ColumnSpacingError</sys:String>
+    <sys:String x:Key="CalibRunViewModelLineSpacingError">LineSpacingError</sys:String>
+    <sys:String x:Key="CalibRunViewModelReferencePointError">ReferencePointError</sys:String>
+    <sys:String x:Key="CalibRunViewModelPlanningRouteCalibrationError">PlanningRouteCalibrationError</sys:String>
+    <sys:String x:Key="CalibRunViewModelPleaseChangeTheRow/ColumnStepSize">PleaseChangeTheRow/ColumnStepSize</sys:String>
+    <sys:String x:Key="CalibRunViewModelShaftControlFailedCheckHardwareStatus">ShaftControlFailedCheckHardwareStatus</sys:String>
+    <sys:String x:Key="CalibRunViewModelProcessExecutionCompletion">ProcessExecutionCompletion</sys:String>
+    <sys:String x:Key="CalibRunViewModelCalibRunStartTip">The current camera is {0}. Please confirm whether to use this camera for motion calibration.</sys:String>
+    <sys:String x:Key="CalibRunViewModelAtfStepNotNull">AtfStep cannot be empty!</sys:String>
+    <sys:String x:Key="CalibRunViewModelAtfCountNotNull">AtfCount cannot be empty!</sys:String>
+
+    <!--ProductCalib-CameraFuseViewModel-Tip-->
+    <sys:String x:Key="CameraFuseViewModelPleaseSwitchToAnotherCamera">PleaseSwitchToAnotherCamera</sys:String>
+    <sys:String x:Key="CameraFuseViewModelNoCollectionPointsAreCollectedCheckTheNumberOfCollectionPoints">NoCollectionPointsAreCollectedCheckTheNumberOfCollectionPoints</sys:String>
+    <sys:String x:Key="CameraFuseViewModelUnableToFindTheDataInTheCalibratedCamera">UnableToFindTheDataInTheCalibratedCamera</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCouldNotFindTheDataInTheFusionCamera">CouldNotFindTheDataInTheFusionCamera</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCompleteCalculation">CompleteCalculation</sys:String>
+    <sys:String x:Key="CameraFuseViewModelCalculationFailedPleaseCheckWhetherTheCalibrationIsComplete">CalculationFailedPleaseCheckWhetherTheCalibrationIsComplete</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete">FailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainRulerValuePleaseConfirmWhetherTheCalibrationDataIsComplete">FailedToObtainRulerValuePleaseConfirmWhetherTheCalibrationDataIsComplete</sys:String>
+    <sys:String x:Key="CameraFuseViewModelXaxisExceedsNegativeLimitPleaseAdjustXaxisPosition">XaxisExceedsNegativeLimitPleaseAdjustXaxisPosition</sys:String>
+    <sys:String x:Key="CameraFuseViewModelXaxisExceedsThePositiveLimitPleaseAdjustXaxisPosition">XaxisExceedsThePositiveLimitPleaseAdjustXaxisPosition</sys:String>
+    <sys:String x:Key="CameraFuseViewModelYaxisExceedsNegativeLimitPleaseAdjustYaxisPosition">YaxisExceedsNegativeLimitPleaseAdjustYaxisPosition</sys:String>
+    <sys:String x:Key="CameraFuseViewModelYaxisExceedsThePositiveLimitPleaseAdjustYaxisPosition">YaxisExceedsThePositiveLimitPleaseAdjustYaxisPosition</sys:String>
+    <sys:String x:Key="CameraFuseViewModelPleasePickSomeFirst">PleasePickSomeFirst</sys:String>
+    <sys:String x:Key="CameraFuseViewModelFailedToObtainTruthValue">FailedToObtainTruthValue</sys:String>
+
+    <!--ProductCalib-LevelingViewModel-Tip-->
+    <sys:String x:Key="LevelingViewModelStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="LevelingViewModelPleaseSetTheFirstPositionFirst">PleaseSetTheFirstPositionFirst</sys:String>
+    <sys:String x:Key="LevelingViewModelShaftControlFailedCheckHardwareStatus">ShaftControlFailedCheckHardwareStatus</sys:String>
+    <sys:String x:Key="LevelingViewModelPleaseSetTheSecondPositionFirst">PleaseSetTheSecondPositionFirst</sys:String>
+
+    <!--ProductCalib-RotateCenterViewModel-Tip-->
+    <sys:String x:Key="RotateCenterViewModelUncalibratedCenterOfRotation">UncalibratedCenterOfRotation</sys:String>
+    <sys:String x:Key="RotateCenterViewModelShaftControlFailedCheckHardwareStatus">ShaftControlFailedCheckHardwareStatus</sys:String>
+    <sys:String x:Key="RotateCenterViewModelUnacquiredCoordinates">UnacquiredCoordinates</sys:String>
+    <sys:String x:Key="RotateCenterViewModelPoint1IsEmpty">Point1IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterViewModelPoint2IsEmpty">Point2IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">FailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect</sys:String>
+
+    <!--CalibShared-SystemCallHelper-Tip-->
+    <sys:String x:Key="SystemCallHelperTheCameraFailedToCaptureTheImage">TheCameraFailedToCaptureTheImage"</sys:String>
+    <sys:String x:Key="SystemCallHelperFailedToCaptureTheCenterOfTheCircle">FailedToCaptureTheCenterOfTheCircle</sys:String>
+    <sys:String x:Key="SystemCallHelperMarkFailedMoveToImageCenter">MarkFailedMoveToImageCenter</sys:String>
+
+    <!--CalibShared-CameraAngleTask-Tip-->
+    <sys:String x:Key="CameraAngleTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CameraAngleTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CameraAngleTaskSetXDistanceFirst">SetXDistanceFirst</sys:String>
+    <sys:String x:Key="CameraAngleTaskImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--CalibShared-CameraDetBaseTask-Tip-->
+    <sys:String x:Key="CameraDetBaseTaskImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--CalibShared-CameraIdentifyAlignCenterTask-Tip-->
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskMustBeCalibratedFirst">MustBeCalibratedFirst</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskcenterTheCircleIsNotInTheImage">centerTheCircleIsNotInTheImage</sys:String>
+    <sys:String x:Key="CameraIdentifyAlignCenterTaskAlignToCenterSuccessful">AlignToCenterSuccessful</sys:String>
+
+    <!--CalibShared-CameraLargeFieldBigTask-Tip-->
+    <sys:String x:Key="CameraLargeFieldBigTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CameraLargeFieldBigTaskSelectTheCircleUsingTheRectangleBoxFirst">SelectTheCircleUsingTheRectangleBoxFirst</sys:String>
+    <sys:String x:Key="CameraLargeFieldBigTaskAlignedCenter">AlignedCenter</sys:String>
+
+    <!--CalibShared-CameraLargeFieldSmallTask-Tip-->
+    <sys:String x:Key="CameraLargeFieldSmallTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CameraLargeFieldSmallTaskImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="CameraLargeFieldSmallTaskAlignedCenter">AlignedCenter</sys:String>
+
+    <!--CalibShared-CameraRelationCaculateDiffTask-Tip-->
+    <sys:String x:Key="CameraRelationCaculateDiffTaskTheDataIsEmptyCollectCompleteDataAndCalculate">TheDataIsEmptyCollectCompleteDataAndCalculate</sys:String>
+    <sys:String x:Key="CameraRelationCaculateDiffTaskSuccessfulCalculation">SuccessfulCalculation</sys:String>
+
+    <!--CalibShared-CameraRelationVisionBigTask-Tip-->
+    <sys:String x:Key="CameraRelationVisionBigTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskSelectTheCircleUsingTheRectangleBoxFirst">先用矩形框选圆</sys:String>
+    <sys:String x:Key="CameraRelationVisionBigTaskAlignedCenter">AlignedCenter</sys:String>
+
+    <!--CalibShared-CameraRelationVisionSmallTask-Tip-->
+    <sys:String x:Key="CameraRelationVisionSmallTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="CameraRelationVisionSmallTaskAlignedCenter">AlignedCenter</sys:String>
+
+    <!--CalibShared-CameraXDetTask-Tip-->
+    <sys:String x:Key="CameraXDetTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CameraXDetTaskStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="CameraXDetTaskCalculateXAngleFirst">CalculateXAngleFirst</sys:String>
+    <sys:String x:Key="CameraXDetTaskSetXDistanceFirst">SetXDistanceFirst</sys:String>
+
+    <!--CalibShared-CameraYDetTask-Tip-->
+    <sys:String x:Key="CameraYDetTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="CameraYDetTaskStartCollection">StartCollection</sys:String>
+    <sys:String x:Key="CameraYDetTaskCalculateXAngleFirst">CalculateXAngleFirst</sys:String>
+    <sys:String x:Key="CameraYDetTaskSetYDistanceFirst">SetYDistanceFirst</sys:String>
+
+    <!--CalibShared-LargeFieldCameraCalibTask-Tip-->
+    <sys:String x:Key="LargeFieldCameraCalibTaskPoint1IsEmpty">Point1IsEmpty</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskWide-angleCameraPoint1CoordinateIsEmpty">kWide-angleCameraPoint1CoordinateIsEmpty</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskSuccessfulCalculation">SuccessfulCalculation</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibTaskCalculationFailure">CalculationFailure</sys:String>
+
+    <!--CalibShared-LargeMoveToPointByIndex-Tip-->
+    <sys:String x:Key="LargeMoveToPointByIndexThePointPositionMustBeDetermined">ThePointPositionMustBeDetermined</sys:String>
+    <sys:String x:Key="LargeMoveToPointByIndexAlreadyInPlace">AlreadyInPlace</sys:String>
+
+    <!--CalibShared-MotionAxisXFlatTask-Tip-->
+    <sys:String x:Key="MotionAxisXFlatTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskSetXDistanceFirst">SetXDistanceFirst</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskTheSpacingInTheXDirectionIsTooSmallSetTheSpacingInTheXDirectionFirst">TheSpacingInTheXDirectionIsTooSmallSetTheSpacingInTheXDirectionFirst</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskFailedToSquareTheCircle">FailedToSquareTheCircle</sys:String>
+    <sys:String x:Key="MotionAxisXFlatTaskImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+
+    <!--CalibShared-MotionCalibTask-Tip-->
+    <sys:String x:Key="MotionCalibTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="MotionCalibTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MotionCalibTaskTheStartingPointHasNotBeenSet">TheStartingPointHasNotBeenSet</sys:String>
+    <sys:String x:Key="MotionCalibTaskNumberOfRowsRowIntervalNumberOfColumnsTheColumnIntervalIsNotSetCorrectly">NumberOfRowsRowIntervalNumberOfColumnsTheColumnIntervalIsNotSetCorrectly</sys:String>
+    <sys:String x:Key="MotionCalibTaskPleaseSelectCalibrationOrValidation">PleaseSelectCalibrationOrValidation</sys:String>
+    <sys:String x:Key="MotionCalibTaskCenterNotFoundRetry">CenterNotFoundRetry</sys:String>
+    <sys:String x:Key="MotionCalibTaskMark">Mark</sys:String>
+    <sys:String x:Key="MotionCalibTaskVerification">Verification</sys:String>
+    <sys:String x:Key="MotionCalibTaskSuccess">Success{0}</sys:String>
+    <sys:String x:Key="MotionCalibTaskFailure">Failure{0}</sys:String>
+
+    <!--CalibShared-MotionMoveStartPointTask-Tip-->
+    <sys:String x:Key="MotionMoveStartPointTaskTheStartingPointHasNotBeenSet">TheStartingPointHasNotBeenSet</sys:String>
+    <sys:String x:Key="MotionMoveStartPointTaskMovedToTheStartingPoint">MovedToTheStartingPoint</sys:String>
+
+    <!--CalibShared-MotionSetStartPointTask-Tip-->
+    <sys:String x:Key="MotionSetStartPointTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="MotionSetStartPointTaskTheCenterOfTheCircleIsAlignedSuccessfully">TheCenterOfTheCircleIsAlignedSuccessfully"</sys:String>
+    <sys:String x:Key="MotionSetStartPointTaskFailedToSquareTheCircle">FailedToSquareTheCircle</sys:String>
+
+    <!--CalibShared-MoveToPoint-Tip-->
+    <sys:String x:Key="MoveToPointThePointPositionMustBeDetermined">PositionMustBeDetermined</sys:String>
+    <sys:String x:Key="MoveToPointAlreadyInPlace">AlreadyInPlace</sys:String>
+
+    <!--CalibShared-RepetitiveValidateTask-Tip-->
+    <sys:String x:Key="RepetitiveValidateTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskNumberOfRowsRowsIntervalNumberOfRowsIntervalSpeedTimesAreNotSetCorrectly">NumberOfRowsRowsIntervalNumberOfRowsIntervalSpeedTimesAreNotSetCorrectly</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionCompletion">CollectionCompletion</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionFailure">CollectionFailure</sys:String>
+    <sys:String x:Key="RepetitiveValidateTaskCollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound">CollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound</sys:String>
+
+    <!--CalibShared-RotateAlignCenterByIndexTask-Tip-->
+    <sys:String x:Key="RotateAlignCenterByIndexTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskAlignedCenter">AlignedCenter</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskAlignmentToCenterFailed">AlignmentToCenterFailed</sys:String>
+    <sys:String x:Key="RotateAlignCenterByIndexTaskPleaseSetTheStartingAngleAndRotationIntervalFirst">PleaseSetTheStartingAngleAndRotationIntervalFirst</sys:String>
+
+    <!--CalibShared-RotateCenterCaculateTask-Tip-->
+    <sys:String x:Key="RotateCenterCaculateTaskPoint1IsEmpty">Point1IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint2IsEmpty">Point2IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint3IsEmpty">Point3IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint4IsEmpty">Point4IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskPoint5IsEmpty">Point5IsEmpty</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskSuccessfulCalculation">SuccessfulCalculation</sys:String>
+    <sys:String x:Key="RotateCenterCaculateTaskCalculationFailure">CalculationFailure</sys:String>
+
+    <!--CalibShared-RotateCenterMoveToPointByIndex-Tip-->
+    <sys:String x:Key="RotateCenterMoveToPointByIndexAlignmentMustBeIdentifiedFirst">AlignmentMustBeIdentifiedFirst</sys:String>
+    <sys:String x:Key="RotateCenterMoveToPointByIndexAlreadyInPlace">AlreadyInPlace</sys:String>
+
+    <!--CalibShared-RotateToAngleTask-Tip-->
+    <sys:String x:Key="RotateToAngleTaskPleaseSetTheStartingAngleAndRotationIntervalFirst">PleaseSetTheStartingAngleAndRotationIntervalFirst</sys:String>
+    <sys:String x:Key="RotateToAngleTaskRotatedInPlace">RotatedInPlace</sys:String>
+
+    <!--CalibShared-RotateVerifyTask-Tip-->
+    <sys:String x:Key="RotateVerifyTaskSetTheAngleYouWantToValidateFirst">SetTheAngleYouWantToValidateFirst</sys:String>
+    <sys:String x:Key="RotateVerifyTaskPleaseCalculateTheAngleFirst">PleaseCalculateTheAngleFirst</sys:String>
+    <sys:String x:Key="RotateVerifyTaskHaveMovedIntoPlace">HaveMovedIntoPlace</sys:String>
+    <sys:String x:Key="RotateVerifyTaskValidationCalculationFailure">ValidationCalculationFailure</sys:String>
+
+    <!--CalibShared-StraightValidateTask-Tip-->
+    <sys:String x:Key="StraightValidateTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <sys:String x:Key="StraightValidateTaskStartContinuousCollectionFirst">StartContinuousCollectionFirst</sys:String>
+    <sys:String x:Key="StraightValidateTaskTheNumberOfColumnIntervalSpeedsIsNotSetCorrectly">TheNumberOfColumnIntervalSpeedsIsNotSetCorrectly</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionCompletion">CollectionCompletion</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionFailed">CollectionFailed</sys:String>
+    <sys:String x:Key="StraightValidateTaskCollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound">CollectionFailedBecauseTheCenterOfTheCircleCouldNotBeFound</sys:String>
+
+    <!--CalibShared-CameraDistortionCalibViewModel-Tip-->
+    <sys:String x:Key="CameraDistortionCalibViewModelPleaseSelectTheImageFilePath">PleaseSelectTheImageFilePath</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelSelectTheDescriptionFilePath">SelectTheDescriptionFilePath</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelSetThePathFirst">SetThePathFirst</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelParameterSettingsAreIncompletePleaseCompleteThemAndThenCalculate">ParameterSettingsAreIncompletePleaseCompleteThemAndThenCalculate</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelPleaseSelectFolder">PleaseSelectFolder</sys:String>
+    <sys:String x:Key="CameraDistortionCalibViewModelNoData">NoData</sys:String>
+
+    <!--CalibShared-CameraParaCalibViewModel-Tip-->
+    <sys:String x:Key="CameraParaCalibViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="CameraParaCalibViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-CameraRelationCalibViewModel-Tip-->
+    <sys:String x:Key="CameraRelationCalibViewModelFailedToObtainTheRulerValueOfFineCameraPleaseConfirmWhetherTheCalibrationDataIsComplete">FailedToObtainTheRulerValueOfFineCameraPleaseConfirmWhetherTheCalibrationDataIsComplete</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelPleaseGoToCoarseCameraCalculation">PleaseGoToCoarseCameraCalculation</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelFailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete">FailedToObtainTruthValuePleaseConfirmWhetherTheCalibrationDataIsComplete</sys:String>
+    <sys:String x:Key="CameraRelationCalibViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-LargeFieldCameraCalibViewModel-Tip-->
+    <sys:String x:Key="LargeFieldCameraCalibViewModelStep2">Step2</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="LargeFieldCameraCalibViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-LargeFieldLinkerCalibViewModel-Tip-->
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelImageAcquisitionFailure">ImageAcquisitionFailure</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelTheDataIsIncompleteCollectCompleteDataAndCalculate">TheDataIsIncompleteCollectCompleteDataAndCalculate</sys:String>
+    <sys:String x:Key="LargeFieldLinkerCalibViewModelNoData">NoData</sys:String>
+
+    <!--CalibShared-MotionSysCalibViewModel-Tip-->
+    <sys:String x:Key="MotionSysCalibViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="MotionSysCalibViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-RepetitivenessValidateViewModel-Tip-->
+    <sys:String x:Key="RepetitivenessValidateViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="RepetitivenessValidateViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-RotateCenterCalibViewModel-Tip-->
+    <sys:String x:Key="RotateCenterCalibViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">FailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect</sys:String>
+    <sys:String x:Key="RotateCenterCalibViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="RotateCenterCalibViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-RotateCenterSimpleViewModel-Tip-->
+    <sys:String x:Key="RotateCenterSimpleViewModelUncollectedData">UncollectedData</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelFailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect">FailedToObtainTruthValueConfirmTheCalibrationDataIsCorrect</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelRotatedInPlace">RotatedInPlace</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="RotateCenterSimpleViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--CalibShared-StraightnessValidateViewModel-Tip-->
+    <sys:String x:Key="StraightnessValidateViewModelNoData">NoData</sys:String>
+    <sys:String x:Key="StraightnessValidateViewModelNotCalculatedOrCalculatedIncorrectly">NotCalculatedOrCalculatedIncorrectly</sys:String>
+
+    <!--ManagerService-DelegateBase-Tip-->
+    <sys:String x:Key="DelegateBaseExitProcess">ExitProcess</sys:String>
+
+    <!--DFTComponent-CardCommCommand-Tip-->
+    <sys:String x:Key="CardCommCommandForwardOutput">ForwardOutput</sys:String>
+    <sys:String x:Key="CardCommCommandKeepTheOutputOUTCO">KeepTheOutputOUTCO</sys:String>
+    <sys:String x:Key="CardCommCommandAcquisitionMode">AcquisitionMode</sys:String>
+    <sys:String x:Key="CardCommCommandReplicationMode">ReplicationMode</sys:String>
+    <sys:String x:Key="CardCommCommandObjectiveLeft">ObjectiveLeft</sys:String>
+    <sys:String x:Key="CardCommCommandObjectiveRight">ObjectiveRight</sys:String>
+    <sys:String x:Key="CardCommCommandBothSidesOfObjective">BothSidesOfObjective</sys:String>
+    <sys:String x:Key="CardCommCommandForwardDirection">ForwardDirection</sys:String>
+    <sys:String x:Key="CardCommCommandNegativeDirection">NegativeDirection</sys:String>
+    <sys:String x:Key="CardCommCommandReverseOutput">ReverseOutput</sys:String>
+
+    <!--DFTComponent-MWCommCommand-Tip-->
+    <sys:String x:Key="MWCommCommandDAOutputsPIMIN">DAOutputsPIMIN</sys:String>
+    <sys:String x:Key="MWCommCommandDAOutputPIC">DAOutputPIC</sys:String>
+    <sys:String x:Key="MWCommCommandADRecordAndDAOutputBasedOnCount">ADRecordAndDAOutputBasedOnCount</sys:String>
+    <sys:String x:Key="MWCommCommandTheADDoesNotRecordAndTheDAOutputIsBasedOnTheCount">TheADDoesNotRecordAndTheDAOutputIsBasedOnTheCount</sys:String>
+    <sys:String x:Key="MWCommCommandNegativeDirection">NegativeDirection</sys:String>
+    <sys:String x:Key="MWCommCommandForwardDirection">ForwardDirection</sys:String>
+    <sys:String x:Key="MWCommCommandAIsForwardDirection">AIsForwardDirection</sys:String>
+    <sys:String x:Key="MWCommCommandBIsForwardDirection">BIsForwardDirection</sys:String>
+
+    <!--DFTComponent-DFTMaintanceViewModel-Tip-->
+    <sys:String x:Key="DFTMaintanceViewModelDeviceNotConnected">DeviceNotConnected</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelAlarmResetFailure">AlarmResetFailure</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelAlarmResetSuccessfully">AlarmResetSuccessfully</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelInstructionFormatCannotBeEnteredInChinese">InstructionFormatCannotBeEnteredInChinese</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelCommandReceivingFailure">CommandReceivingFailure</sys:String>
+    <sys:String x:Key="DFTMaintanceViewModelTheSendCommandIsNull">TheSendCommandIsNull</sys:String>
+
+    <!--UIShared-FFUView-Tip-->
+    <sys:String x:Key="FFUViewOpenAll">OpenAll</sys:String>
+    <sys:String x:Key="FFUViewOpen">Open</sys:String>
+    <sys:String x:Key="FFUViewAllShutDown">AllShutDown</sys:String>
+    <sys:String x:Key="FFUViewShutDown">ShutDown</sys:String>
+    <sys:String x:Key="FFUViewName">Name</sys:String>
+    <sys:String x:Key="FFUViewState">State</sys:String>
+    <sys:String x:Key="FFUViewActualWindSpeed">ActualWindSpeed</sys:String>
+    <sys:String x:Key="FFUViewSetWindSpeed">SetWindSpeed</sys:String>
+
+    <!--UIShared-PureHuaView-Tip-->
+    <sys:String x:Key="PureHuaViewName">Name</sys:String>
+    <sys:String x:Key="PureHuaViewState">State</sys:String>
+    <sys:String x:Key="PureHuaViewHighFrequencyWindSpeed">HighFrequencyWindSpeed</sys:String>
+    <sys:String x:Key="PureHuaViewLowFrequencyWindSpeed">LowFrequencyWindSpeed</sys:String>
+    <sys:String x:Key="PureHuaViewFrequencyMode">FrequencyMode</sys:String>
+
+    <!--UIShared-IOView-Tip-->
+    <sys:String x:Key="IOViewScreeningGroup">ScreeningGroup</sys:String>
+
+    <!--UIShared-DualBandPower-Tip-->
+    <sys:String x:Key="DualBandPowerSend">Send</sys:String>
+
+    <!--UIShared-GateParam-Tip-->
+    <sys:String x:Key="GateParamMakeSureTurnOnTheLaser">TurnOnTheLaser</sys:String>
+
+    <!--UIShared-LogViewModel-Tip-->
+    <sys:String x:Key="LogViewModelMessage">Message</sys:String>
+    <sys:String x:Key="LogViewModelWarning">Warning</sys:String>
+    <sys:String x:Key="LogViewModelError">Error</sys:String>
+    <sys:String x:Key="LogViewModelTrack">Track</sys:String>
+
+    <!--UIShared-MotionInitViewModel-Tip-->
+    <sys:String x:Key="LogViewModelExceedingLimit">ExceedingLimit</sys:String>
+
+    <!--BoxShared-ScannerRegTask-Tip-->
+    <sys:String x:Key="ScannerRegTaskCameraNotStarted">CameraNotStarted</sys:String>
+    <!--UIShared-ScanCalibFileFactory-Tip-->
+    <sys:String x:Key="ScanCalibFileFactoryImportingTheGalvanometerSucceededProcedure">ImportingTheGalvanometerSucceededProcedure</sys:String>
+
+    <!--UIShared-ScannerRelationCalibrateViewModel-Tip-->
+    <sys:String x:Key="ScannerRelationCalibrateViewModelNophotoPosition">NophotoPosition</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewModelNoMarkingPosition">NoMarkingPosition</sys:String>
+    <sys:String x:Key="ScannerRelationCalibrateViewModelNoInputParameter">NoInputParameter</sys:String>
+
+    <!--UIShared-DxfView-Tip-->
+    <sys:String x:Key="DxfViewAttribute">Attribute</sys:String>
+    <sys:String x:Key="DxfViewGraphtTree">GraphtTree</sys:String>
+    <!--UIShared-ScanBasicImageView-Tip-->
+    <sys:String x:Key="ScanBasicImageViewDxfViewAttribute">Attribute</sys:String>
+    <sys:String x:Key="ScanBasicImageViewGraphtTree">GraphtTree</sys:String>
+    <sys:String x:Key="ScanBasicImageViewEquipment">Equipment</sys:String>
+    <sys:String x:Key="ScanBasicImageViewLaserProperty">LaserProperty</sys:String>
+
+    <!--UIShared-ScanImageView-Tip-->
+    <sys:String x:Key="ScanImageViewDxfViewAttribute">Attribute</sys:String>
+    <sys:String x:Key="ScanImageViewGraphtTree">GraphtTree</sys:String>
+    <sys:String x:Key="ScanImageViewEquipment">Equipment</sys:String>
+    <sys:String x:Key="ScanImageViewLaserProperty">LaserProperty</sys:String>
+
+    <!--ImageViewer-MarkMovedEventArg-Tip-->
+    <sys:String x:Key="MarkMovedEventArgOpenPicture">OpenPicture</sys:String>
+    <sys:String x:Key="MarkMovedEventArgSaveImage">SaveImage</sys:String>
+    <sys:String x:Key="MarkMovedEventArgImageOpenException">ImageOpenException</sys:String>
+    <sys:String x:Key="MarkMovedEventArgLoadImage">LoadImage</sys:String>
+    <sys:String x:Key="MarkMovedEventArgFileDonetExist">FileDonetExist</sys:String>
+    <sys:String x:Key="MarkMovedEventArgAfterSettingClickSave">AfterSettingClickSave</sys:String>
+
+    <!--PowerCalibComponent_PC-PowerMeasurementResultView-Tip-->
+    <sys:String x:Key="PowerMeasurementResultViewNumber">Number</sys:String>
+    <sys:String x:Key="PowerMeasurementResultViewMeasurementParameter">MeasurementParameter</sys:String>
+    <sys:String x:Key="PowerMeasurementResultViewRealPower">RealPower</sys:String>
+
+
+
+    <!--PowerCalibComponent_Shared-PMAdjustProgress-Tip-->
+    <sys:String x:Key="PMAdjustProgressPowerMeterDeviceEmpty">PowerMeterDeviceEmpty</sys:String>
+    <sys:String x:Key="PMAdjustProgressMeasureDeviceEmpty">MeasureDeviceEmpty</sys:String>
+    <sys:String x:Key="PMAdjustProgressMeasureDeviceException">MeasureDeviceException</sys:String>
+    <sys:String x:Key="PMAdjustProgressDeviceStateError">DeviceStateError</sys:String>
+    <sys:String x:Key="PMAdjustProgressPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerCheckTask-Tip-->
+    <sys:String x:Key="PowerCheckTaskPowerMeterDeviceOffline">PowerMeterDeviceOffline</sys:String>
+    <sys:String x:Key="PowerCheckTaskPowerMeterDeviceEmpty">PowerMeterDeviceEmpty</sys:String>
+    <sys:String x:Key="PowerCheckTaskDeviceCollectionFailed">DeviceCollectionFailed</sys:String>
+    <sys:String x:Key="PowerCheckTaskException">Exception</sys:String>
+
+    <!--ControlCanvas-DesignPanel-Tip-->
+    <sys:String x:Key="DesignPanelIncorrectFormat">IncorrectFormat</sys:String>
+
+    <!--MotionTest-MainWindow-Tip-->
+    <sys:String x:Key="MainWindowDistanceMeasurement">DistanceMeasurement</sys:String>
+
+    <!--PowerCalibComponent_Shared-PowerMeterControl-Tip-->
+    <sys:String x:Key="PowerMeterControlSetZero">SetZero</sys:String>
+    <sys:String x:Key="PowerMeterControlNotSetZero">NotSetZero</sys:String>
+
+    <!--XYYCalibShared-AccurateCenterCalibTask-Tip-->
+    <sys:String x:Key="AccurateCenterCalibTaskStopSearchingCenterOfCircle">StopSearchingCenterOfCircle</sys:String>
+    <sys:String x:Key="AccurateCenterCalibTaskTheLocationOfTheComputingCenterIsIncorrect">TheLocationOfTheComputingCenterIsIncorrect</sys:String>
+
+    <!--XYYCalibShared-CenterCalibTask-Tip-->
+    <sys:String x:Key="CenterCalibTaskStopCalibratingTheCenterOfRotation">StopCalibratingTheCenterOfRotation</sys:String>
+    <sys:String x:Key="CenterCalibTaskNotFoundWhetherToTryAgain">NotFoundWhetherToTryAgain</sys:String>
+    <sys:String x:Key="CenterCalibTaskTheCenterOfRotationCannotBeFound">TheCenterOfRotationCannotBeFound</sys:String>
+    <sys:String x:Key="CenterCalibTaskFindTheCenterOfRotation">FindTheCenterOfRotation</sys:String>
+
+    <!--XYYCalibShared-MakeTableTask-Tip-->
+    <sys:String x:Key="MakeTableTaskFailedToCalculateTheTargetLocation">FailedToCalculateTheTargetLocation</sys:String>
+    <sys:String x:Key="MakeTableTaskFailedToCalculateTheChordLength">FailedToCalculateTheChordLength</sys:String>
+    <sys:String x:Key="MakeTableTaskStopAutomatiCalibration">StopAutomatiCalibration</sys:String>
+    <sys:String x:Key="MakeTableTaskFailedToCaptureTheImageCenter">FailedToCaptureTheImageCenter</sys:String>
+    <sys:String x:Key="MakeTableTaskApproximationCalculationFailure">ApproximationCalculationFailure</sys:String>
+
+    <!--XYYCalibShared-MatchTemplateTask-Tip-->
+    <sys:String x:Key="MatchTemplateTaskStopAutoMatching">StopAutoMatching</sys:String>
+    <sys:String x:Key="MatchTemplateTaskTheIntervalParameterIsIncorrectlySet">TheIntervalParameterIsIncorrectlySet</sys:String>
+    <sys:String x:Key="MatchTemplateTaskErrorMatchingImageCenter">ErrorMatchingImageCenter</sys:String>
+    <sys:String x:Key="MatchTemplateTaskError">Error</sys:String>
+
+    <!--XYYCalibShared-MatchTemplateTask2-Tip-->
+    <sys:String x:Key="MatchTemplateTask2StopMatching">StopMatching</sys:String>
+    <sys:String x:Key="MatchTemplateTask2ErrorMatchingImageCenter">ErrorMatchingImageCenter</sys:String>
+    <sys:String x:Key="MatchTemplateTask2Error">Error</sys:String>
+
+    <!--XYYCalibShared-VerifyTask-Tip-->
+    <sys:String x:Key="VerifyTaskStopVerification">StopVerification</sys:String>
+    <sys:String x:Key="VerifyTaskMiscalculation">Miscalculation</sys:String>
+
+    <!--XYYCalibShared-VerifyTask2-Tip-->
+    <sys:String x:Key="VerifyTask2StopVerification">StopVerification</sys:String>
+    <sys:String x:Key="VerifyTask2Miscalculation">Miscalculation</sys:String>
+
+    <!--XYYCalibShared-MatchTemplateView-Tip-->
+    <sys:String x:Key="MatchTemplateViewStep1">Step1</sys:String>
+    <sys:String x:Key="MatchTemplateViewPlaceCalibrationBoard">PlaceCalibrationBoard</sys:String>
+    <sys:String x:Key="MatchTemplateViewTemplate">Template</sys:String>
+    <sys:String x:Key="MatchTemplateViewMatchingCircle">MatchingCircle</sys:String>
+    <sys:String x:Key="MatchTemplateViewStep2">Step2</sys:String>
+    <sys:String x:Key="MatchTemplateViewTemplateMaking">TemplateMaking</sys:String>
+    <sys:String x:Key="MatchTemplateViewStep3">Step3</sys:String>
+    <sys:String x:Key="MatchTemplateViewTemplatePath">TemplatePath</sys:String>
+
+    <!--XYYCalibShared-XYYAffineCalibrateView-Tip-->
+    <sys:String x:Key="XYYAffineCalibrateViewStep1">Step1</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewXInterval">XInterval</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewYInterval">YInterval</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewStartAutomaticMatching">StartAutomaticMatching</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewStop">Stop</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewNumber">Number</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewStep2">Step2</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewCalculate">Calculate</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewReadData">ReadData</sys:String>
+    <sys:String x:Key="XYYAffineCalibrateViewSaveData">SaveData</sys:String>
+
+    <!--XYYCalibShared-XYYCenterCalibrateView-Tip-->
+    <sys:String x:Key="XYYCenterCalibrateViewStep1">Step1</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewAngle">Angle</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewExecute">Execute</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewManualRotation">ManualRotation</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewStep2">Step2</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewReadData">ReadData</sys:String>
+    <sys:String x:Key="XYYCenterCalibrateViewSaveData">SaveData</sys:String>
+
+    <!--XYYCalibShared-XYYTableMakerView-Tip-->
+    <sys:String x:Key="XYYTableMakerViewStep1">Step1</sys:String>
+    <sys:String x:Key="XYYTableMakerViewCalibrationAngleRange">CalibrationAngleRange</sys:String>
+    <sys:String x:Key="XYYTableMakerViewAngularStep">AngularStep</sys:String>
+    <sys:String x:Key="XYYTableMakerViewThreshold">Threshold</sys:String>
+    <sys:String x:Key="XYYTableMakerViewStep2">Step2</sys:String>
+    <sys:String x:Key="XYYTableMakerViewStartExecution">StartExecution</sys:String>
+    <sys:String x:Key="XYYTableMakerViewStopExecution">StopExecution</sys:String>
+    <sys:String x:Key="XYYTableMakerViewStep3">Step3</sys:String>
+    <sys:String x:Key="XYYTableMakerViewReadData">ReadData</sys:String>
+    <sys:String x:Key="XYYTableMakerViewSaveData">SaveData</sys:String>
+
+    <!--XYYCalibShared-XYYVerifyView-Tip-->
+    <sys:String x:Key="XYYVerifyViewStep1">Step1</sys:String>
+    <sys:String x:Key="XYYVerifyViewOriginalPointA">OriginalPointA</sys:String>
+    <sys:String x:Key="XYYVerifyViewGetCurrentValue">GetCurrentValue</sys:String>
+    <sys:String x:Key="XYYVerifyViewTheCoordinate(X,Y)">TheCoordinate(X,Y)</sys:String>
+    <sys:String x:Key="XYYVerifyViewOriginalPointB">OriginalPointB</sys:String>
+    <sys:String x:Key="XYYVerifyViewNewAPoint">APoint</sys:String>
+    <sys:String x:Key="XYYVerifyViewNewBPoint">BPoint</sys:String>
+    <sys:String x:Key="XYYVerifyViewSettingTemplateA">SettingTemplateA</sys:String>
+    <sys:String x:Key="XYYVerifyViewSettingTemplateB">SettingTemplateB</sys:String>
+    <sys:String x:Key="XYYVerifyViewStep2">Step2</sys:String>
+    <sys:String x:Key="XYYVerifyViewLeveling1">Leveling1</sys:String>
+    <sys:String x:Key="XYYVerifyViewLeveling2">Leveling2</sys:String>
+    <sys:String x:Key="XYYVerifyViewStop">Stop</sys:String>
+    <sys:String x:Key="XYYVerifyViewReturnToOrigin">ReturnToOrigin</sys:String>
+    <sys:String x:Key="XYYVerifyViewReadData">ReadData</sys:String>
+    <sys:String x:Key="XYYVerifyViewSaveData">SaveData</sys:String>
+
+    <!--XYYCalibShared-XYYCalibView-Tip-->
+    <sys:String x:Key="XYYCalibViewTemplateSelection">TemplateSelection</sys:String>
+    <sys:String x:Key="XYYCalibViewAffineRelationCalibration">AffineRelationCalibration</sys:String>
+    <sys:String x:Key="XYYCalibViewRotationCenterCalibration">RotationCenterCalibration</sys:String>
+    <sys:String x:Key="XYYCalibViewRotationCalibration">RotationCalibration</sys:String>
+    <sys:String x:Key="XYYCalibViewVerify">Verify</sys:String>
+
+    <!-- ************************************************* Menu **************************************** -->
+
+    <!--Menu-->
+    <sys:String x:Key="Jobs">Jobs</sys:String>
+    <sys:String x:Key="Modules">Modules</sys:String>
+    <sys:String x:Key="Recipes">Recipes</sys:String>
+    <sys:String x:Key="Systems">Systems</sys:String>
+    <sys:String x:Key="Analysis">Analysis</sys:String>
+    <sys:String x:Key="Overview">Overview</sys:String>
+    <sys:String x:Key="Tooling">Tooling</sys:String>
+    <sys:String x:Key="Facility">Facility</sys:String>
+    <sys:String x:Key="Material">Material</sys:String>
+    <sys:String x:Key="I/O">I/O</sys:String>
+    <sys:String x:Key="Counter">Counter</sys:String>
+    <sys:String x:Key="Scripts">Scripts</sys:String>
+    <sys:String x:Key="Features">Features</sys:String>
+    <sys:String x:Key="Axis">Axis</sys:String>
+    <sys:String x:Key="Equipment">Equipment</sys:String>
+    <sys:String x:Key="Setup">Setup</sys:String>
+    <sys:String x:Key="UserInterface">UserInterface</sys:String>
+
+
+</ResourceDictionary>

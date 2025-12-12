@@ -1,0 +1,128 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MXVisionAlgorithm.Component.OpticDistortRate.View"
+             xmlns:Custom="http://www.maxwell.com/controls" xmlns:mw="http://www.maxwell-gp.com/" x:Class="MXVisionAlgorithm.Component.OpticDistortRate.View.OpticDistortTestView"
+             mc:Ignorable="d" 
+             d:DesignHeight="1350" d:DesignWidth="1800">
+    <Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Viewbox x:Name="ImageRegion" Grid.Row="0" Grid.Column="0" Stretch="Uniform" Margin="5">
+                <Custom:DesignPanel x:Name="ImagePanel" Width="1500" Height="1300" Source="{Binding Image}"/>
+            </Viewbox>
+
+            <ScrollViewer Grid.Column="1" Grid.Row="0" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalScrollBarVisibility="Auto" VerticalAlignment="Center" >
+                <Grid Margin="5" Height="800" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100"/>
+                        <RowDefinition Height="700"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <GroupBox Grid.Column="0" Grid.Row="0" Header="Image Data" Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" x:Name="LoadImage" Content="Load Image" Click="{mw:Action LoadImageClick}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Margin="5"/>
+                            <Button Grid.Column="1" x:Name="SaveIamge" Content="Save Image" Click="{mw:Action SaveImageClick}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Margin="5"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Grid.Column="0" Grid.Row="1" Header="Distort" Grid.ColumnSpan="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1.5*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="4*"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="20"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="30"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Grid.Column="1" HorizontalAlignment="Center" />
+                                <Label Grid.Column="2" x:Name="gridLabel" Content="Grid Mark" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Height="29" Width="90"></Label>
+                                <RadioButton Grid.Column="3" HorizontalAlignment="Center" IsChecked="{Binding IsCircleMark}"/>
+                                <Label Grid.Column="4" x:Name="circleLabel" Content="Circle Mark" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Height="29" Width="90"></Label>
+
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" x:Name="minSizeLabel" Content="Mark min(pix):" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="32" Width="115"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" x:Name="minSizeTbx" Text="{Binding MinMarkArea}" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="15" Width="160" IsReadOnly="False" Height="35" Margin="0,0,0,12"/>
+
+                                <Label Grid.Row="1" Grid.Column="0" x:Name="maxSizeLabel" Content="Mark Max(pix):" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="32" Width="115"/>
+                                <TextBox Grid.Column="1" Grid.Row="1" x:Name="maxSizeTbx" Text="{Binding MaxMarkArea}" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="False" Height="35"/>
+
+                            </Grid>
+                            <Grid Grid.Row="2" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Grid.Column="0" x:Name="GetMark" Content="Grab Mark" Width="128" VerticalAlignment="Center" Click="{mw:Action GrabMarkClick}"/>
+                                <Button Grid.Column="1" x:Name="Calculate" Content="Calculate Distort" Width="128" VerticalAlignment="Center" Click="{mw:Action CalcDistortClick}"/>
+                            </Grid>
+                            <Button Grid.Row="3" Grid.Column="0" x:Name="DrawArrow" Content="Draw Distort Arrow" Click="{mw:Action DrawArrowClick}" Width="128" VerticalAlignment="Center"/>
+                            <Grid Grid.Row="4" Margin="0,0,0,0" Grid.RowSpan="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120"/>
+                                    <ColumnDefinition Width="180"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                    <RowDefinition Height="1*"/>
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Row="0" Grid.Column="0" x:Name="LeftTopLabel" Content="LeftTop" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="29" Width="64"/>
+                                <TextBox Grid.Row="0" Grid.Column="1" x:Name="LeftTopTbx" Text="{Binding LeftTopRes}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="True"  Height="35" TextChanged="LeftTopTbx_TextChanged"/>
+
+                                <Label Grid.Row="1" Grid.Column="0" x:Name="LeftBottomLabel" Content="LeftBottom" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15"  Height="29" Width="90"/>
+                                <TextBox Grid.Column="1" Grid.Row="1" x:Name="LeftBottomTbx" Text="{Binding LeftBottomRes}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="True" Height="35"/>
+
+                                <Label Grid.Row="2" Grid.Column="0" x:Name="RightTopLabel" Content="RightTop" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="29" Width="76" />
+                                <TextBox Grid.Column="1" Grid.Row="2" x:Name="RightTopTbx" Text="{Binding RightTopRes}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="True" Height="35" />
+
+                                <Label Grid.Column="0" Grid.Row="3" x:Name="RightBottomLabel" Content="RightBottom" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="15" Height="29" Width="102"/>
+                                <TextBox Grid.Row="3" Grid.Column="1" x:Name="RightBottomTbx" Text="{Binding RightBottomRes}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Width="160" IsReadOnly="True" Height="35"/>
+
+                            </Grid>
+
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+
+    </Grid>
+</UserControl>

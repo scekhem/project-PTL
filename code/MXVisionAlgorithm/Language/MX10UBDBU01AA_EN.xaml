@@ -1,0 +1,65 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="HeaderProgram">HeaderProgram</sys:String>
+    <sys:String x:Key="Auto">Auto</sys:String>
+    <sys:String x:Key="Manu">Manu</sys:String>
+    <sys:String x:Key="Teching">Teching</sys:String>
+    <sys:String x:Key="Data">Data</sys:String>
+    <sys:String x:Key="Recipe">Recipe</sys:String>
+    <sys:String x:Key="Origin">Origin</sys:String>
+    <sys:String x:Key="System">System</sys:String>
+    <sys:String x:Key="Maintenance">Maintenance</sys:String>
+    <sys:String x:Key="Other">Other</sys:String>
+    <sys:String x:Key="Image">Image</sys:String>
+	
+	<sys:String x:Key="WaferLoadUnit">Wafer Load Unit</sys:String>
+    <sys:String x:Key="BondHeadUnit">Bond Head Unit</sys:String>
+	<sys:String x:Key="WaferHoldUnit">Wafer Hold Unit</sys:String>
+    <sys:String x:Key="DippingUnit">Dipping Unit</sys:String>
+	<sys:String x:Key="EjectUnit">Eject Unit</sys:String>
+    <sys:String x:Key="CameraUnit">Camera Unit</sys:String>
+	<sys:String x:Key="FlipUnit">Flip Unit</sys:String>
+    <sys:String x:Key="BaseStageUnit">Base Stage Unit</sys:String>
+	<sys:String x:Key="StepModle">Step Modle</sys:String>
+
+    <sys:String x:Key="TopWaferTeching">Top Wafer Teching</sys:String>
+    <sys:String x:Key="TopChipSizeTeching">Top Chip Size Teching</sys:String>
+    <sys:String x:Key="BaseChipSizeTeching">Base Chip Size Teching</sys:String>
+    <sys:String x:Key="FristPickupPosTeching">Frist Pick-up Pos.Teching</sys:String>
+    <sys:String x:Key="ICEjectTeching">IC Eject Teching</sys:String>
+    <sys:String x:Key="ICPickupTeching">IC Pick-up Teching</sys:String>
+    <sys:String x:Key="ToolICPosCheck">Tool/IC Pos.Check</sys:String>
+    <sys:String x:Key="ICTeching">IC Teching</sys:String>
+    <sys:String x:Key="SubstTeching">Subst Teching</sys:String>
+    <sys:String x:Key="BHRotateCenterTeching">BH Rotate Center Teching</sys:String>
+    <sys:String x:Key="SystemTeching">System Teching</sys:String>
+	<sys:String x:Key="DeviceTeching">Device Teching</sys:String>
+	
+	<sys:String x:Key="TopWaferData">Top Wafer Data</sys:String>
+	<sys:String x:Key="WaferZoomMagnification">Wafer Zoom Magnification</sys:String>
+	<sys:String x:Key="WaferAlignment">Wafer Alignment</sys:String>
+	<sys:String x:Key="BadMarkCheck">Bad Mark Check</sys:String>
+	<sys:String x:Key="Maping">Maping</sys:String>
+	<sys:String x:Key="ICAlignment">IC Alignment</sys:String>
+	<sys:String x:Key="Eject">Eject</sys:String>
+	<sys:String x:Key="PickUp">Pick Up</sys:String>
+	<sys:String x:Key="PlaceUp">Place Up</sys:String>
+	<sys:String x:Key="SubstrateData">Substrate Data</sys:String>
+	<sys:String x:Key="SubstrateICAlignment">Substrate/IC Alignment</sys:String>
+	<sys:String x:Key="BondProcess">Bond Process</sys:String>
+	<sys:String x:Key="Dipping">Dipping</sys:String>
+
+	<sys:String x:Key="CalcMmppxView">CalcMmppx</sys:String>
+	<sys:String x:Key="ImageEmphasizeView">ImageEmphasize</sys:String>
+	<sys:String x:Key="MarkLocation">MarkLocation</sys:String>
+	<sys:String x:Key="MarkLocationView">MarkLocation</sys:String>
+	<sys:String x:Key="MarkLocationRepeatTestView">MarkLocationRepeatTest</sys:String>
+	<sys:String x:Key="OpticDistortTestView">OpticDistortTest</sys:String>
+	<sys:String x:Key="TemplateMatchView">TemplateMatch</sys:String>
+	<sys:String x:Key="TemplateMatchRepeatTestView">TemplateMatchRepeatTest</sys:String>
+    <sys:String x:Key="AreaProportionView">AreaProportion</sys:String>
+
+
+</ResourceDictionary>

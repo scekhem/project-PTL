@@ -1,0 +1,131 @@
+next-version: 0.0.0.1
+assembly-versioning-scheme: MajorMinorPatchTag
+assembly-file-versioning-scheme: MajorMinorPatchTag
+assembly-informational-format: '{PreReleaseLabel}.{Major}.{Minor}.{Patch}.{ShortSha}'
+tag-prefix: '[vV]?'
+major-version-bump-message: '\+semver:\s?(breaking|major)'
+minor-version-bump-message: '\+semver:\s?(feature|minor)'
+patch-version-bump-message: '\+semver:\s?(fix|patch)'
+no-bump-message: '\+semver:\s?(none|skip)'
+
+commit-date-format: 'yyyy-MM-dd'
+
+increment: Inherit
+commit-message-incrementing: Enabled
+legacy-semver-padding: 2
+build-metadata-padding: 2
+commits-since-version-source-padding: 2
+ignore:
+  sha: []
+  commits-before: 2015-10-23T12:23:15
+
+branches:
+  main:
+    regex: master[/-]
+    mode: ContinuousDelivery
+    tag: beta
+    increment: Inherit
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: true
+    is-release-branch: true
+    is-mainline: true
+    pre-release-weight: 55000
+  release/UBF:
+    regex: master_UBF(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: UBF
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  release/UBT:
+    regex: master_UBT(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: UBT
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  release/UBD:
+    regex: master_UBD(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: UBD
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  develop/base:
+    regex: develop[/-]
+    mode: ContinuousDelivery
+    tag: dev.base
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  develop/UBF:
+    regex: develop_UBF(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: dev.f
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  develop/UBT:
+    regex: develop_UBT(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: dev.t
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  develop/UBD:
+    regex: develop_UBD(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: dev.d
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0
+  feature:
+    regex: feature_(.{3,20})?$
+    mode: ContinuousDeployment
+    tag: useBranchName
+    increment: Inherit
+    source-branches: [ 'develop' ]
+    prevent-increment-of-merged-branch-version: false
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: false
+  Publish/UBF:
+    regex: Publish_UBF(.{3,20})?$
+    mode: ContinuousDelivery
+    tag: pub.f
+    increment: Inherit
+    source-branches: [ 'master' ]
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+    tracks-release-branches: false
+    is-release-branch: true
+    pre-release-weight: 0

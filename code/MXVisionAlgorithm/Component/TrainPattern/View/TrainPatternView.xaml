@@ -1,0 +1,702 @@
+﻿<Window x:Class="MXVisionAlgorithm.Component.TrainPattern.View.TrainPatternView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mw="http://www.maxwell-gp.com/"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:converter="clr-namespace:MwFramework.Controls.UIControl;assembly=MwFramework.Controls.UIControl"
+        xmlns:control="http://www.maxwell.com/controls"
+        mc:Ignorable="d"             
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center" 
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        d:DesignHeight="1350" d:DesignWidth="1800">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="visiableConverter"/>
+        <Style x:Key="GroupBoxSecondaryExt" TargetType="GroupBox">
+            <Setter Property="Padding" Value="5 5"/>
+            <Setter Property="Margin" Value="3,5,3,0"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="600"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  BorderThickness="1" BorderBrush="{StaticResource BorderBrush}">
+            <StackPanel Orientation="Horizontal" Margin="10 0 0 0">
+                <TextBlock VerticalAlignment="Center" FontSize="16" >Low Level maintenance
+                        <!--<Hyperlink Command="{mw:Action GoBack}"  FontSize="16">Low Level maintenance</Hyperlink>-->
+                </TextBlock>
+                <Label FontSize="16"  Content="Train" ContentStringFormat="> {0}" VerticalAlignment="Center" />
+            </StackPanel>
+        </Border>
+        <Viewbox x:Name="LeftRegion" Grid.Row="1" Grid.Column="0" Grid.RowSpan="2" Stretch="UniformToFill" >
+            <control:DesignPanel  Width="1350" Height="970"  x:Name="cameraPanel"    MotorX="{Binding MotorX}"  MotorY="{Binding MotorY}" MotorZ="{Binding MotorTH}"  Source="{Binding ContinuousImage}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonDown" >
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_MouseLeftButtonDown}" CommandParameter="{Binding ElementName=cameraPanel}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="MouseLeftButtonUp" >
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_MouseLeftButtonUp}" CommandParameter="{Binding ElementName=cameraPanel}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="OnSourceChange" >
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_OnSourceChange}" CommandParameter="{Binding ElementName=cameraPanel}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="OnMouseMove" >
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_OnMouseMove}" CommandParameter="{Binding ElementName=cameraPanel}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                    <i:EventTrigger EventName="ReportItemSelected" >
+                        <i:InvokeCommandAction Command="{Binding cameraPanelRight_ReportItemSelected}" CommandParameter="{Binding ElementName=cameraPanel}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+
+            </control:DesignPanel>
+        </Viewbox>
+        <Border x:Name="RightRegion" Grid.Row="1" Grid.Column="1" BorderThickness="1">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <StackPanel >
+                    <Expander  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander1,Mode=TwoWay}" >
+                        <Expander.Header>
+                            <TextBlock Text="Source" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="100" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Button Grid.Row="0" Content="Acquired Image" Command="{mw:Action AcquiredImage }"  FontStyle="Oblique"  FontSize="15"  Width="180" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                                <Button Grid.Row="1" Content="From Library" Command="{mw:Action LoadImageFromLibrary }"  FontStyle="Oblique"  FontSize="15"  Width="180" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                                <Button Grid.Row="2" Content="From File" Command="{mw:Action LoadImageFromFile }"   FontStyle="Oblique" FontSize="15"  Width="180" Height="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Button>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  x:Name="RegionExpander"  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                             BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander2,Mode=TwoWay}" >
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="Expanded">
+                                <i:InvokeCommandAction Command="{Binding regionExpanded}" CommandParameter="{Binding ElementName=RegionExpander}"></i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <Expander.Header>
+                            <TextBlock Text="Region" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="100" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <GroupBox Grid.ColumnSpan="2" FontSize="18"  Header="Rectangle Navigation"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="180"/>
+                                        <RowDefinition Height="60"/>
+                                        <RowDefinition Height="80"/>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="280"></ColumnDefinition>
+                                        <ColumnDefinition Width="290"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                        <Button Content="Up" Command="{mw:Action SetRegionUp}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                        <Button Content="Left" Command="{mw:Action SetRegionLeft}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="30,10,0,0" ></Button>
+                                        <Button Content="Down" Command="{mw:Action SetRegionDown}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                        <Button Content="Right" Command="{mw:Action SetRegionRight}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="150,-140,0,0" ></Button>
+                                    </StackPanel>
+                                    <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="X" VerticalAlignment="Center" Margin="60 5,0,0"></TextBlock>
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="Y" VerticalAlignment="Center" Margin="130,5,0,0"></TextBlock>
+                                        <TextBox x:Name="SetX" IsReadOnly="True" Text="{Binding SetRegionX}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,5,0,0"></TextBox>
+                                        <TextBox x:Name="SetY" IsReadOnly="True" Text="{Binding SetRegionY}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                    </WrapPanel>
+                                    <WrapPanel Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="2">
+                                        <Button Content="Set" Command="{mw:Action SetRegion}" Width="150" Height="60" FontSize="17" ></Button>
+                                        <Button Content="Clear"  Command="{mw:Action ClearRegion}" Width="150" Height="60" FontSize="17" Margin="268,0,0,0"></Button>
+                                        <!--<Button Content="ClearAll" Command="{mw:Action ClearAllRegion}" Width="150" Height="60" FontSize="17" HorizontalAlignment="Right" Margin="55,0,0,0"  ></Button>-->
+                                    </WrapPanel>
+                                    <GroupBox Grid.Column="1" FontSize="20" Height="100"   Header="Mode"  BorderThickness="2"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="0,-80,0,0">
+                                        <WrapPanel Orientation="Horizontal">
+                                            <RadioButton x:Name="RegionModeMove" Content="Move" FontSize="19" IsChecked="{Binding SetRegionModeMove}"  VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                            <RadioButton  x:Name="RegionModeResize"  Content="Resize" FontSize="19" IsChecked="{Binding SetRegionModeResize}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                        </WrapPanel>
+                                    </GroupBox>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"   Visibility ="{Binding ElementName=RegionModeMove,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="Step Width" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                        <Slider  Style="{StaticResource TextBoxSlider}" Minimum="0.1" Maximum="1" Value="{Binding StepWidth}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1"/>
+
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"   Visibility ="{Binding ElementName=RegionModeResize,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="Scale" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                        <Slider  Style="{StaticResource TextBoxSlider}"  Minimum="0.1" Maximum="2" Value="{Binding Scale}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1">
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="ValueChanged">
+                                                    <i:InvokeCommandAction Command="{Binding cmbScaleSelectionChanged}"></i:InvokeCommandAction>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Slider>
+                                    </StackPanel>
+                                    <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="Width" VerticalAlignment="Center" Margin="50 5,0,0"></TextBlock>
+                                        <TextBlock  FontSize="19" FontStyle="Normal" Text="Height" VerticalAlignment="Center" Margin="80,5,0,0"></TextBlock>
+                                        <TextBox x:Name="SetWidth" IsReadOnly="True" Text="{Binding SetRegionWidth}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,5,0,0"></TextBox>
+                                        <TextBox x:Name="SetHeight" IsReadOnly="True" Text="{Binding SetRegionHeight}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                    </WrapPanel>
+                                </Grid>
+                            </GroupBox>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander3,Mode=TwoWay}">
+                        <Expander.Header>
+                            <TextBlock Text="Train don't care" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="550"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <!--<TabControl Grid.Row="0" Grid.Column="0"  mw:TabControlAttach.HeaderHeight="40"  Background="{StaticResource BackgroundBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" TabStripPlacement="Top"
+                        x:Name="TraindontcareRegion" >
+                                <TabItem Header="Rectangle">-->
+                                <WrapPanel Grid.Row="0" Orientation="Horizontal">
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolideRectangle}"  Content="Rectangle" Click="{mw:Action SelectRectangle}"></Button>
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolidePolygon}" Content="Polygon" Click="{mw:Action SelectPolygon}"></Button>
+                                </WrapPanel>
+                                <Grid Grid.Row="1" >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="400" ></RowDefinition>
+                                        <RowDefinition Height="100"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <GroupBox  Grid.Row="0" FontSize="18"  Header="{Binding Navigation}"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="160"/>
+                                                <RowDefinition Height="80"/>
+                                                <RowDefinition Height="100"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="280"></ColumnDefinition>
+                                                <ColumnDefinition Width="290"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                                <Button Content="Up" Command="{mw:Action SetRegionUp }" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Left" Command="{mw:Action SetRegionLeft}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="30,10,0,0" ></Button>
+                                                <Button Content="Down" Command="{mw:Action SetRegionDown}"  Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Right" Command="{mw:Action SetRegionRight}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="150,-140,0,0" ></Button>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="X" VerticalAlignment="Center" Margin="60 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Y" VerticalAlignment="Center" Margin="130,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetCareX" IsReadOnly="True" Text="{Binding SetRegionX}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetCareY" IsReadOnly="True" Text="{Binding SetRegionY}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                            <GroupBox Grid.Column="1" FontSize="20" Height="100"   Header="Mode"  BorderThickness="2"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="0,-40,10,0">
+                                                <WrapPanel Orientation="Horizontal">
+                                                    <RadioButton x:Name="TrainDontModeMove" Content="Move" FontSize="19" IsChecked="{Binding SetRegionModeMove}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                                    <RadioButton x:Name="TrainDontModeResize"  Content="Resize" FontSize="19" IsChecked="{Binding SetRegionModeResize}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                                </WrapPanel>
+                                            </GroupBox>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Visibility ="{Binding ElementName=TrainDontModeMove,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Step Width" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}" Minimum="0.1" Maximum="1" Value="{Binding StepWidth,Mode=TwoWay}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1"/>
+
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"   Visibility ="{Binding ElementName=TrainDontModeResize,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Scale" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}"  Minimum="0.1" Maximum="2" Value="{Binding Scale,Mode=TwoWay}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="ValueChanged">
+                                                            <i:InvokeCommandAction Command="{Binding cmbScaleSelectionChanged}"></i:InvokeCommandAction>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Slider>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Width" VerticalAlignment="Center" Margin="50 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Height" VerticalAlignment="Center" Margin="80,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetCareWidth" IsReadOnly="True" Text="{Binding SetRegionWidth}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetCareHeight" IsReadOnly="True" Text="{Binding SetRegionHeight}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                        </Grid>
+                                    </GroupBox>
+                                    <GroupBox Grid.Row="1" FontSize="20" Height="100"   Header="Pixel Mask Mode"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="5,0,10,0">
+                                        <WrapPanel Orientation="Horizontal">
+                                            <RadioButton  Content="Inner" FontSize="19" IsChecked="{Binding SetInnerMaskMode}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                            <RadioButton  Content="Outer" FontSize="19" IsChecked="{Binding SetOuterMaskMode}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                        </WrapPanel>
+                                    </GroupBox>
+                                </Grid>
+                                <!--</TabItem>
+                                <TabItem Header="Polygon"/>
+                            </TabControl>-->
+                                <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                    <Button Content="Set" Command="{mw:Action SetTrain}" Width="150" Height="60" FontSize="17" ></Button>
+                                    <Button Content="Clear" Command="{mw:Action ClearTrain}" Width="150" Height="60" FontSize="17" Margin="75,0,0,0"></Button>
+                                    <Button Content="ClearAll" Command="{mw:Action ClearAllTrain}" Width="150" Height="60" FontSize="17" Margin="70,0,0,0"  ></Button>
+                                </WrapPanel>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander4,Mode=TwoWay}">
+                        <Expander.Header>
+                            <TextBlock Text="Origin" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="100" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="250"/>
+                                    <RowDefinition Height="300"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <GroupBox  Grid.Row="0" Margin="0,-50,0,0"  FontSize="18"  Header="Navigation"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="350"></ColumnDefinition>
+                                            <ColumnDefinition Width="250"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                            <Button Content="Up" Command="{mw:Action SetOriginUp}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="120,10,0,0"></Button>
+                                            <Button Content="Left" Command="{mw:Action SetOriginLeft}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="20,10,0,0" ></Button>
+                                            <Button Content="Down" Command="{mw:Action SetOriginDown}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"   Margin="120,10,0,0"></Button>
+                                            <Button Content="Right" Command="{mw:Action SetOriginRight}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Right"  VerticalAlignment="Center"  Margin="0,-140,30,0"></Button>
+                                            <Button Background="IndianRed" Command="{mw:Action DisplayCrosshair}" Height="40" Width="80" FontSize="19" HorizontalAlignment="Center"    Margin="0,-140,10,0" ></Button>
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                                            <Slider   Width="120"   Minimum="1" Maximum="100" Margin="-10,30,0,0" 
+                                                   IsSnapToTickEnabled="True"         
+                                             TickFrequency="0.01"  LargeChange="0.01"
+                                              Visibility="Visible" 
+                                              IsEnabled="True">
+                                                <i:Interaction.Behaviors>
+                                                    <converter:SliderValueChangedBehavior Value="{Binding PixelSteps,Mode=TwoWay}" />
+                                                </i:Interaction.Behaviors>
+                                            </Slider>
+                                            <mw:NumberBox Increment="0.01" mw:NumericKeypadAttach.IsEnabled="False" mw:ParameterAttach.IsShowOldValue="False" Minimum="1" Maximum="100" Style="{StaticResource LeftRightButtonNumberBoxStyle}" Value="{Binding PixelSteps, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Margin="-10,10,0,0" />
+
+                                            <TextBlock Text="1Pixel--" Margin="55,10,0,0"></TextBlock>
+                                            <TextBlock Text="0.01Pixel" Margin="120,-22,0,0"></TextBlock>
+                                        </StackPanel>
+                                    </Grid>
+                                </GroupBox>
+                                <GroupBox  Grid.Row="1" Margin="0,-50,0,0"  FontSize="18"  Header="Properties"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="80"></RowDefinition>
+                                            <RowDefinition Height="80"></RowDefinition>
+                                            <RowDefinition Height="80"></RowDefinition>
+                                            <RowDefinition Height="80"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="100"></ColumnDefinition>
+                                            <ColumnDefinition Width="400"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Line Width:"></TextBlock>
+                                        <Slider  Grid.Row="0" Grid.Column="1"   Minimum="1" Maximum="1500"  
+                                             Visibility="Visible"  IsEnabled="True"
+                                              IsSnapToTickEnabled="True"         
+                                             TickFrequency="1"  LargeChange="1" Value="{Binding LineWidth,Mode=TwoWay}" >
+                                            <!--<i:Interaction.Behaviors>
+                                            <converter:SliderValueChangedBehavior Value="{Binding LineWidth,Mode=TwoWay}" />
+                                        </i:Interaction.Behaviors>-->
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="ValueChanged">
+                                                    <i:InvokeCommandAction Command="{Binding lineWidthValueChanged}"></i:InvokeCommandAction>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Slider>
+                                        <mw:NumberBox Grid.Row="0" Grid.Column="2" DecimalPlaces="5" Increment="1" ShowUpDownButton="True" Margin="-80,-40,0,0" mw:NumericKeypadAttach.IsEnabled="True"  Minimum="1" Maximum="1500" Style="{StaticResource LeftRightButtonNumberBoxStyle}" Value="{Binding LineWidth, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+
+                                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Line Size:"></TextBlock>
+                                        <Slider  Grid.Row="1" Grid.Column="1"  Minimum="1" Maximum="500" 
+                                             Visibility="Visible"  IsEnabled="True"
+                                              IsSnapToTickEnabled="True"         
+                                             TickFrequency="1"  LargeChange="1" Value="{Binding LineSize,Mode=TwoWay}">
+                                            <!--<i:Interaction.Behaviors>
+                                            <converter:SliderValueChangedBehavior Value="{Binding LineSize,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                                        </i:Interaction.Behaviors>-->
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="ValueChanged">
+                                                    <i:InvokeCommandAction Command="{Binding lineSizeValueChanged}"></i:InvokeCommandAction>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Slider>
+                                        <mw:NumberBox Grid.Row="1" Increment="1" DecimalPlaces="5" Grid.Column="2" Margin="-80,-50,0,0" mw:NumericKeypadAttach.IsEnabled="True"  ShowUpDownButton="True"  Minimum="1" Maximum="500" Style="{StaticResource LeftRightButtonNumberBoxStyle}" Value="{Binding LineSize, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+
+                                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Rotation:"></TextBlock>
+                                        <Slider  Grid.Row="2" Grid.Column="1" 
+                                             Minimum="0" Maximum="180" 
+                                             Visibility="Visible"  IsSnapToTickEnabled="True"         
+                                             TickFrequency="1" SmallChange="1"  LargeChange="1" 
+                                             IsEnabled="True"   Value="{Binding Rotation,Mode=TwoWay}">
+                                            <!--<i:Interaction.Behaviors>
+                                            <converter:SliderValueChangedBehavior Value="{Binding Rotation,Mode=TwoWay}" />
+                                        </i:Interaction.Behaviors>-->
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="ValueChanged">
+                                                    <i:InvokeCommandAction Command="{Binding rotationValueChanged}"></i:InvokeCommandAction>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Slider>
+                                        <mw:NumberBox Grid.Row="2" Grid.Column="2" Margin="-80,-50,0,0" Increment="1"  mw:NumericKeypadAttach.IsEnabled="True"  ShowUpDownButton="True" Minimum="0" Maximum="180" Style="{StaticResource LeftRightButtonNumberBoxStyle}" Value="{Binding Rotation, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+
+                                        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="0">
+                                            <CheckBox x:Name="ShowCircle" Content="Show Circle"  IsChecked="{Binding IsDiplayCircle}" Click="{mw:Action ShowCircle}" ></CheckBox>
+                                            <TextBlock  Text="Radius:" HorizontalAlignment="Center" Margin="10" IsEnabled="{Binding IsDiplayCircle}"></TextBlock>
+                                        </StackPanel>
+                                        <Slider  Grid.Row="3" Grid.Column="1"  IsSnapToTickEnabled="True"         
+                                             TickFrequency="1"  LargeChange="1"  Minimum="0" Maximum="1024"  Visibility="Visible"  IsEnabled="{Binding IsDiplayCircle}" Margin="30"
+                                             Value="{Binding Radius,Mode=TwoWay}">
+                                            <!--<i:Interaction.Behaviors>
+                                            <converter:SliderValueChangedBehavior Value="{Binding Radius,Mode=TwoWay}" />
+                                        </i:Interaction.Behaviors>-->
+                                            <i:Interaction.Triggers>
+                                                <i:EventTrigger EventName="ValueChanged">
+                                                    <i:InvokeCommandAction Command="{Binding radiusValueChanged,Mode=TwoWay}"></i:InvokeCommandAction>
+                                                </i:EventTrigger>
+                                            </i:Interaction.Triggers>
+                                        </Slider>
+                                        <mw:NumberBox Grid.Row="3" Grid.Column="2" Increment="1"  Margin="-80,10,0,0" IsEnabled="{Binding IsDiplayCircle}"  Minimum="0" Maximum="1024" Style="{StaticResource LeftRightButtonNumberBoxStyle}" Value="{Binding Radius, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  />
+                                    </Grid>
+                                </GroupBox>
+                                <WrapPanel Orientation="Horizontal" Grid.Row="3">
+                                    <Button Content="AutoOrigin" Width="250" Height="60" FontSize="17" Command="{mw:Action AutoOrigin}" ></Button>
+                                    <TextBox Width="250" Height="60" FontSize="17" Text="{Binding AutoOrginValue}" Margin="90,0,0,0"></TextBox>
+                                </WrapPanel>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander5,Mode=TwoWay}" Visibility="Collapsed">
+                        <Expander.Header>
+                            <TextBlock Text="Details" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="100" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="550"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <!--<TabControl Grid.Row="0" Grid.Column="0"  mw:TabControlAttach.HeaderHeight="40"  Background="{StaticResource BackgroundBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" TabStripPlacement="Top"
+                        x:Name="DetailRegion" >
+                                <TabItem Header="Rectangle">-->
+                                <WrapPanel Grid.Row="0" Orientation="Horizontal">
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolideRectangle}" Content="Rectangle" Click="{mw:Action SelectRectangle}"></Button>
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolidePolygon}" Content="Polygon" Click="{mw:Action SelectPolygon}"></Button>
+                                </WrapPanel>
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="400" ></RowDefinition>
+                                        <RowDefinition Height="100"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <GroupBox  Grid.Row="0" FontSize="18"  Header="{Binding Navigation}"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="160"/>
+                                                <RowDefinition Height="80"/>
+                                                <RowDefinition Height="100"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="280"></ColumnDefinition>
+                                                <ColumnDefinition Width="290"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                                <Button Content="Up" Command="{mw:Action SetRegionUp }" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Left" Command="{mw:Action SetRegionLeft}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="30,10,0,0" ></Button>
+                                                <Button Content="Down" Command="{mw:Action SetRegionDown}"  Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Right" Command="{mw:Action SetRegionRight}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="150,-140,0,0" ></Button>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="X" VerticalAlignment="Center" Margin="60 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Y" VerticalAlignment="Center" Margin="130,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetDetailsCareX" IsReadOnly="True" Text="{Binding SetRegionX}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetDetailsCareY" IsReadOnly="True" Text="{Binding SetRegionY}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                            <GroupBox Grid.Column="1" FontSize="20" Height="100"   Header="Mode"  BorderThickness="2"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="0,-40,10,0">
+                                                <WrapPanel Orientation="Horizontal">
+                                                    <RadioButton x:Name="DetailModeMove"  Content="Move" FontSize="19" IsChecked="{Binding SetRegionModeMove}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                                    <RadioButton x:Name="DetailModeResize"  Content="Resize" FontSize="19" IsChecked="{Binding SetRegionModeResize}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                                </WrapPanel>
+                                            </GroupBox>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" Visibility ="{Binding ElementName=DetailModeMove,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Step Width" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}" Minimum="0.1" Maximum="1" Value="{Binding StepWidth}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1"/>
+
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"   Visibility ="{Binding ElementName=DetailModeResize,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Scale" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}"   Minimum="0.1" Maximum="2" Value="{Binding Scale}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="ValueChanged">
+                                                            <i:InvokeCommandAction Command="{Binding cmbScaleSelectionChanged}"></i:InvokeCommandAction>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Slider>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Width" VerticalAlignment="Center" Margin="50 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Height" VerticalAlignment="Center" Margin="80,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetDetailsCareWidth" IsReadOnly="True" Text="{Binding SetRegionWidth}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetDetailsCareHeight" IsReadOnly="True" Text="{Binding SetRegionHeight}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                        </Grid>
+                                    </GroupBox>
+                                    <GroupBox Grid.Row="1" FontSize="20" Height="100"   Header="Pixel Mask Mode"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="5,0,10,0">
+                                        <WrapPanel Orientation="Horizontal">
+                                            <RadioButton  Content="Inner" FontSize="19" IsChecked="{Binding SetInnerMaskMode}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                            <RadioButton  Content="Outer" FontSize="19" IsChecked="{Binding SetOuterMaskMode}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                        </WrapPanel>
+                                    </GroupBox>
+                                </Grid>
+                                <!--</TabItem>
+                                <TabItem Header="Polygon"/>
+                            </TabControl>-->
+                                <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                    <Button Content="Set" Command="{mw:Action SetDetail}" Width="150" Height="60" FontSize="17" ></Button>
+                                    <Button Content="Clear" Command="{mw:Action ClearDetail}" Width="150" Height="60" FontSize="17" Margin="75,0,0,0"></Button>
+                                    <Button Content="ClearAll" Command="{mw:Action ClearAllDetail}" Width="150" Height="60" FontSize="17" Margin="70,0,0,0"  ></Button>
+                                </WrapPanel>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander  VerticalAlignment="Stretch" ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander6,Mode=TwoWay}">
+                        <Expander.Header>
+                            <TextBlock Text="Details don't care" FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="200" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                    <RowDefinition Height="550"/>
+                                    <RowDefinition Height="60"/>
+                                </Grid.RowDefinitions>
+                                <WrapPanel Grid.Row="0" Orientation="Horizontal">
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolideRectangle}"  Content="Rectangle" Click="{mw:Action SelectRectangle}"></Button>
+                                    <Button Width="200" Height="50"  Margin="5,5,0,0" Foreground="AntiqueWhite" Background="{Binding SolidePolygon}" Content="Polygon" Click="{mw:Action SelectPolygon}"></Button>
+                                </WrapPanel>
+                                <!--<TabControl Grid.Row="0" Grid.Column="0"  mw:TabControlAttach.HeaderHeight="40"  Background="{StaticResource BackgroundBrush}" BorderBrush="{StaticResource BorderBrush}" BorderThickness="1" TabStripPlacement="Top"
+                        x:Name="DetaildontcareRegion" >
+                                <TabItem Header="Rectangle">-->
+                                <Grid Grid.Row="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="400" ></RowDefinition>
+                                        <RowDefinition Height="100"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <GroupBox  Grid.Row="0" FontSize="18"  Header="{Binding Navigation}"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" >
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="160"/>
+                                                <RowDefinition Height="80"/>
+                                                <RowDefinition Height="100"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="280"></ColumnDefinition>
+                                                <ColumnDefinition Width="290"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+                                            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                                <Button Content="Up" Command="{mw:Action SetRegionUp }" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left" VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Left" Command="{mw:Action SetRegionLeft}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="30,10,0,0" ></Button>
+                                                <Button Content="Down" Command="{mw:Action SetRegionDown}"  Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"   Margin="90,10,0,0"></Button>
+                                                <Button Content="Right" Command="{mw:Action SetRegionRight}" Height="40" Width="100" FontSize="19" HorizontalAlignment="Left"  VerticalAlignment="Center"  Margin="150,-140,0,0" ></Button>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="X" VerticalAlignment="Center" Margin="60 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Y" VerticalAlignment="Center" Margin="130,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetDetailsdontCareX" IsReadOnly="True" Text="{Binding SetRegionX}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetDetailsdontCareY" IsReadOnly="True" Text="{Binding SetRegionY}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                            <GroupBox Grid.Column="1" FontSize="20" Height="100"   Header="Mode"  BorderThickness="2"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="0,-40,10,0">
+                                                <WrapPanel Orientation="Horizontal">
+                                                    <RadioButton x:Name="DontDetailModeMove"  Content="Move" FontSize="19" IsChecked="{Binding SetRegionModeMove}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                                    <RadioButton x:Name="DontDetailModeResize"  Content="Resize" FontSize="19" IsChecked="{Binding SetRegionModeResize}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                                </WrapPanel>
+                                            </GroupBox>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"  Visibility ="{Binding ElementName=DontDetailModeMove,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Step Width" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}" Minimum="0.1" Maximum="1" Value="{Binding StepWidth}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1"/>
+
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical"   Visibility ="{Binding ElementName=DontDetailModeResize,Path=IsChecked,Converter={StaticResource visiableConverter}}">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Scale" HorizontalAlignment="Center" Margin="0 ,-20,50,0"></TextBlock>
+                                                <Slider  Style="{StaticResource TextBoxSlider}"  Minimum="0.1" Maximum="2" Value="{Binding Scale}" Width="200" IsSnapToTickEnabled="True" TickFrequency="0.1">
+                                                    <i:Interaction.Triggers>
+                                                        <i:EventTrigger EventName="ValueChanged">
+                                                            <i:InvokeCommandAction Command="{Binding cmbScaleSelectionChanged}"></i:InvokeCommandAction>
+                                                        </i:EventTrigger>
+                                                    </i:Interaction.Triggers>
+                                                </Slider>
+                                            </StackPanel>
+                                            <WrapPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Width" VerticalAlignment="Center" Margin="50 5,0,0"></TextBlock>
+                                                <TextBlock  FontSize="19" FontStyle="Normal" Text="Height" VerticalAlignment="Center" Margin="80,5,0,0"></TextBlock>
+                                                <TextBox x:Name="SetDetailsdontCareWidth" IsReadOnly="True" Text="{Binding SetRegionWidth}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,5,0,0"></TextBox>
+                                                <TextBox x:Name="SetDetailsdontCareHeight" IsReadOnly="True" Text="{Binding SetRegionHeight}" Width="80" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="60,5,0,0"></TextBox>
+                                            </WrapPanel>
+                                        </Grid>
+                                    </GroupBox>
+                                    <GroupBox Grid.Row="1" FontSize="20" Height="100"   Header="Pixel Mask Mode"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}" Margin="5,0,10,0">
+                                        <WrapPanel Orientation="Horizontal">
+                                            <RadioButton  Content="Inner" FontSize="19" IsChecked="{Binding SetInnerMaskMode}" VerticalContentAlignment="Center" Margin="30,5,0,0"></RadioButton>
+                                            <RadioButton  Content="Outer" FontSize="19" IsChecked="{Binding SetOuterMaskMode}" VerticalContentAlignment="Center" Margin="50,5,0,0"></RadioButton>
+                                        </WrapPanel>
+                                    </GroupBox>
+                                </Grid>
+                                <!--</TabItem>
+                                <TabItem Header="Polygon"/>
+                            </TabControl>-->
+                                <WrapPanel Orientation="Horizontal" Grid.Row="2">
+                                    <Button Content="Set" Command="{mw:Action SetDontDetail}" Width="150" Height="60" FontSize="17" ></Button>
+                                    <Button Content="Clear" Command="{mw:Action ClearDontDetail}" Width="150" Height="60" FontSize="17" Margin="75,0,0,0"></Button>
+                                    <Button Content="ClearAll" Command="{mw:Action ClearAllDontDetail}" Width="150" Height="60" FontSize="17" Margin="70,0,0,0"  ></Button>
+                                </WrapPanel>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                    <Expander ExpandDirection="Down" HorizontalContentAlignment="Left" SnapsToDevicePixels="True" Background="Gray"
+                            BorderBrush="AliceBlue" BorderThickness="5" IsExpanded="{Binding SelectedExpander7, Mode=TwoWay}">
+                        <Expander.Header>
+                            <TextBlock Text="Match " FontSize="20" FontWeight="Bold"  TextWrapping="Wrap" Width="100" />
+                        </Expander.Header>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <GroupBox  Grid.Row="0"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}"  Header="Operation">
+                                <StackPanel>
+                                    <WrapPanel Orientation="Horizontal" Height="60">
+                                        <Button Width="260" Height="60"  Margin="5,5,0,0"   Foreground="AntiqueWhite"  Background="Gray" Content="Search" Click="{mw:Action Search}"/>
+                                        <Button Width="260" Height="60"  Margin="25,5,0,0"   Foreground="AntiqueWhite"  Background="Gray" Content="Acquired Image" Click="{mw:Action Acquire}"/>
+                                    </WrapPanel>
+                                    <WrapPanel Height="60">
+                                        <mw:ProgressBar Width="280" Height="60" Value="{Binding ProgressValue, Mode=OneWay}" Minimum="0"  Maximum="100"     Margin="5,0,0,0"/>
+                                    </WrapPanel>
+                                    <WrapPanel Height="60">
+                                        <TextBlock Text="Interval[ms]" FontSize="15" Margin="15,20,0,0"/>
+                                        <mw:IntNumberBox ShowUpDownButton="True" mw:NumericKeypadAttach.IsEnabled="False" Value="{Binding InterVal}" IsPopupShow="True" Minimum="0" Height="40" Maximum="1000" Width="170" Margin="10,10,0,0"/>
+                                        <TextBlock Text="Repeatings" FontSize="15" Margin="15,20,0,0"/>
+                                        <mw:IntNumberBox ShowUpDownButton="True" mw:NumericKeypadAttach.IsEnabled="False" Value="{Binding Repeatings}" IsPopupShow="True" Minimum="0" Maximum="1000" Height="40" Width="165" Margin="10,10,0,0"/>
+                                    </WrapPanel>
+                                </StackPanel>
+                            </GroupBox>
+                            <GroupBox  Grid.Row="1"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}"  Header="Display">
+                                <DataGrid 
+                                        Height="270" 
+                                        Margin="10"
+                                        ItemsSource="{Binding MatchParameterList}"
+                                      
+                                        SelectionMode="Single" AutoGenerateColumns="False" CanUserAddRows="False"
+                                        CanUserDeleteRows="False"  CanUserResizeRows="False" 
+                                        IsReadOnly="True"    SelectionUnit="FullRow"                             
+                                        CanUserSortColumns="False">
+                                    <DataGrid.Style>
+                                        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource {x:Type DataGrid}}">
+                                            <Style.Triggers>
+                                                <Trigger Property="ItemsControl.AlternationIndex" Value="0" >
+                                                    <Setter Property="Background" Value="LightBlue" />
+                                                </Trigger>
+                                                <Trigger Property="ItemsControl.AlternationIndex" Value="1" >
+                                                    <Setter Property="Background" Value="LightYellow"/>
+                                                </Trigger>
+                                                <Trigger Property="IsEnabled" Value="False">
+                                                    <Setter Property="Opacity" Value="1"/>
+                                                </Trigger>
+
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DataGrid.Style>
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Info" Width="150" Binding="{Binding ParameterInfo}"/>
+                                        <DataGridTextColumn Header="X[Pix]" Width="100" Binding="{Binding ParameterX}"/>
+                                        <DataGridTextColumn Header="Y[Pix]" Width="100" Binding="{Binding ParameterY}"/>
+                                        <DataGridTextColumn Header="Ratation °"  Width="100" Binding="{Binding ParameterRatation}"/>
+                                        <DataGridTextColumn Header="Score ％"  Width="100" Binding="{Binding ParameterScore}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </GroupBox>
+                            <!--<GroupBox  Grid.Row="2"  BorderThickness="3"  Style="{StaticResource GroupBoxSecondaryExt}"  Header="Chart">
+                                    <lvc:CartesianChart Height="400" Name="myLiveChart"  DisableAnimations="True"  LegendLocation="Top" >
+
+                                    </lvc:CartesianChart>
+                                </GroupBox>-->
+                        </Grid>
+                    </Expander>
+                    <Expander
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Left"
+                        Background="Gray"
+                        BorderBrush="AliceBlue"
+                        BorderThickness="5"
+                        ExpandDirection="Down"
+                        IsExpanded="{Binding SelectedExpander8, Mode=TwoWay}"
+                        SnapsToDevicePixels="True">
+                        <Expander.Header>
+                            <TextBlock
+                                Width="100"
+                                FontSize="20"
+                                FontWeight="Bold"
+                                Text="Set up"
+                                TextWrapping="Wrap" />
+                        </Expander.Header>
+                        <Expander.Content>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.Column="0" Content="MinLength" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <mw:IntNumberBox Grid.Row="0" Grid.Column="1" Name="MinLengthNumber" Value="{Binding MinLength}" ></mw:IntNumberBox>
+                                <Label Grid.Row="1" Grid.Column="0" Content="EdgeThreshold" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <mw:IntNumberBox Grid.Row="1" Grid.Column="1" Name="EdgeThresholdNumber" Value="{Binding EdgeThreshold}"></mw:IntNumberBox>
+                                <Label Grid.Row="2" Grid.Column="0" Content="ScoreThreshold" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <mw:NumberBox Grid.Row="2" Grid.Column="1" Name="ScoreThresholdNumber" Value="{Binding ScoreThreshold}"></mw:NumberBox>
+                                <Label Grid.Row="3" Grid.Column="0" Content="MeasureLength1" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <mw:IntNumberBox Grid.Row="3" Grid.Column="1" Name="MinLength1Number" Value="{Binding MeasureLength1}"></mw:IntNumberBox>
+                                <Label Grid.Row="4" Grid.Column="0" Content="TemplateType" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <ComboBox Grid.Row="4" Grid.Column="1" Name ="TemplateTypeCbx"  HorizontalContentAlignment="Center" FontSize="13" Width="200"  SelectedItem="{Binding TemplateType}" ></ComboBox>
+                                <Label Grid.Row="5" Grid.Column="0" Content="PatternMetric" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <ComboBox Grid.Row="5" Grid.Column="1" Name ="MetricCbx"  HorizontalContentAlignment="Center" FontSize="13" Width="200" SelectedItem="{Binding Metric}" ></ComboBox>
+                                <Label Grid.Row="6" Grid.Column="0" Content="LinePolarity" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                                <ComboBox Grid.Row="6" Grid.Column="1" Name ="LinePolarityCbx"  HorizontalContentAlignment="Center" FontSize="13" Width="200" SelectedItem="{Binding LinePolarity}" ></ComboBox>
+                                <Button Grid.Row="7" Grid.Column="1" Name="SaveParamBtn" Content="Save" Click="{mw:Action SaveSetUpParam}"></Button>
+                            </Grid>
+                        </Expander.Content>
+                    </Expander>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <WrapPanel Orientation="Horizontal" Grid.Column="1"  Grid.Row="2">
+            <Button Content="OK" FontSize="19" Command="{mw:Action SetOk}"  Width="280" Height="60"  VerticalContentAlignment="Center"></Button>
+            <Button Content="Cancle" FontSize="19" Command="{mw:Action SetCancle}" Width="280" Height="60"  VerticalContentAlignment="Center" Margin="40,0,0,0"></Button>
+        </WrapPanel>
+    </Grid>
+</Window>
